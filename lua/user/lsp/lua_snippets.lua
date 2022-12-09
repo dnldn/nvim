@@ -19,7 +19,7 @@ function m.custom_snippets()
 	local date = function() return {os.date('%Y-%m-%d')} end
 
 	--Universal language block. Compress to single line after unit tests. First argument indicates language type (nil = all).
-	--TODO: replace these with dofile or require.
+	--TODO: replace these with dofile or require from subdirectory.
 	ls.add_snippets("lua", {
 		snip({
 		    trig = "year",
@@ -50,13 +50,8 @@ function m.custom_snippets()
 end
 
 
-function m.friendly_snippets() require("luasnip.loaders.from_vscode").lazy_load() end
 
 function m.init()
-
-	-- This isn't necessary because they are loaded directly through packer.
-	-- m.friendly_snippets()
-
 	--Loads all custom snippets.
 	m.custom_snippets()
 end

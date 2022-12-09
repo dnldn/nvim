@@ -1,12 +1,7 @@
---This file contains all lsp servers to be called.
+--This file contains all lsp servers to be called. Configurations are in config subfolder.
 local m = {}
 function m.init()
-
-	--TODO: Opts objects should be called from a settings files.
-
-	--Lua proof-reading.
-	require("lspconfig").sumneko_lua.setup{}
-
+	--Lua proof-reading. Contains recognitiion for vim globals.
+	require("user.lsp.config.lua_lsp").init()
 end
-
 return m

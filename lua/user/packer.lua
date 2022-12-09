@@ -5,11 +5,20 @@ vim.cmd [[packadd packer.nvim]]
 
 --Collapse all plugins to one line once added. Run :so to source, then PackerSync
 return require('packer').startup(function(use)
-	use 'wbthomason/packer.nvim'
+
+	--Visual plugins.
 	use 'folke/tokyonight.nvim'
+	use ("nvim-lualine/lualine.nvim")
+	use 'nvim-tree/nvim-web-devicons'
+
+	--Utility plugins.
+	use 'wbthomason/packer.nvim'
+	use 'tpope/vim-fugitive'
+
+	--Command/movement plugins.
 	use 'tpope/vim-surround'
 	use 'tpope/vim-commentary'
-	use 'tpope/vim-fugitive'
+	use { 'phaazon/hop.nvim', branch = 'v2', config = function() require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' } end }
 
 	--Managing LSP/Linters/DAP/formatters.
 	use 'williamboman/mason.nvim'
@@ -28,8 +37,12 @@ return require('packer').startup(function(use)
 	use 'saadparwaiz1/cmp_luasnip'
 	use 'rafamadriz/friendly-snippets'
 
-	use { 'nvim-tree/nvim-tree.lua', requires = { 'nvim-tree/nvim-web-devicons', }, tag = 'nightly' }
+	--Navigation plugins.
+	-- use { 'nvim-tree/nvim-tree.lua', requires = { 'nvim-tree/nvim-web-devicons', }, tag = 'nightly' }
+	use { 'nvim-tree/nvim-tree.lua', tag = 'nightly' }
+	use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
 	use { 'nvim-telescope/telescope.nvim', tag = '0.1.0', requires = { {'nvim-lua/plenary.nvim'} } }
-	use { 'phaazon/hop.nvim', branch = 'v2', config = function() require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' } end }
+
+
 end)
 

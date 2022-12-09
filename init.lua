@@ -4,6 +4,7 @@ require("user.global_options")
 require("user.keymap")
 --Navigation-related settings.
 require("user.navigation")
---LSP/autocomplete settings. Source the init.lua file because it's pointed to a directory.
+--LSP/autocomplete settings. Sources the init.lua file because it's pointed to a directory.
 require("user.lsp")
-
+--Activates lua line.
+require("user.visual_settings")

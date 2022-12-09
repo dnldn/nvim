@@ -26,4 +26,27 @@ require("nvim-tree").setup({
 })
 
 
---TODO: reserved for telescope bindings.
+--Importing telescope: TODO - refactor with local function register.
+local telescope_setup, telescope = pcall(require, "telescope")
+if not telescope_setup then return end
+
+--Importing telescope actions. Refactor here as well.
+local actions_setup, actions = pcall(require, "telescope.actions")
+if not actions_setup then return end
+
+-- configure telescope
+telescope.setup({
+  -- configure custom mappings
+  defaults = {
+    mappings = {
+      i = {
+        ["<C-k>"] = actions.move_selection_previous, -- move to prev result
+        ["<C-j>"] = actions.move_selection_next, -- move to next result
+        ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist, -- send selected to quickfixlist
+      },
+    },
+  },
+})
+
+--Extension with improved fuzzy find performance.
+telescope.load_extension("fzf")
