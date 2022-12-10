@@ -9,7 +9,8 @@ local enabled = require("user.user_commands.all")
 --Native commands:
 
 --Alternative to entering command line and typing :w or :q!
-nnoremap("<leader>qt", "<cmd>:q!<CR>")
+--TODO: potential footgun in future with current user_command system - vim.api.nvim_command wasn't responding correctly when additional prompt was needed. 
+nnoremap("<leader>qt", "<cmd>NvimTreeClose<CR><cmd>:q!<CR>")
 nnoremap("<leader>sv", "<cmd>:w<CR>")
 
 --Tab through windows with alt + direction.
@@ -25,6 +26,15 @@ nnoremap("<leader>wq", "<cmd>close<CR>") --Close current split window.
 nnoremap("<A-k>", "<cmd>wincmd k<CR>")
 nnoremap("<A-k>", "<cmd>wincmd k<CR>")
 nnoremap("<A-k>", "<cmd>wincmd k<CR>")
+
+--Movement. 
+nnoremap("<C-j>", "<C-d>zz") --Center screen after page down.
+nnoremap("<C-k>", "<C-u>zz") --Center screen after page up.
+
+--Remapping macros to tab in insert mode, and flipping q to executing macros. TODO: Check for clashes on snippets with tab.
+nnoremap("<tab>", "q")
+nnoremap("q", "@")
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
 --Plugins:
@@ -39,8 +49,30 @@ nnoremap("<A-s>", "<cmd>Telescope grep_string <CR>")
 nnoremap("<A-b>", "<cmd>Telescope buffers <CR>")
 nnoremap("<A-/>", "<cmd>Telescope help_tags <CR>")
 
---Hop binding. "s" is not super useful, so we're replacing it directly.
+--Attempting some leader binds to see if they take.
+nnoremap("<leader>ff", "<cmd>Telescope find_files find_command=rg,--ignore,--hidden,--files prompt_prefix=🔍<CR>")
+nnoremap("<leader>fz", "<cmd>Telescope find_files find_command=rg,--ignore,--hidden,--files prompt_prefix=🔍<CR>") --Doubling up command because it uses fzf.
+nnoremap("<leader>fg", "<cmd>Telescope live_grep <CR>")
+nnoremap("<leader>rg", "<cmd>Telescope live_grep <CR>") --Doubling up command because it uses rg.
+nnoremap("<leader>fs", "<cmd>Telescope grep_string <CR>")
+nnoremap("<leader>fb", "<cmd>Telescope buffers <CR>")
+nnoremap("<leader>f/", "<cmd>Telescope help_tags <CR>")
+
+--Harpoon bindings.
+nnoremap("<leader>ha", "<cmd>HarpoonAddMark<CR>")
+nnoremap("<leader>hq", "<cmd>HarpoonQuickMenu<CR>")
+nnoremap("<A-u>","<cmd>HarpoonNav1<CR>")
+nnoremap("<A-i>","<cmd>HarpoonNav2<CR>")
+nnoremap("<A-o>","<cmd>HarpoonNav3<CR>")
+nnoremap("<A-p>","<cmd>HarpoonNav4<CR>")
+nnoremap("<A-[>","<cmd>HarpoonNav5<CR>")
+nnoremap("<A-]>","<cmd>HarpoonNav6<CR>")
+
+--Hop binding. "s" is the same as "xi", so we're replacing it directly.
 nnoremap("s", "<cmd>HopAnywhere<CR>")
+
+--Open diff using tpope fugitive plugin and split vertically. TODO: Implement git fetch, push, pull.
+nnoremap("<leader>gs", "<cmd>Gvdiffsplit<CR>")
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -52,11 +84,5 @@ if enabled.sublime then nnoremap("<leader>sb", "<cmd>Sublime<CR>") end
 --Toggle nvim-cmp autocompletion on/off. It's pretty damn aggressive, which is annoying when you aren't drafting new code.
 if enabled.toggle_cmp then nnoremap("<leader>ac", "<cmd>CmpToggle<CR>") end
 
-
------------------------------------------------------------------------------------------------------------------------------------------------------
-
---Deprecated/TODO:
---Would love to remap these, but neovim doesn't natively support cnoremap? Lunarvim has some workaround that I can't figure out here:
---https://github.com/LunarVim/LunarVim/blob/8d3f9b8bf7f5fddca2e8046a84ecbd7c3945dcba/lua/lvim/keymappings.lua : line 94 - it's being called by init as is.
---cnoremap("<C-j>", "c_CTRL-N>")
---cnoremap("<C-k>", "c_CTRL-P>"
+--Quit current buffer and close nvim-tree.
+-- if enabled.close_buffer then nnoremap("<leader>qt", "<cmd>QTBuffer<CR>") end

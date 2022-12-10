@@ -8,7 +8,7 @@ return require('packer').startup(function(use)
 
 	--Visual plugins.
 	use 'folke/tokyonight.nvim'
-	use ("nvim-lualine/lualine.nvim")
+	use "nvim-lualine/lualine.nvim"
 	use 'nvim-tree/nvim-web-devicons'
 
 	--Utility plugins.
@@ -38,11 +38,10 @@ return require('packer').startup(function(use)
 	use 'rafamadriz/friendly-snippets'
 
 	--Navigation plugins.
-	-- use { 'nvim-tree/nvim-tree.lua', requires = { 'nvim-tree/nvim-web-devicons', }, tag = 'nightly' }
+	use { 'ThePrimeagen/harpoon' }
 	use { 'nvim-tree/nvim-tree.lua', tag = 'nightly' }
 	use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
 	use { 'nvim-telescope/telescope.nvim', tag = '0.1.0', requires = { {'nvim-lua/plenary.nvim'} } }
-
 
 end)
 

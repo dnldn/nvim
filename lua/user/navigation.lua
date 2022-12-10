@@ -25,6 +25,7 @@ require("nvim-tree").setup({
   },
 })
 
+---------------------------------------------------------------------------------------------------
 
 --Importing telescope: TODO - refactor with local function register.
 local telescope_setup, telescope = pcall(require, "telescope")
@@ -34,15 +35,15 @@ if not telescope_setup then return end
 local actions_setup, actions = pcall(require, "telescope.actions")
 if not actions_setup then return end
 
--- configure telescope
+--Configure telescope.
 telescope.setup({
-  -- configure custom mappings
+  --Configure custom mappings.
   defaults = {
     mappings = {
       i = {
-        ["<C-k>"] = actions.move_selection_previous, -- move to prev result
-        ["<C-j>"] = actions.move_selection_next, -- move to next result
-        ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist, -- send selected to quickfixlist
+        ["<C-k>"] = actions.move_selection_previous,
+        ["<C-j>"] = actions.move_selection_next,
+        ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist, --Send selected to quick fix list.
       },
     },
   },
@@ -50,3 +51,27 @@ telescope.setup({
 
 --Extension with improved fuzzy find performance.
 telescope.load_extension("fzf")
+
+---------------------------------------------------------------------------------------------------
+
+--Importing harpoon: TODO: if I stick with this, place it above telescope as harpoon will integrate with telescope.
+
+local harpoon_setup, harpoon = pcall(require, "harpoon")
+if not harpoon_setup then return end
+
+--Configure harpoon.
+harpoon.setup({
+	menu = {
+		width = vim.api.nvim_win_get_width(0) - 4,
+	}
+})
+
+--Registering harpoon commands here as actions so they can be called less messily in keymap.lua.
+vim.api.nvim_create_user_command("HarpoonAddMark", function() require("harpoon.mark").add_file() end, {nargs = 0})
+vim.api.nvim_create_user_command("HarpoonQuickMenu", function() require("harpoon.ui").toggle_quick_menu() end, {nargs = 0})
+vim.api.nvim_create_user_command("HarpoonNav1", function() require("harpoon.ui").nav_file(1) end, {nargs = 0})
+vim.api.nvim_create_user_command("HarpoonNav2", function() require("harpoon.ui").nav_file(2) end, {nargs = 0})
+vim.api.nvim_create_user_command("HarpoonNav3", function() require("harpoon.ui").nav_file(3) end, {nargs = 0})
+vim.api.nvim_create_user_command("HarpoonNav4", function() require("harpoon.ui").nav_file(4) end, {nargs = 0})
+vim.api.nvim_create_user_command("HarpoonNav5", function() require("harpoon.ui").nav_file(5) end, {nargs = 0})
+vim.api.nvim_create_user_command("HarpoonNav6", function() require("harpoon.ui").nav_file(6) end, {nargs = 0})
