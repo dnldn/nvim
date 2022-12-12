@@ -60,13 +60,13 @@ nnoremap("<leader>f/", "<cmd>Telescope help_tags <CR>")
 
 --Harpoon bindings.
 nnoremap("<leader>ha", "<cmd>HarpoonAddMark<CR>")
-nnoremap("<leader>hq", "<cmd>HarpoonQuickMenu<CR>")
+nnoremap("<A-y>", "<cmd>HarpoonQuickMenu<CR>")
 nnoremap("<A-u>","<cmd>HarpoonNav1<CR>")
 nnoremap("<A-i>","<cmd>HarpoonNav2<CR>")
 nnoremap("<A-o>","<cmd>HarpoonNav3<CR>")
 nnoremap("<A-p>","<cmd>HarpoonNav4<CR>")
-nnoremap("<A-[>","<cmd>HarpoonNav5<CR>")
-nnoremap("<A-]>","<cmd>HarpoonNav6<CR>")
+nnoremap("<A-[>","<cmd>HarpoonGroupLeft<CR>")
+nnoremap("<A-]>","<cmd>HarpoonGroupRight<CR>")
 
 --Hop binding. "s" is the same as "xi", so we're replacing it directly.
 nnoremap("s", "<cmd>HopAnywhere<CR>")

@@ -59,6 +59,9 @@ telescope.load_extension("fzf")
 local harpoon_setup, harpoon = pcall(require, "harpoon")
 if not harpoon_setup then return end
 
+--Registering global variable to determine which buffers in quick menu are being hotkeyed to.
+_HarpoonSceneCounter = 0
+
 --Configure harpoon.
 harpoon.setup({
 	menu = {
@@ -66,12 +69,45 @@ harpoon.setup({
 	}
 })
 
---Registering harpoon commands here as actions so they can be called less messily in keymap.lua.
+--Registering harpoon commands as actions to keep keymap.lua clean.
 vim.api.nvim_create_user_command("HarpoonAddMark", function() require("harpoon.mark").add_file() end, {nargs = 0})
 vim.api.nvim_create_user_command("HarpoonQuickMenu", function() require("harpoon.ui").toggle_quick_menu() end, {nargs = 0})
-vim.api.nvim_create_user_command("HarpoonNav1", function() require("harpoon.ui").nav_file(1) end, {nargs = 0})
-vim.api.nvim_create_user_command("HarpoonNav2", function() require("harpoon.ui").nav_file(2) end, {nargs = 0})
-vim.api.nvim_create_user_command("HarpoonNav3", function() require("harpoon.ui").nav_file(3) end, {nargs = 0})
-vim.api.nvim_create_user_command("HarpoonNav4", function() require("harpoon.ui").nav_file(4) end, {nargs = 0})
-vim.api.nvim_create_user_command("HarpoonNav5", function() require("harpoon.ui").nav_file(5) end, {nargs = 0})
-vim.api.nvim_create_user_command("HarpoonNav6", function() require("harpoon.ui").nav_file(6) end, {nargs = 0})
+
+--Navigation commands:
+
+	--Alt-u, Alt-i, Alt-o, Alt-p access four consecutive buffers as populated in Harpoon's quick menu.
+
+vim.api.nvim_create_user_command("HarpoonNav1", function() require("harpoon.ui").nav_file(1+_HarpoonSceneCounter) end, {nargs = 0})
+vim.api.nvim_create_user_command("HarpoonNav2", function() require("harpoon.ui").nav_file(2+_HarpoonSceneCounter) end, {nargs = 0})
+vim.api.nvim_create_user_command("HarpoonNav3", function() require("harpoon.ui").nav_file(3+_HarpoonSceneCounter) end, {nargs = 0})
+vim.api.nvim_create_user_command("HarpoonNav4", function() require("harpoon.ui").nav_file(4+_HarpoonSceneCounter) end, {nargs = 0})
+
+
+--Clamping is needed for the next two commands and lua doesn't implement it for some reason...
+local function clamp(x, min, max) if x < min then return min elseif x > max then return max else return x end end
+
+
+	--Alt-[ moves the selection back by four buffers
+	--Alt-] moves the selection forward by four buffers.
+	--These allow me to tab quickly without pulling up the UI menu.
+
+
+--Get a multiple from current number of buffers, and move down by four. Clamp so value rounds down to zero if less than 1.
+vim.api.nvim_create_user_command("HarpoonGroupLeft",  function()
+	local current = math.floor((require("harpoon.mark").get_length()-1)/4)
+	if current == 0 then _HarpoonSceneCounter = 0 return
+	else
+		_HarpoonSceneCounter = clamp(_HarpoonSceneCounter - 4, 0, current)*4
+		vim.api.nvim_command("echo \"" .. "Buffer " .. _HarpoonSceneCounter+1 .. " through " .. _HarpoonSceneCounter + 4 .. " selected." .. "\"")
+	end
+end, {nargs = 0})
+
+--Get a multiple from current number of buffers, and move up by four. Clamp so value rounds down to a maximum defined by current number of buffers.
+vim.api.nvim_create_user_command("HarpoonGroupRight", function()
+	local current = math.floor((require("harpoon.mark").get_length()-1)/4)
+	if current == 0 then _HarpoonSceneCounter = 0 return
+	else
+		_HarpoonSceneCounter = clamp(_HarpoonSceneCounter + 4, 0, current)*4
+		vim.api.nvim_command("echo \"" .. "Buffer " .. _HarpoonSceneCounter+1 .. " through " .. _HarpoonSceneCounter + 4 .. " selected." .. "\"")
+	end
+end, {nargs = 0})
