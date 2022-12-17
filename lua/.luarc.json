@@ -1,5 +1,8 @@
 {
     "$schema": "https://raw.githubusercontent.com/sumneko/vscode-lua/master/setting/schema.json",
+    "Lua.diagnostics.globals": [
+        "warts"
+    ],
     "Lua.workspace.library": [
         "/home/kubuntu-main/.config/nvim",
         "/home/kubuntu-main/.local/share/nvim/site",

@@ -54,13 +54,14 @@ telescope.load_extension("fzf")
 
 ---------------------------------------------------------------------------------------------------
 
---Importing harpoon: TODO: if I stick with this, place it above telescope as harpoon will integrate with telescope.
+--Importing harpoon: TODO: implement mark navigation with same system.
 
 local harpoon_setup, harpoon = pcall(require, "harpoon")
 if not harpoon_setup then return end
 
---Registering global variable to determine which buffers in quick menu are being hotkeyed to.
-_HarpoonSceneCounter = 0
+--Registering global variables to determine which buffers in quick menu are being hotkeyed to.
+_HarpoonIndex = 1
+_HarpoonSceneTable = {1, 5, 9, 13, 17, 21, 25, 29, 33, 37, 41, 45, 49, 53, 57, 61}
 
 --Configure harpoon.
 harpoon.setup({
@@ -71,16 +72,17 @@ harpoon.setup({
 
 --Registering harpoon commands as actions to keep keymap.lua clean.
 vim.api.nvim_create_user_command("HarpoonAddMark", function() require("harpoon.mark").add_file() end, {nargs = 0})
+vim.api.nvim_create_user_command("HarpoonRemoveMark", function() require("harpoon.mark").rm_file() end, {nargs = 0})
 vim.api.nvim_create_user_command("HarpoonQuickMenu", function() require("harpoon.ui").toggle_quick_menu() end, {nargs = 0})
 
 --Navigation commands:
 
 	--Alt-u, Alt-i, Alt-o, Alt-p access four consecutive buffers as populated in Harpoon's quick menu.
 
-vim.api.nvim_create_user_command("HarpoonNav1", function() require("harpoon.ui").nav_file(1+_HarpoonSceneCounter) end, {nargs = 0})
-vim.api.nvim_create_user_command("HarpoonNav2", function() require("harpoon.ui").nav_file(2+_HarpoonSceneCounter) end, {nargs = 0})
-vim.api.nvim_create_user_command("HarpoonNav3", function() require("harpoon.ui").nav_file(3+_HarpoonSceneCounter) end, {nargs = 0})
-vim.api.nvim_create_user_command("HarpoonNav4", function() require("harpoon.ui").nav_file(4+_HarpoonSceneCounter) end, {nargs = 0})
+vim.api.nvim_create_user_command("HarpoonNav1", function() require("harpoon.ui").nav_file(_HarpoonSceneTable[_HarpoonIndex]+0) end, {nargs = 0})
+vim.api.nvim_create_user_command("HarpoonNav2", function() require("harpoon.ui").nav_file(_HarpoonSceneTable[_HarpoonIndex]+1) end, {nargs = 0})
+vim.api.nvim_create_user_command("HarpoonNav3", function() require("harpoon.ui").nav_file(_HarpoonSceneTable[_HarpoonIndex]+2) end, {nargs = 0})
+vim.api.nvim_create_user_command("HarpoonNav4", function() require("harpoon.ui").nav_file(_HarpoonSceneTable[_HarpoonIndex]+3) end, {nargs = 0})
 
 
 --Clamping is needed for the next two commands and lua doesn't implement it for some reason...
@@ -94,20 +96,20 @@ local function clamp(x, min, max) if x < min then return min elseif x > max then
 
 --Get a multiple from current number of buffers, and move down by four. Clamp so value rounds down to zero if less than 1.
 vim.api.nvim_create_user_command("HarpoonGroupLeft",  function()
-	local current = math.floor((require("harpoon.mark").get_length()-1)/4)
-	if current == 0 then _HarpoonSceneCounter = 0 return
+	local current_max = math.floor((require("harpoon.mark").get_length()-1)/4)+1
+	if current_max == 0 then _HarpoonIndex = 1 return
 	else
-		_HarpoonSceneCounter = clamp(_HarpoonSceneCounter - 4, 0, current)*4
-		vim.api.nvim_command("echo \"" .. "Buffer " .. _HarpoonSceneCounter+1 .. " through " .. _HarpoonSceneCounter + 4 .. " selected." .. "\"")
+		_HarpoonIndex = clamp(_HarpoonIndex - 1, 1, current_max)
+		vim.api.nvim_command("echo \"" .. "Buffer " .. _HarpoonSceneTable[_HarpoonIndex] .. " through " .. _HarpoonSceneTable[_HarpoonIndex] + 4 .. " selected." .. "\"")
 	end
 end, {nargs = 0})
 
 --Get a multiple from current number of buffers, and move up by four. Clamp so value rounds down to a maximum defined by current number of buffers.
 vim.api.nvim_create_user_command("HarpoonGroupRight", function()
-	local current = math.floor((require("harpoon.mark").get_length()-1)/4)
-	if current == 0 then _HarpoonSceneCounter = 0 return
+	local current_max = math.floor((require("harpoon.mark").get_length()-1)/4)+1
+	if current_max == 0 then _HarpoonIndex = 1 return
 	else
-		_HarpoonSceneCounter = clamp(_HarpoonSceneCounter + 4, 0, current)*4
-		vim.api.nvim_command("echo \"" .. "Buffer " .. _HarpoonSceneCounter+1 .. " through " .. _HarpoonSceneCounter + 4 .. " selected." .. "\"")
+		_HarpoonIndex = clamp(_HarpoonIndex + 1, 1, current_max)
+		vim.api.nvim_command("echo \"" .. "Buffer " .. _HarpoonSceneTable[_HarpoonIndex] .. " through " .. _HarpoonSceneTable[_HarpoonIndex] + 4 .. " selected." .. "\"")
 	end
 end, {nargs = 0})

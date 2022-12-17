@@ -77,7 +77,7 @@ _G.packer_plugins = {
   LuaSnip = {
     loaded = true,
     path = "/home/kubuntu-main/.local/share/nvim/site/pack/packer/start/LuaSnip",
-    url = "https://github.com/L3Mon4D3/LuaSnip"
+    url = "https://github.com/L3MON4D3/LuaSnip"
   },
   ["cmp-buffer"] = {
     loaded = true,
@@ -93,6 +93,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/kubuntu-main/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
+  },
+  ["cmp-nvim-lua"] = {
+    loaded = true,
+    path = "/home/kubuntu-main/.local/share/nvim/site/pack/packer/start/cmp-nvim-lua",
+    url = "https://github.com/hrsh7th/cmp-nvim-lua"
   },
   ["cmp-path"] = {
     loaded = true,
@@ -120,20 +125,30 @@ _G.packer_plugins = {
     path = "/home/kubuntu-main/.local/share/nvim/site/pack/packer/start/hop.nvim",
     url = "https://github.com/phaazon/hop.nvim"
   },
+  ["lsp-zero.nvim"] = {
+    loaded = true,
+    path = "/home/kubuntu-main/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
+    url = "https://github.com/VonHeikemen/lsp-zero.nvim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/home/kubuntu-main/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
-  ["mason-lspconfig"] = {
+  ["mason-lspconfig.nvim"] = {
     loaded = true,
-    path = "/home/kubuntu-main/.local/share/nvim/site/pack/packer/start/mason-lspconfig",
-    url = "https://github.com/williamboman/mason-lspconfig"
+    path = "/home/kubuntu-main/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
+    url = "https://github.com/williamboman/mason-lspconfig.nvim"
   },
   ["mason.nvim"] = {
     loaded = true,
     path = "/home/kubuntu-main/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["nvim-cheat.sh"] = {
+    loaded = true,
+    path = "/home/kubuntu-main/.local/share/nvim/site/pack/packer/start/nvim-cheat.sh",
+    url = "https://github.com/RishabhRD/nvim-cheat.sh"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -150,6 +165,11 @@ _G.packer_plugins = {
     path = "/home/kubuntu-main/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
     url = "https://github.com/nvim-tree/nvim-tree.lua"
   },
+  ["nvim-treesitter"] = {
+    loaded = true,
+    path = "/home/kubuntu-main/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/kubuntu-main/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
@@ -164,6 +184,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/kubuntu-main/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  popfix = {
+    loaded = true,
+    path = "/home/kubuntu-main/.local/share/nvim/site/pack/packer/start/popfix",
+    url = "https://github.com/RishabhRD/popfix"
   },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,
