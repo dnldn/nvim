@@ -21,33 +21,12 @@ return require('packer').startup(function(use)
 	use 'tpope/vim-commentary'
 	use { 'phaazon/hop.nvim', branch = 'v2', config = function() require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' } end }
 
-	--Old LSP loading approach:
-	--[[
-	--Managing LSP/Linters/DAP/formatters.
-	-- use 'williamboman/mason.nvim' 							YES
-	-- use 'williamboman/mason-lspconfig' 							YES
-	-- use 'neovim/nvim-lspconfig' 								YES
-	-- use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'} 				YES
-
-	--Completion engine.
-	--use 'hrsh7th/cmp-nvim-lsp' 								YES
-	--use 'hrsh7th/cmp-buffer' 								YES
-	--use 'hrsh7th/cmp-path' 								YES
-	--use 'hrsh7th/cmp-cmdline' 								YES
-	--use 'hrsh7th/nvim-cmp' 								YES
-	--use 'hrsh7th/cmp-nvim-lua' 								YES
-
-	--Snippets.
-	--use 'L3Mon4D3/LuaSnip' 								YES
-	--use 'saadparwaiz1/cmp_luasnip' 							YES
-	--use 'rafamadriz/friendly-snippets' 							YES
-	]]
-
 	--Navigation plugins.
 	use { 'ThePrimeagen/harpoon' }
 	use { 'nvim-tree/nvim-tree.lua', tag = 'nightly' }
 	use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
 	use { 'nvim-telescope/telescope.nvim', tag = '0.1.0', requires = { {'nvim-lua/plenary.nvim'} } }
+	use 'chentoast/marks.nvim'
 
 	--Reverting back to using lsp-zero instead of going a la carte. Too much configuration to manage the way I had it.
 	use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}

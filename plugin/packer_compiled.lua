@@ -135,6 +135,11 @@ _G.packer_plugins = {
     path = "/home/kubuntu-main/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
+  ["marks.nvim"] = {
+    loaded = true,
+    path = "/home/kubuntu-main/.local/share/nvim/site/pack/packer/start/marks.nvim",
+    url = "https://github.com/chentoast/marks.nvim"
+  },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
     path = "/home/kubuntu-main/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",

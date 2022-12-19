@@ -6,7 +6,7 @@ local enabled = require("user.user_commands.all")
 --Native commands:
 
 --Alternative to entering command line and typing :w or :q!
---FIXME: potential footgun in future with current user_command system - vim.api.nvim_command wasn't responding correctly when additional prompt was needed. 
+--FIXME: potential footgun in future with current user_command system - vim.api.nvim_command doesn't always respond correctly when additional prompt is needed.
 vim.keymap.set("n", "<leader>qt", "<cmd>NvimTreeClose<CR><cmd>:q!<CR>")
 vim.keymap.set("n", "<leader>sv", "<cmd>:w<CR>")
 vim.keymap.set("n", "<leader>so", "<cmd>:so<CR>")
@@ -14,22 +14,28 @@ vim.keymap.set("n", "<leader>so", "<cmd>:so<CR>")
 --Tab through windows with alt + direction.
 vim.keymap.set("n", "<A-h>", "<cmd>wincmd h<CR>")
 vim.keymap.set("n", "<A-l>", "<cmd>wincmd l<CR>")
-vim.keymap.set("n", "<A-j>", "<cmd>wincmd j<CR>")
-vim.keymap.set("n", "<A-k>", "<cmd>wincmd k<CR>")
+vim.keymap.set("n", "<A-j>", "<cmd>wincmd j<CR>") --Note: This bind will change depending on whether LSP diagnostics are toggled or not.
+vim.keymap.set("n", "<A-k>", "<cmd>wincmd k<CR>") --Note: This bind will change depending on whether LSP diagnostics are toggled or not.
 
 --Split window.
 vim.keymap.set("n", "<leader>wh", "<C-w>s") --Split window horizontally.
 vim.keymap.set("n", "<leader>wv", "<C-w>v") --Split window vertically.
 vim.keymap.set("n", "<leader>wq", "<cmd>close<CR>") --Close current split window.
-vim.keymap.set("n", "<A-k>", "<cmd>wincmd k<CR>")
-vim.keymap.set("n", "<A-k>", "<cmd>wincmd k<CR>")
-vim.keymap.set("n", "<A-k>", "<cmd>wincmd k<CR>")
 
 --Movement. 
 vim.keymap.set("n", "<C-j>", "<C-d>zz") --Center screen after page down.
 vim.keymap.set("n", "<C-k>", "<C-u>zz") --Center screen after page up.
 vim.keymap.set("n", "n", "nzz") --Center screen after finding next match.
 vim.keymap.set("n", "N", "Nzz") --Center screen after finding previous match.
+
+--Marks. Other keybinds for this are set in lua/user/navigation.lua.
+vim.keymap.set("n", "<A-U>", "`a")
+vim.keymap.set("n", "<A-I>", "`b")
+vim.keymap.set("n", "<A-O>", "`c")
+vim.keymap.set("n", "<A-P>", "`d")
+vim.keymap.set("n", "<A-Y>","<cmd>marks<CR>")
+vim.keymap.set("n", "<A-{>","<cmd>MarkGroupLeft<CR>")
+vim.keymap.set("n", "<A-}>","<cmd>MarkGroupRight<CR>")
 
 --Remapping macros to tab in insert mode, and flipping q to executing macros.
 vim.keymap.set("n", "<tab>", "q")
@@ -106,11 +112,14 @@ vim.keymap.set("n", "<leader>cc", "<cmd>Cheat<CR>")
 if enabled.sublime then vim.keymap.set("n", "<leader>sb", "<cmd>Sublime<CR>") end
 
 --Toggle nvim-cmp autocompletion on/off. It's pretty damn aggressive, which is annoying when you aren't drafting new code.
---TODO: this needs to be amended now that old way is deprecated.
--- if enabled.toggle_cmp then vim.keymap.set("n", "<leader>ac", "<cmd>CmpToggle<CR>") end
--- vim.g.nvim_cmp_toggle = true
-
 vim.keymap.set("n", "<leader>ac", "<cmd>CmpToggle<CR>")
 
 --Toggle dark mode.
 vim.keymap.set("n", "<leader>dm", "<cmd>DarkMode<CR>")
+
+--Toggles LSP diagnostics on or off. Alters keymaps of Alt-j/k depending on state.
+vim.keymap.set("n", "<A-d>", "<cmd>DisplayDiagnostics<CR>")
+
+--Delete marks from file and make change persistent - otherwise, they will come back when session is reopened.
+vim.keymap.set("n", "<leader>dl", "<cmd>DeleteMarkFromBuffer<CR>")
+vim.keymap.set("n", "<leader>db", "<cmd>DeleteAllMarksFromBuffer<CR>")

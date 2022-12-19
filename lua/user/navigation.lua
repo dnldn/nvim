@@ -27,7 +27,7 @@ require("nvim-tree").setup({
 
 ---------------------------------------------------------------------------------------------------
 
---Importing telescope: TODO - refactor with local function register.
+--Importing telescope.
 local telescope_setup, telescope = pcall(require, "telescope")
 if not telescope_setup then return end
 
@@ -54,7 +54,7 @@ telescope.load_extension("fzf")
 
 ---------------------------------------------------------------------------------------------------
 
---Importing harpoon: TODO: implement mark navigation with same system.
+--Importing harpoon.
 
 local harpoon_setup, harpoon = pcall(require, "harpoon")
 if not harpoon_setup then return end
@@ -65,6 +65,7 @@ _HarpoonSceneTable = {1, 5, 9, 13, 17, 21, 25, 29, 33, 37, 41, 45, 49, 53, 57, 6
 
 --Configure harpoon.
 harpoon.setup({
+
 	menu = {
 		width = vim.api.nvim_win_get_width(0) - 4,
 	}
@@ -112,4 +113,70 @@ vim.api.nvim_create_user_command("HarpoonGroupRight", function()
 		_HarpoonIndex = clamp(_HarpoonIndex + 1, 1, current_max)
 		vim.api.nvim_command("echo \"" .. "Buffer " .. _HarpoonSceneTable[_HarpoonIndex] .. " through " .. _HarpoonSceneTable[_HarpoonIndex] + 4 .. " selected." .. "\"")
 	end
+end, {nargs = 0})
+
+---------------------------------------------------------------------------------------------------
+
+--Configuring marks. FIXME: set_next creates persistent marks, but delete_line and delete_buf do not remove persistent marks when session has been closed and reopened.
+			-- 12/18/2022 - this appears to be an issue with neovim itself, something to do with the shada file. Basically all local marks are persistent unless you purge it.
+			-- TODO: determine how to access shada file, and create a purging function that runs when delete_line and delete_buf are run to make changes persistent.
+			-- https://neovim.io/doc/user/starting.html#shada
+			-- Issuing the command line	wshada!	after deleting marks makes them persistent. Will have to migrate delete_line and delete_buf to user commands to make that work as intended.
+require'marks'.setup {
+	default_mappings = false,
+	mappings = {
+		set_next = "M",
+		-- delete_line = "<space>dl",
+		-- delete_buf = "<space>db",
+		prev = "<A-K>",
+		next = "<A-J>",
+	}
+}
+
+--Pair of functions to translate mark letter to number 1-26 and back.
+local function char_from_mark(num) return string.char(string.byte("a")+num-1) end
+local function mark_from_char(char) return string.byte(char)-string.byte("a")+1 end
+
+--Registering global variables to determine which set of marks hotkeys will focus to.
+vim.g.marker_index = 1
+
+vim.api.nvim_create_user_command("MarkGroupLeft", function()
+	vim.g.marker_index = clamp(vim.g.marker_index - 1, 1, 6)
+	local toEndPos = 3 local pos
+	if vim.g.marker_index == 1 then pos = vim.g.marker_index + ((vim.g.marker_index-1)*4) elseif vim.g.marker_index == 6 then pos = vim.g.marker_index + ((vim.g.marker_index-1)*4)-1 toEndPos = 1 else pos = vim.g.marker_index + ((vim.g.marker_index-1)*4)-1 end
+	vim.api.nvim_command("echo \"" .. "Marks " ..  char_from_mark(pos) .. "-" .. char_from_mark(pos+toEndPos) .. " selected." .. "\"")
+
+	if vim.g.marker_index == 6 then
+		vim.keymap.set("n", "<A-U>", "`" .. char_from_mark(pos))
+		vim.keymap.set("n", "<A-I>", "`" .. char_from_mark(pos+1))
+		vim.keymap.set("n", "<A-O>", "<nop>")
+		vim.keymap.set("n", "<A-P>", "<nop>")
+	else
+		vim.keymap.set("n", "<A-U>", "`" .. char_from_mark(pos))
+		vim.keymap.set("n", "<A-I>", "`" .. char_from_mark(pos+1))
+		vim.keymap.set("n", "<A-O>", "`" .. char_from_mark(pos+2))
+		vim.keymap.set("n", "<A-P>", "`" .. char_from_mark(pos+3))
+	end
+
+end, {nargs = 0})
+
+
+vim.api.nvim_create_user_command("MarkGroupRight", function()
+	vim.g.marker_index = clamp(vim.g.marker_index + 1, 1, 6)
+	local toEndPos = 3 local pos
+	if vim.g.marker_index == 1 then pos = vim.g.marker_index + ((vim.g.marker_index-1)*4) elseif vim.g.marker_index == 6 then pos = vim.g.marker_index + ((vim.g.marker_index-1)*4)-1 toEndPos = 1 else pos = vim.g.marker_index + ((vim.g.marker_index-1)*4)-1 end
+	vim.api.nvim_command("echo \"" .. "Marks " ..  char_from_mark(pos) .. "-" .. char_from_mark(pos+toEndPos) .. " selected." .. "\"")
+
+	if vim.g.marker_index == 6 then
+		vim.keymap.set("n", "<A-U>", "`" .. char_from_mark(pos))
+		vim.keymap.set("n", "<A-I>", "`" .. char_from_mark(pos+1))
+		vim.keymap.set("n", "<A-O>", "<nop>")
+		vim.keymap.set("n", "<A-P>", "<nop>")
+	else
+		vim.keymap.set("n", "<A-U>", "`" .. char_from_mark(pos))
+		vim.keymap.set("n", "<A-I>", "`" .. char_from_mark(pos+1))
+		vim.keymap.set("n", "<A-O>", "`" .. char_from_mark(pos+2))
+		vim.keymap.set("n", "<A-P>", "`" .. char_from_mark(pos+3))
+	end
+
 end, {nargs = 0})

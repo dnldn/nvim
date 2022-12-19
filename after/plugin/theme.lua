@@ -1,10 +1,10 @@
 --Tokyo night theme.
 vim.cmd("colorscheme tokyonight-moon")
-_DarkMode = false
+vim.g.dark_mode = false
 
 --Global function to enable darker background with less contrast.
 function DarkMode()
-	if not _DarkMode then
+	if not vim.g.dark_mode then
 		require("tokyonight").setup({
 			on_colors = function(colors)
 				colors.bg = "#000000"
@@ -18,7 +18,7 @@ function DarkMode()
 			end
 		})
 		vim.cmd("colorscheme tokyonight-moon")
-		_DarkMode = true
+		vim.g.dark_mode = true
 	else
 		require("tokyonight").setup({
 			on_colors = function(colors)
@@ -33,9 +33,9 @@ function DarkMode()
 			end
 		})
 		vim.cmd("colorscheme tokyonight-moon")
-		_DarkMode = false
+		vim.g.dark_mode = false
 	end
-	return _DarkMode
+	return vim.g.dark_mode
 end
 
 --Color settings for nvim-tree.
