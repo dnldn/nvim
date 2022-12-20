@@ -1,15 +1,18 @@
-**Contains required statements of any option that must be explicitly called (my own customizations/anything not done automatically in rtp).
-init.lua 
+<h1>Neovim configuration.</h1>
 
-**Contains globally-initialized files. Files are initialized, checked for errors, checked for updates.
-lua/user 
-	
-**Contains configuration files for existing plugins. Files here are loaded after everything has been initialized.
-after/plugin
+All plugins are managed with packer.lua.
 
-**Contains user lua scripts that are run as commands.
-lua/user/commands
+**init.lua**: Initializes any files not automatically initialized by Neovim.
 
-**Contains lsp/formatting/linters/autocomplete settings and initializations.
-lua/user/lsp
+**lua/user**: Files initialized at Neovim startup.
+- global_options.lua: Change default global VIM settings for indentation, cursor appearance etc.
+- keymap.lua: Set global keybindings for default actions and user commands.
+- navigation.lua: Settings for nvim-tree, telescope, harpoon, and marks.
+- packer.lua: Manages all installed plugins.
+- visual_settings: Manage themes, icons and visual flair.
+- user_commands: Contains user macros that use vim command line. Initializations are done by all.lua file.
 
+**after/plugin**: Changes settings after contents of lua/user have been initialized.
+- lsp.lua: Contains all LSP/autocomplete settings- managed by lsp-zero.
+- theme.lua: Initializes themes/user functions loaded by visual_settings.
+- treesitter.lua: Manages treesitter plugin.

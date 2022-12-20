@@ -1,0 +1,3954 @@
+snippet reaper.AddMediaItemToTrack
+	reaper.AddMediaItemToTrack(${1:tr})
+snippet reaper.AddProjectMarker
+	reaper.AddProjectMarker(${1:proj}, ${2:isrgn}, ${3:pos}, ${4:rgnend}, ${5:name}, ${6:wantidx})
+snippet reaper.AddProjectMarker2
+	reaper.AddProjectMarker2(${1:proj}, ${2:isrgn}, ${3:pos}, ${4:rgnend}, ${5:name}, ${6:wantidx}, ${7:color})
+snippet reaper.AddRemoveReaScript
+	reaper.AddRemoveReaScript(${1:add}, ${2:sectionID}, ${3:scriptfn}, ${4:commit})
+snippet reaper.AddTakeToMediaItem
+	reaper.AddTakeToMediaItem(${1:item})
+snippet reaper.AddTempoTimeSigMarker
+	reaper.AddTempoTimeSigMarker(${1:proj}, ${2:timepos}, ${3:bpm}, ${4:timesig_num}, ${5:timesig_denom}, ${6:lineartempochange})
+snippet reaper.adjustZoom
+	reaper.adjustZoom(${1:amt}, ${2:forceset}, ${3:doupd}, ${4:centermode})
+snippet reaper.AnyTrackSolo
+	reaper.AnyTrackSolo(${1:proj})
+snippet reaper.APIExists
+	reaper.APIExists(${1:function_name})
+snippet reaper.APITest
+	reaper.APITest()
+snippet reaper.ApplyNudge
+	reaper.ApplyNudge(${1:project}, ${2:nudgeflag}, ${3:nudgewhat}, ${4:nudgeunits}, ${5:value}, ${6:reverse}, ${7:copies})
+snippet gfx.arc
+	gfx.arc(${1:x}, ${2:y}, ${3:r}, ${4:ang1}, ${5:ang2}, ${6:antialias})
+snippet reaper.ArmCommand
+	reaper.ArmCommand(${1:cmd}, ${2:sectionname})
+snippet reaper.atexit
+	reaper.atexit(${1:function})
+snippet reaper.Audio_Init
+	reaper.Audio_Init()
+snippet reaper.Audio_IsPreBuffer
+	reaper.Audio_IsPreBuffer()
+snippet reaper.Audio_IsRunning
+	reaper.Audio_IsRunning()
+snippet reaper.Audio_Quit
+	reaper.Audio_Quit()
+snippet reaper.AudioAccessorStateChanged
+	reaper.AudioAccessorStateChanged(${1:accessor})
+snippet reaper.AudioAccessorUpdate
+	reaper.AudioAccessorUpdate(${1:accessor})
+snippet reaper.AudioAccessorValidateState
+	reaper.AudioAccessorValidateState(${1:accessor})
+snippet reaper.Blink_GetBeatAtTime
+	reaper.Blink_GetBeatAtTime(${1:time}, ${2:quantum})
+snippet reaper.Blink_GetClockNow
+	reaper.Blink_GetClockNow()
+snippet reaper.Blink_GetEnabled
+	reaper.Blink_GetEnabled()
+snippet reaper.Blink_GetMaster
+	reaper.Blink_GetMaster()
+snippet reaper.Blink_GetNumPeers
+	reaper.Blink_GetNumPeers()
+snippet reaper.Blink_GetPhaseAtTime
+	reaper.Blink_GetPhaseAtTime(${1:time}, ${2:quantum})
+snippet reaper.Blink_GetPlaying
+	reaper.Blink_GetPlaying()
+snippet reaper.Blink_GetPuppet
+	reaper.Blink_GetPuppet()
+snippet reaper.Blink_GetQuantum
+	reaper.Blink_GetQuantum()
+snippet reaper.Blink_GetStartStopSyncEnabled
+	reaper.Blink_GetStartStopSyncEnabled()
+snippet reaper.Blink_GetTempo
+	reaper.Blink_GetTempo()
+snippet reaper.Blink_GetTimeAtBeat
+	reaper.Blink_GetTimeAtBeat(${1:beat}, ${2:quantum})
+snippet reaper.Blink_GetTimeForPlaying
+	reaper.Blink_GetTimeForPlaying()
+snippet reaper.Blink_GetVersion
+	reaper.Blink_GetVersion()
+snippet reaper.Blink_SetBeatAtStartPlayingTimeRequest
+	reaper.Blink_SetBeatAtStartPlayingTimeRequest(${1:beat}, ${2:quantum})
+snippet reaper.Blink_SetBeatAtTimeForce
+	reaper.Blink_SetBeatAtTimeForce(${1:bpm}, ${2:time}, ${3:quantum})
+snippet reaper.Blink_SetBeatAtTimeRequest
+	reaper.Blink_SetBeatAtTimeRequest(${1:bpm}, ${2:time}, ${3:quantum})
+snippet reaper.Blink_SetCaptureTransportCommands
+	reaper.Blink_SetCaptureTransportCommands(${1:enable})
+snippet reaper.Blink_SetEnabled
+	reaper.Blink_SetEnabled(${1:enable})
+snippet reaper.Blink_SetMaster
+	reaper.Blink_SetMaster(${1:enable})
+snippet reaper.Blink_SetPlaying
+	reaper.Blink_SetPlaying(${1:playing}, ${2:time})
+snippet reaper.Blink_SetPlayingAndBeatAtTimeRequest
+	reaper.Blink_SetPlayingAndBeatAtTimeRequest(${1:playing}, ${2:time}, ${3:beat}, ${4:quantum})
+snippet reaper.Blink_SetPuppet
+	reaper.Blink_SetPuppet(${1:enable})
+snippet reaper.Blink_SetQuantum
+	reaper.Blink_SetQuantum(${1:quantum})
+snippet reaper.Blink_SetStartStopSyncEnabled
+	reaper.Blink_SetStartStopSyncEnabled(${1:enable})
+snippet reaper.Blink_SetTempo
+	reaper.Blink_SetTempo(${1:bpm})
+snippet reaper.Blink_SetTempoAtTime
+	reaper.Blink_SetTempoAtTime(${1:bpm}, ${2:time})
+snippet reaper.Blink_StartStop
+	reaper.Blink_StartStop()
+snippet gfx.blit
+	gfx.blit(${1:source}, ${2:scale}, ${3:rotation}, ${4:srcx}, ${5:srcy}, ${6:srcw}, ${7:srch}, ${8:destx}, ${9:desty}, ${10:destw}, ${11:desth}, ${12:rotxoffs}, ${13:rotyoffs})
+snippet gfx.blitext
+	gfx.blitext(${1:source}, ${2:coordinatelist}, ${3:rotation})
+snippet gfx.blurto
+	gfx.blurto(${1:x}, ${2:y})
+snippet reaper.BR_EnvAlloc
+	reaper.BR_EnvAlloc(${1:envelope}, ${2:takeEnvelopesUseProjectTime})
+snippet reaper.BR_EnvCountPoints
+	reaper.BR_EnvCountPoints(${1:envelope})
+snippet reaper.BR_EnvDeletePoint
+	reaper.BR_EnvDeletePoint(${1:envelope}, ${2:id})
+snippet reaper.BR_EnvFind
+	reaper.BR_EnvFind(${1:envelope}, ${2:position}, ${3:delta})
+snippet reaper.BR_EnvFindNext
+	reaper.BR_EnvFindNext(${1:envelope}, ${2:position})
+snippet reaper.BR_EnvFindPrevious
+	reaper.BR_EnvFindPrevious(${1:envelope}, ${2:position})
+snippet reaper.BR_EnvFree
+	reaper.BR_EnvFree(${1:envelope}, ${2:commit})
+snippet reaper.BR_EnvGetParentTake
+	reaper.BR_EnvGetParentTake(${1:envelope})
+snippet reaper.BR_EnvGetParentTrack
+	reaper.BR_EnvGetParentTrack(${1:envelope})
+snippet reaper.BR_EnvGetPoint
+	reaper.BR_EnvGetPoint(${1:envelope}, ${2:id})
+snippet reaper.BR_EnvGetProperties
+	reaper.BR_EnvGetProperties(${1:envelope})
+snippet reaper.BR_EnvSetPoint
+	reaper.BR_EnvSetPoint(${1:envelope}, ${2:id}, ${3:position}, ${4:value}, ${5:shape}, ${6:selected}, ${7:bezier})
+snippet reaper.BR_EnvSetProperties
+	reaper.BR_EnvSetProperties(${1:envelope}, ${2:active}, ${3:visible}, ${4:armed}, ${5:inLane}, ${6:laneHeight}, ${7:defaultShape}, ${8:faderScaling}, ${9:automationItemsOptionsIn})
+snippet reaper.BR_EnvSortPoints
+	reaper.BR_EnvSortPoints(${1:envelope})
+snippet reaper.BR_EnvValueAtPos
+	reaper.BR_EnvValueAtPos(${1:envelope}, ${2:position})
+snippet reaper.BR_GetArrangeView
+	reaper.BR_GetArrangeView(${1:proj})
+snippet reaper.BR_GetClosestGridDivision
+	reaper.BR_GetClosestGridDivision(${1:position})
+snippet reaper.BR_GetCurrentTheme
+	reaper.BR_GetCurrentTheme()
+snippet reaper.BR_GetMediaItemByGUID
+	reaper.BR_GetMediaItemByGUID(${1:proj}, ${2:guidStringIn})
+snippet reaper.BR_GetMediaItemGUID
+	reaper.BR_GetMediaItemGUID(${1:item})
+snippet reaper.BR_GetMediaItemImageResource
+	reaper.BR_GetMediaItemImageResource(${1:item})
+snippet reaper.BR_GetMediaItemTakeGUID
+	reaper.BR_GetMediaItemTakeGUID(${1:take})
+snippet reaper.BR_GetMediaSourceProperties
+	reaper.BR_GetMediaSourceProperties(${1:take})
+snippet reaper.BR_GetMediaTrackByGUID
+	reaper.BR_GetMediaTrackByGUID(${1:proj}, ${2:guidStringIn})
+snippet reaper.BR_GetMediaTrackFreezeCount
+	reaper.BR_GetMediaTrackFreezeCount(${1:track})
+snippet reaper.BR_GetMediaTrackGUID
+	reaper.BR_GetMediaTrackGUID(${1:track})
+snippet reaper.BR_GetMediaTrackLayouts
+	reaper.BR_GetMediaTrackLayouts(${1:track})
+snippet reaper.BR_GetMediaTrackSendInfo_Envelope
+	reaper.BR_GetMediaTrackSendInfo_Envelope(${1:track}, ${2:category}, ${3:sendidx}, ${4:envelopeType})
+snippet reaper.BR_GetMediaTrackSendInfo_Track
+	reaper.BR_GetMediaTrackSendInfo_Track(${1:track}, ${2:category}, ${3:sendidx}, ${4:trackType})
+snippet reaper.BR_GetMidiSourceLenPPQ
+	reaper.BR_GetMidiSourceLenPPQ(${1:take})
+snippet reaper.BR_GetMidiTakePoolGUID
+	reaper.BR_GetMidiTakePoolGUID(${1:take})
+snippet reaper.BR_GetMidiTakeTempoInfo
+	reaper.BR_GetMidiTakeTempoInfo(${1:take})
+snippet reaper.BR_GetMouseCursorContext
+	reaper.BR_GetMouseCursorContext()
+snippet reaper.BR_GetMouseCursorContext_Envelope
+	reaper.BR_GetMouseCursorContext_Envelope()
+snippet reaper.BR_GetMouseCursorContext_Item
+	reaper.BR_GetMouseCursorContext_Item()
+snippet reaper.BR_GetMouseCursorContext_MIDI
+	reaper.BR_GetMouseCursorContext_MIDI()
+snippet reaper.BR_GetMouseCursorContext_Position
+	reaper.BR_GetMouseCursorContext_Position()
+snippet reaper.BR_GetMouseCursorContext_StretchMarker
+	reaper.BR_GetMouseCursorContext_StretchMarker()
+snippet reaper.BR_GetMouseCursorContext_Take
+	reaper.BR_GetMouseCursorContext_Take()
+snippet reaper.BR_GetMouseCursorContext_Track
+	reaper.BR_GetMouseCursorContext_Track()
+snippet reaper.BR_GetNextGridDivision
+	reaper.BR_GetNextGridDivision(${1:position})
+snippet reaper.BR_GetPrevGridDivision
+	reaper.BR_GetPrevGridDivision(${1:position})
+snippet reaper.BR_GetSetTrackSendInfo
+	reaper.BR_GetSetTrackSendInfo(${1:track}, ${2:category}, ${3:sendidx}, ${4:parmname}, ${5:setNewValue}, ${6:newValue})
+snippet reaper.BR_GetTakeFXCount
+	reaper.BR_GetTakeFXCount(${1:take})
+snippet reaper.BR_IsMidiOpenInInlineEditor
+	reaper.BR_IsMidiOpenInInlineEditor(${1:take})
+snippet reaper.BR_IsTakeMidi
+	reaper.BR_IsTakeMidi(${1:take})
+snippet reaper.BR_ItemAtMouseCursor
+	reaper.BR_ItemAtMouseCursor()
+snippet reaper.BR_MIDI_CCLaneRemove
+	reaper.BR_MIDI_CCLaneRemove(${1:midiEditor}, ${2:laneId})
+snippet reaper.BR_MIDI_CCLaneReplace
+	reaper.BR_MIDI_CCLaneReplace(${1:midiEditor}, ${2:laneId}, ${3:newCC})
+snippet reaper.BR_PositionAtMouseCursor
+	reaper.BR_PositionAtMouseCursor(${1:checkRuler})
+snippet reaper.BR_SetArrangeView
+	reaper.BR_SetArrangeView(${1:proj}, ${2:startTime}, ${3:endTime})
+snippet reaper.BR_SetItemEdges
+	reaper.BR_SetItemEdges(${1:item}, ${2:startTime}, ${3:endTime})
+snippet reaper.BR_SetMediaItemImageResource
+	reaper.BR_SetMediaItemImageResource(${1:item}, ${2:imageIn}, ${3:imageFlags})
+snippet reaper.BR_SetMediaSourceProperties
+	reaper.BR_SetMediaSourceProperties(${1:take}, ${2:section}, ${3:start}, ${4:length}, ${5:fade}, ${6:reverse})
+snippet reaper.BR_SetMediaTrackLayouts
+	reaper.BR_SetMediaTrackLayouts(${1:track}, ${2:mcpLayoutNameIn}, ${3:tcpLayoutNameIn})
+snippet reaper.BR_SetMidiTakeTempoInfo
+	reaper.BR_SetMidiTakeTempoInfo(${1:take}, ${2:ignoreProjTempo}, ${3:bpm}, ${4:num}, ${5:den})
+snippet reaper.BR_SetTakeSourceFromFile
+	reaper.BR_SetTakeSourceFromFile(${1:take}, ${2:filenameIn}, ${3:inProjectData})
+snippet reaper.BR_SetTakeSourceFromFile2
+	reaper.BR_SetTakeSourceFromFile2(${1:take}, ${2:filenameIn}, ${3:inProjectData}, ${4:keepSourceProperties})
+snippet reaper.BR_TakeAtMouseCursor
+	reaper.BR_TakeAtMouseCursor()
+snippet reaper.BR_TrackAtMouseCursor
+	reaper.BR_TrackAtMouseCursor()
+snippet reaper.BR_TrackFX_GetFXModuleName
+	reaper.BR_TrackFX_GetFXModuleName(${1:track}, ${2:fx})
+snippet reaper.BR_Win32_CB_FindString
+	reaper.BR_Win32_CB_FindString(${1:comboBoxHwnd}, ${2:startId}, ${3:string})
+snippet reaper.BR_Win32_CB_FindStringExact
+	reaper.BR_Win32_CB_FindStringExact(${1:comboBoxHwnd}, ${2:startId}, ${3:string})
+snippet reaper.BR_Win32_ClientToScreen
+	reaper.BR_Win32_ClientToScreen(${1:hwnd}, ${2:xIn}, ${3:yIn})
+snippet reaper.BR_Win32_FindWindowEx
+	reaper.BR_Win32_FindWindowEx(${1:hwndParent}, ${2:hwndChildAfter}, ${3:className}, ${4:windowName}, ${5:searchClass}, ${6:searchName})
+snippet reaper.BR_Win32_GET_X_LPARAM
+	reaper.BR_Win32_GET_X_LPARAM(${1:lParam})
+snippet reaper.BR_Win32_GET_Y_LPARAM
+	reaper.BR_Win32_GET_Y_LPARAM(${1:lParam})
+snippet reaper.BR_Win32_GetConstant
+	reaper.BR_Win32_GetConstant(${1:constantName})
+snippet reaper.BR_Win32_GetCursorPos
+	reaper.BR_Win32_GetCursorPos()
+snippet reaper.BR_Win32_GetFocus
+	reaper.BR_Win32_GetFocus()
+snippet reaper.BR_Win32_GetForegroundWindow
+	reaper.BR_Win32_GetForegroundWindow()
+snippet reaper.BR_Win32_GetMainHwnd
+	reaper.BR_Win32_GetMainHwnd()
+snippet reaper.BR_Win32_GetMixerHwnd
+	reaper.BR_Win32_GetMixerHwnd()
+snippet reaper.BR_Win32_GetMonitorRectFromRect
+	reaper.BR_Win32_GetMonitorRectFromRect(${1:workingAreaOnly}, ${2:leftIn}, ${3:topIn}, ${4:rightIn}, ${5:bottomIn})
+snippet reaper.BR_Win32_GetParent
+	reaper.BR_Win32_GetParent(${1:hwnd})
+snippet reaper.BR_Win32_GetPrivateProfileString
+	reaper.BR_Win32_GetPrivateProfileString(${1:sectionName}, ${2:keyName}, ${3:defaultString}, ${4:filePath})
+snippet reaper.BR_Win32_GetWindow
+	reaper.BR_Win32_GetWindow(${1:hwnd}, ${2:cmd})
+snippet reaper.BR_Win32_GetWindowLong
+	reaper.BR_Win32_GetWindowLong(${1:hwnd}, ${2:index})
+snippet reaper.BR_Win32_GetWindowRect
+	reaper.BR_Win32_GetWindowRect(${1:hwnd})
+snippet reaper.BR_Win32_GetWindowText
+	reaper.BR_Win32_GetWindowText(${1:hwnd})
+snippet reaper.BR_Win32_HIBYTE
+	reaper.BR_Win32_HIBYTE(${1:value})
+snippet reaper.BR_Win32_HIWORD
+	reaper.BR_Win32_HIWORD(${1:value})
+snippet reaper.BR_Win32_HwndToString
+	reaper.BR_Win32_HwndToString(${1:hwnd})
+snippet reaper.BR_Win32_IsWindow
+	reaper.BR_Win32_IsWindow(${1:hwnd})
+snippet reaper.BR_Win32_IsWindowVisible
+	reaper.BR_Win32_IsWindowVisible(${1:hwnd})
+snippet reaper.BR_Win32_LOBYTE
+	reaper.BR_Win32_LOBYTE(${1:value})
+snippet reaper.BR_Win32_LOWORD
+	reaper.BR_Win32_LOWORD(${1:value})
+snippet reaper.BR_Win32_MAKELONG
+	reaper.BR_Win32_MAKELONG(${1:low}, ${2:high})
+snippet reaper.BR_Win32_MAKELPARAM
+	reaper.BR_Win32_MAKELPARAM(${1:low}, ${2:high})
+snippet reaper.BR_Win32_MAKELRESULT
+	reaper.BR_Win32_MAKELRESULT(${1:low}, ${2:high})
+snippet reaper.BR_Win32_MAKEWORD
+	reaper.BR_Win32_MAKEWORD(${1:low}, ${2:high})
+snippet reaper.BR_Win32_MAKEWPARAM
+	reaper.BR_Win32_MAKEWPARAM(${1:low}, ${2:high})
+snippet reaper.BR_Win32_MIDIEditor_GetActive
+	reaper.BR_Win32_MIDIEditor_GetActive()
+snippet reaper.BR_Win32_ScreenToClient
+	reaper.BR_Win32_ScreenToClient(${1:hwnd}, ${2:xIn}, ${3:yIn})
+snippet reaper.BR_Win32_SendMessage
+	reaper.BR_Win32_SendMessage(${1:hwnd}, ${2:msg}, ${3:lParam}, ${4:wParam})
+snippet reaper.BR_Win32_SetFocus
+	reaper.BR_Win32_SetFocus(${1:hwnd})
+snippet reaper.BR_Win32_SetForegroundWindow
+	reaper.BR_Win32_SetForegroundWindow(${1:hwnd})
+snippet reaper.BR_Win32_SetWindowLong
+	reaper.BR_Win32_SetWindowLong(${1:hwnd}, ${2:index}, ${3:newLong})
+snippet reaper.BR_Win32_SetWindowPos
+	reaper.BR_Win32_SetWindowPos(${1:hwnd}, ${2:hwndInsertAfter}, ${3:x}, ${4:y}, ${5:width}, ${6:height}, ${7:flags})
+snippet reaper.BR_Win32_ShellExecute
+	reaper.BR_Win32_ShellExecute(${1:operation}, ${2:file}, ${3:parameters}, ${4:directory}, ${5:showFlags})
+snippet reaper.BR_Win32_ShowWindow
+	reaper.BR_Win32_ShowWindow(${1:hwnd}, ${2:cmdShow})
+snippet reaper.BR_Win32_StringToHwnd
+	reaper.BR_Win32_StringToHwnd(${1:string})
+snippet reaper.BR_Win32_WindowFromPoint
+	reaper.BR_Win32_WindowFromPoint(${1:x}, ${2:y})
+snippet reaper.BR_Win32_WritePrivateProfileString
+	reaper.BR_Win32_WritePrivateProfileString(${1:sectionName}, ${2:keyName}, ${3:value}, ${4:filePath})
+snippet reaper.BypassFxAllTracks
+	reaper.BypassFxAllTracks(${1:bypass})
+snippet reaper.CalculateNormalization
+	reaper.CalculateNormalization(${1:source}, ${2:normalizeTo}, ${3:normalizeTarget}, ${4:normalizeStart}, ${5:normalizeEnd})
+snippet reaper.CF_EnumerateActions
+	reaper.CF_EnumerateActions(${1:section}, ${2:index})
+snippet reaper.CF_EnumMediaSourceCues
+	reaper.CF_EnumMediaSourceCues(${1:src}, ${2:index})
+snippet reaper.CF_EnumSelectedFX
+	reaper.CF_EnumSelectedFX(${1:hwnd}, ${2:index})
+snippet reaper.CF_ExportMediaSource
+	reaper.CF_ExportMediaSource(${1:src}, ${2:fn})
+snippet reaper.CF_GetClipboard
+	reaper.CF_GetClipboard()
+snippet reaper.CF_GetClipboardBig
+	reaper.CF_GetClipboardBig(${1:output})
+snippet reaper.CF_GetCommandText
+	reaper.CF_GetCommandText(${1:section}, ${2:command})
+snippet reaper.CF_GetFocusedFXChain
+	reaper.CF_GetFocusedFXChain()
+snippet reaper.CF_GetMediaSourceBitDepth
+	reaper.CF_GetMediaSourceBitDepth(${1:src})
+snippet reaper.CF_GetMediaSourceBitRate
+	reaper.CF_GetMediaSourceBitRate(${1:src})
+snippet reaper.CF_GetMediaSourceMetadata
+	reaper.CF_GetMediaSourceMetadata(${1:src}, ${2:name}, ${3:out})
+snippet reaper.CF_GetMediaSourceOnline
+	reaper.CF_GetMediaSourceOnline(${1:src})
+snippet reaper.CF_GetMediaSourceRPP
+	reaper.CF_GetMediaSourceRPP(${1:src})
+snippet reaper.CF_GetSWSVersion
+	reaper.CF_GetSWSVersion()
+snippet reaper.CF_GetTakeFXChain
+	reaper.CF_GetTakeFXChain(${1:take})
+snippet reaper.CF_GetTrackFXChain
+	reaper.CF_GetTrackFXChain(${1:track})
+snippet reaper.CF_GetTrackFXChainEx
+	reaper.CF_GetTrackFXChainEx(${1:project}, ${2:track}, ${3:wantInputChain})
+snippet reaper.CF_LocateInExplorer
+	reaper.CF_LocateInExplorer(${1:file})
+snippet reaper.CF_SelectTrackFX
+	reaper.CF_SelectTrackFX(${1:track}, ${2:index})
+snippet reaper.CF_SetClipboard
+	reaper.CF_SetClipboard(${1:str})
+snippet reaper.CF_SetMediaSourceOnline
+	reaper.CF_SetMediaSourceOnline(${1:src}, ${2:set})
+snippet reaper.CF_ShellExecute
+	reaper.CF_ShellExecute(${1:file})
+snippet gfx.circle
+	gfx.circle(${1:x}, ${2:y}, ${3:r}, ${4:fill}, ${5:antialias})
+snippet clear
+	clear(${1:value}, ${2:offset}, ${3:size})
+snippet reaper.ClearAllRecArmed
+	reaper.ClearAllRecArmed()
+snippet reaper.ClearConsole
+	reaper.ClearConsole()
+snippet reaper.ClearPeakCache
+	reaper.ClearPeakCache()
+snippet gfx.clienttoscreen
+	gfx.clienttoscreen(${1:x}, ${2:y})
+snippet reaper.ColorFromNative
+	reaper.ColorFromNative(${1:col})
+snippet reaper.ColorToNative
+	reaper.ColorToNative(${1:r}, ${2:g}, ${3:b})
+snippet convolve
+	convolve(${1:src}, ${2:srcoffs}, ${3:size}, ${4:destoffs})
+snippet copy
+	copy(${1:src}, ${2:srcoffs}, ${3:size}, ${4:destoffs})
+snippet reaper.CountAutomationItems
+	reaper.CountAutomationItems(${1:env})
+snippet reaper.CountEnvelopePoints
+	reaper.CountEnvelopePoints(${1:envelope})
+snippet reaper.CountEnvelopePointsEx
+	reaper.CountEnvelopePointsEx(${1:envelope}, ${2:autoitem_idx})
+snippet reaper.CountMediaItems
+	reaper.CountMediaItems(${1:proj})
+snippet reaper.CountProjectMarkers
+	reaper.CountProjectMarkers(${1:proj})
+snippet reaper.CountSelectedMediaItems
+	reaper.CountSelectedMediaItems(${1:proj})
+snippet reaper.CountSelectedTracks
+	reaper.CountSelectedTracks(${1:proj})
+snippet reaper.CountSelectedTracks2
+	reaper.CountSelectedTracks2(${1:proj}, ${2:wantmaster})
+snippet reaper.CountTakeEnvelopes
+	reaper.CountTakeEnvelopes(${1:take})
+snippet reaper.CountTakes
+	reaper.CountTakes(${1:item})
+snippet reaper.CountTCPFXParms
+	reaper.CountTCPFXParms(${1:project}, ${2:track})
+snippet reaper.CountTempoTimeSigMarkers
+	reaper.CountTempoTimeSigMarkers(${1:proj})
+snippet reaper.CountTrackEnvelopes
+	reaper.CountTrackEnvelopes(${1:track})
+snippet reaper.CountTrackMediaItems
+	reaper.CountTrackMediaItems(${1:track})
+snippet reaper.CountTracks
+	reaper.CountTracks(${1:proj})
+snippet reaper.CreateNewMIDIItemInProj
+	reaper.CreateNewMIDIItemInProj(${1:track}, ${2:starttime}, ${3:endtime}, ${4:qnIn})
+snippet reaper.CreateTakeAudioAccessor
+	reaper.CreateTakeAudioAccessor(${1:take})
+snippet reaper.CreateTrackAudioAccessor
+	reaper.CreateTrackAudioAccessor(${1:track})
+snippet reaper.CreateTrackSend
+	reaper.CreateTrackSend(${1:tr}, ${2:desttrIn})
+snippet reaper.CSurf_FlushUndo
+	reaper.CSurf_FlushUndo(${1:force})
+snippet reaper.CSurf_GetTouchState
+	reaper.CSurf_GetTouchState(${1:trackid}, ${2:isPan})
+snippet reaper.CSurf_GoEnd
+	reaper.CSurf_GoEnd()
+snippet reaper.CSurf_GoStart
+	reaper.CSurf_GoStart()
+snippet reaper.CSurf_NumTracks
+	reaper.CSurf_NumTracks(${1:mcpView})
+snippet reaper.CSurf_OnArrow
+	reaper.CSurf_OnArrow(${1:whichdir}, ${2:wantzoom})
+snippet reaper.CSurf_OnFwd
+	reaper.CSurf_OnFwd(${1:seekplay})
+snippet reaper.CSurf_OnFXChange
+	reaper.CSurf_OnFXChange(${1:trackid}, ${2:en})
+snippet reaper.CSurf_OnInputMonitorChange
+	reaper.CSurf_OnInputMonitorChange(${1:trackid}, ${2:monitor})
+snippet reaper.CSurf_OnInputMonitorChangeEx
+	reaper.CSurf_OnInputMonitorChangeEx(${1:trackid}, ${2:monitor}, ${3:allowgang})
+snippet reaper.CSurf_OnMuteChange
+	reaper.CSurf_OnMuteChange(${1:trackid}, ${2:mute})
+snippet reaper.CSurf_OnMuteChangeEx
+	reaper.CSurf_OnMuteChangeEx(${1:trackid}, ${2:mute}, ${3:allowgang})
+snippet reaper.CSurf_OnPanChange
+	reaper.CSurf_OnPanChange(${1:trackid}, ${2:pan}, ${3:relative})
+snippet reaper.CSurf_OnPanChangeEx
+	reaper.CSurf_OnPanChangeEx(${1:trackid}, ${2:pan}, ${3:relative}, ${4:allowGang})
+snippet reaper.CSurf_OnPause
+	reaper.CSurf_OnPause()
+snippet reaper.CSurf_OnPlay
+	reaper.CSurf_OnPlay()
+snippet reaper.CSurf_OnPlayRateChange
+	reaper.CSurf_OnPlayRateChange(${1:playrate})
+snippet reaper.CSurf_OnRecArmChange
+	reaper.CSurf_OnRecArmChange(${1:trackid}, ${2:recarm})
+snippet reaper.CSurf_OnRecArmChangeEx
+	reaper.CSurf_OnRecArmChangeEx(${1:trackid}, ${2:recarm}, ${3:allowgang})
+snippet reaper.CSurf_OnRecord
+	reaper.CSurf_OnRecord()
+snippet reaper.CSurf_OnRecvPanChange
+	reaper.CSurf_OnRecvPanChange(${1:trackid}, ${2:recv_index}, ${3:pan}, ${4:relative})
+snippet reaper.CSurf_OnRecvVolumeChange
+	reaper.CSurf_OnRecvVolumeChange(${1:trackid}, ${2:recv_index}, ${3:volume}, ${4:relative})
+snippet reaper.CSurf_OnRew
+	reaper.CSurf_OnRew(${1:seekplay})
+snippet reaper.CSurf_OnRewFwd
+	reaper.CSurf_OnRewFwd(${1:seekplay}, ${2:dir})
+snippet reaper.CSurf_OnScroll
+	reaper.CSurf_OnScroll(${1:xdir}, ${2:ydir})
+snippet reaper.CSurf_OnSelectedChange
+	reaper.CSurf_OnSelectedChange(${1:trackid}, ${2:selected})
+snippet reaper.CSurf_OnSendPanChange
+	reaper.CSurf_OnSendPanChange(${1:trackid}, ${2:send_index}, ${3:pan}, ${4:relative})
+snippet reaper.CSurf_OnSendVolumeChange
+	reaper.CSurf_OnSendVolumeChange(${1:trackid}, ${2:send_index}, ${3:volume}, ${4:relative})
+snippet reaper.CSurf_OnSoloChange
+	reaper.CSurf_OnSoloChange(${1:trackid}, ${2:solo})
+snippet reaper.CSurf_OnSoloChangeEx
+	reaper.CSurf_OnSoloChangeEx(${1:trackid}, ${2:solo}, ${3:allowgang})
+snippet reaper.CSurf_OnStop
+	reaper.CSurf_OnStop()
+snippet reaper.CSurf_OnTempoChange
+	reaper.CSurf_OnTempoChange(${1:bpm})
+snippet reaper.CSurf_OnTrackSelection
+	reaper.CSurf_OnTrackSelection(${1:trackid})
+snippet reaper.CSurf_OnVolumeChange
+	reaper.CSurf_OnVolumeChange(${1:trackid}, ${2:volume}, ${3:relative})
+snippet reaper.CSurf_OnVolumeChangeEx
+	reaper.CSurf_OnVolumeChangeEx(${1:trackid}, ${2:volume}, ${3:relative}, ${4:allowGang})
+snippet reaper.CSurf_OnWidthChange
+	reaper.CSurf_OnWidthChange(${1:trackid}, ${2:width}, ${3:relative})
+snippet reaper.CSurf_OnWidthChangeEx
+	reaper.CSurf_OnWidthChangeEx(${1:trackid}, ${2:width}, ${3:relative}, ${4:allowGang})
+snippet reaper.CSurf_OnZoom
+	reaper.CSurf_OnZoom(${1:xdir}, ${2:ydir})
+snippet reaper.CSurf_ResetAllCachedVolPanStates
+	reaper.CSurf_ResetAllCachedVolPanStates()
+snippet reaper.CSurf_ScrubAmt
+	reaper.CSurf_ScrubAmt(${1:amt})
+snippet reaper.CSurf_SetAutoMode
+	reaper.CSurf_SetAutoMode(${1:mode}, ${2:ignoresurf})
+snippet reaper.CSurf_SetPlayState
+	reaper.CSurf_SetPlayState(${1:play}, ${2:pause}, ${3:rec}, ${4:ignoresurf})
+snippet reaper.CSurf_SetRepeatState
+	reaper.CSurf_SetRepeatState(${1:rep}, ${2:ignoresurf})
+snippet reaper.CSurf_SetSurfaceMute
+	reaper.CSurf_SetSurfaceMute(${1:trackid}, ${2:mute}, ${3:ignoresurf})
+snippet reaper.CSurf_SetSurfacePan
+	reaper.CSurf_SetSurfacePan(${1:trackid}, ${2:pan}, ${3:ignoresurf})
+snippet reaper.CSurf_SetSurfaceRecArm
+	reaper.CSurf_SetSurfaceRecArm(${1:trackid}, ${2:recarm}, ${3:ignoresurf})
+snippet reaper.CSurf_SetSurfaceSelected
+	reaper.CSurf_SetSurfaceSelected(${1:trackid}, ${2:selected}, ${3:ignoresurf})
+snippet reaper.CSurf_SetSurfaceSolo
+	reaper.CSurf_SetSurfaceSolo(${1:trackid}, ${2:solo}, ${3:ignoresurf})
+snippet reaper.CSurf_SetSurfaceVolume
+	reaper.CSurf_SetSurfaceVolume(${1:trackid}, ${2:volume}, ${3:ignoresurf})
+snippet reaper.CSurf_SetTrackListChange
+	reaper.CSurf_SetTrackListChange()
+snippet reaper.CSurf_TrackFromID
+	reaper.CSurf_TrackFromID(${1:idx}, ${2:mcpView})
+snippet reaper.CSurf_TrackToID
+	reaper.CSurf_TrackToID(${1:track}, ${2:mcpView})
+snippet reaper.DB2SLIDER
+	reaper.DB2SLIDER(${1:x})
+snippet reaper.defer
+	reaper.defer(${1:function})
+snippet reaper.DeleteEnvelopePointEx
+	reaper.DeleteEnvelopePointEx(${1:envelope}, ${2:autoitem_idx}, ${3:ptidx})
+snippet reaper.DeleteEnvelopePointRange
+	reaper.DeleteEnvelopePointRange(${1:envelope}, ${2:time_start}, ${3:time_end})
+snippet reaper.DeleteEnvelopePointRangeEx
+	reaper.DeleteEnvelopePointRangeEx(${1:envelope}, ${2:autoitem_idx}, ${3:time_start}, ${4:time_end})
+snippet reaper.DeleteExtState
+	reaper.DeleteExtState(${1:section}, ${2:key}, ${3:persist})
+snippet reaper.DeleteProjectMarker
+	reaper.DeleteProjectMarker(${1:proj}, ${2:markrgnindexnumber}, ${3:isrgn})
+snippet reaper.DeleteProjectMarkerByIndex
+	reaper.DeleteProjectMarkerByIndex(${1:proj}, ${2:markrgnidx})
+snippet reaper.DeleteTakeMarker
+	reaper.DeleteTakeMarker(${1:take}, ${2:idx})
+snippet reaper.DeleteTakeStretchMarkers
+	reaper.DeleteTakeStretchMarkers(${1:take}, ${2:idx}, ${3:countIn})
+snippet reaper.DeleteTempoTimeSigMarker
+	reaper.DeleteTempoTimeSigMarker(${1:project}, ${2:markerindex})
+snippet reaper.DeleteTrack
+	reaper.DeleteTrack(${1:tr})
+snippet reaper.DeleteTrackMediaItem
+	reaper.DeleteTrackMediaItem(${1:tr}, ${2:it})
+snippet gfx.deltablit
+	gfx.deltablit(${1:srcimg}, ${2:srcs}, ${3:srct}, ${4:srcw}, ${5:srch}, ${6:destx}, ${7:desty}, ${8:destw}, ${9:desth}, ${10:dsdx}, ${11:dtdx}, ${12:dsdy}, ${13:dtdy}, ${14:dsdxdy}, ${15:dtdxdy}, ${16:usecliprect=1})
+snippet reaper.DestroyAudioAccessor
+	reaper.DestroyAudioAccessor(${1:accessor})
+snippet gfx.dock
+	gfx.dock(${1:v}, ${2:wx}, ${3:wy}, ${4:ww}, ${5:wh})
+snippet reaper.Dock_UpdateDockID
+	reaper.Dock_UpdateDockID(${1:ident_str}, ${2:whichDock})
+snippet reaper.DockGetPosition
+	reaper.DockGetPosition(${1:whichDock})
+snippet reaper.DockIsChildOfDock
+	reaper.DockIsChildOfDock(${1:hwnd})
+snippet reaper.DockWindowActivate
+	reaper.DockWindowActivate(${1:hwnd})
+snippet reaper.DockWindowAdd
+	reaper.DockWindowAdd(${1:hwnd}, ${2:name}, ${3:pos}, ${4:allowShow})
+snippet reaper.DockWindowAddEx
+	reaper.DockWindowAddEx(${1:hwnd}, ${2:name}, ${3:identstr}, ${4:allowShow})
+snippet reaper.DockWindowRefresh
+	reaper.DockWindowRefresh()
+snippet reaper.DockWindowRefreshForHWND
+	reaper.DockWindowRefreshForHWND(${1:hwnd})
+snippet reaper.DockWindowRemove
+	reaper.DockWindowRemove(${1:hwnd})
+snippet gfx.drawchar
+	gfx.drawchar(${1:char})
+snippet gfx.drawnumber
+	gfx.drawnumber(${1:n}, ${2:ndigits})
+snippet gfx.drawstr
+	gfx.drawstr(${1:str}, ${2:flags}, ${3:right}, ${4:bottom})
+snippet reaper.EditTempoTimeSigMarker
+	reaper.EditTempoTimeSigMarker(${1:project}, ${2:markerindex})
+snippet reaper.EnsureNotCompletelyOffscreen
+	reaper.EnsureNotCompletelyOffscreen(${1:integerr.left}, ${2:integerr.top}, ${3:integerr.right}, ${4:integerr.bot})
+snippet reaper.EnumerateFiles
+	reaper.EnumerateFiles(${1:path}, ${2:fileindex})
+snippet reaper.EnumerateSubdirectories
+	reaper.EnumerateSubdirectories(${1:path}, ${2:subdirindex})
+snippet reaper.EnumPitchShiftModes
+	reaper.EnumPitchShiftModes(${1:mode})
+snippet reaper.EnumPitchShiftSubModes
+	reaper.EnumPitchShiftSubModes(${1:mode}, ${2:submode})
+snippet reaper.EnumProjectMarkers
+	reaper.EnumProjectMarkers(${1:idx})
+snippet reaper.EnumProjectMarkers2
+	reaper.EnumProjectMarkers2(${1:proj}, ${2:idx})
+snippet reaper.EnumProjectMarkers3
+	reaper.EnumProjectMarkers3(${1:proj}, ${2:idx})
+snippet reaper.EnumProjects
+	reaper.EnumProjects(${1:idx})
+snippet reaper.EnumProjExtState
+	reaper.EnumProjExtState(${1:proj}, ${2:extname}, ${3:idx})
+snippet reaper.EnumRegionRenderMatrix
+	reaper.EnumRegionRenderMatrix(${1:proj}, ${2:regionindex}, ${3:rendertrack})
+snippet reaper.EnumTrackMIDIProgramNames
+	reaper.EnumTrackMIDIProgramNames(${1:track}, ${2:programNumber}, ${3:programName})
+snippet reaper.EnumTrackMIDIProgramNamesEx
+	reaper.EnumTrackMIDIProgramNamesEx(${1:proj}, ${2:track}, ${3:programNumber}, ${4:programName})
+snippet reaper.Envelope_Evaluate
+	reaper.Envelope_Evaluate(${1:envelope}, ${2:time}, ${3:samplerate}, ${4:samplesRequested})
+snippet reaper.Envelope_FormatValue
+	reaper.Envelope_FormatValue(${1:env}, ${2:value})
+snippet reaper.Envelope_GetParentTake
+	reaper.Envelope_GetParentTake(${1:env})
+snippet reaper.Envelope_GetParentTrack
+	reaper.Envelope_GetParentTrack(${1:env})
+snippet reaper.Envelope_SortPoints
+	reaper.Envelope_SortPoints(${1:envelope})
+snippet reaper.Envelope_SortPointsEx
+	reaper.Envelope_SortPointsEx(${1:envelope}, ${2:autoitem_idx})
+snippet reaper.ExecProcess
+	reaper.ExecProcess(${1:cmdline}, ${2:timeoutmsec})
+snippet fft
+	fft(${1:size}, ${2:permute}, ${3:offset})
+snippet fft_real
+	fft_real(${1:size}, ${2:permute}, ${3:offset})
+snippet reaper.file_exists
+	reaper.file_exists(${1:path})
+snippet reaper.FindTempoTimeSigMarker
+	reaper.FindTempoTimeSigMarker(${1:project}, ${2:time})
+snippet reaper.FNG_AddMidiNote
+	reaper.FNG_AddMidiNote(${1:midiTake})
+snippet reaper.FNG_AllocMidiTake
+	reaper.FNG_AllocMidiTake(${1:take})
+snippet reaper.FNG_CountMidiNotes
+	reaper.FNG_CountMidiNotes(${1:midiTake})
+snippet reaper.FNG_FreeMidiTake
+	reaper.FNG_FreeMidiTake(${1:midiTake})
+snippet reaper.FNG_GetMidiNote
+	reaper.FNG_GetMidiNote(${1:midiTake}, ${2:index})
+snippet reaper.FNG_GetMidiNoteIntProperty
+	reaper.FNG_GetMidiNoteIntProperty(${1:midiNote}, ${2:property})
+snippet reaper.FNG_SetMidiNoteIntProperty
+	reaper.FNG_SetMidiNoteIntProperty(${1:midiNote}, ${2:property}, ${3:value})
+snippet reaper.format_timestr
+	reaper.format_timestr(${1:tpos}, ${2:buf})
+snippet reaper.format_timestr_len
+	reaper.format_timestr_len(${1:tpos}, ${2:buf}, ${3:offset}, ${4:modeoverride})
+snippet reaper.format_timestr_pos
+	reaper.format_timestr_pos(${1:tpos}, ${2:buf}, ${3:modeoverride})
+snippet reaper.genGuid
+	reaper.genGuid(${1:gGUID})
+snippet reaper.get_action_context
+	reaper.get_action_context()
+snippet get_alloc
+	get_alloc()
+snippet reaper.get_config_var_string
+	reaper.get_config_var_string(${1:name})
+snippet reaper.get_ini_file
+	reaper.get_ini_file()
+snippet reaper.GetActiveTake
+	reaper.GetActiveTake(${1:item})
+snippet reaper.GetAllProjectPlayStates
+	reaper.GetAllProjectPlayStates(${1:ignoreProject})
+snippet reaper.GetAppVersion
+	reaper.GetAppVersion()
+snippet reaper.GetArmedCommand
+	reaper.GetArmedCommand()
+snippet reaper.GetAudioAccessorEndTime
+	reaper.GetAudioAccessorEndTime(${1:accessor})
+snippet reaper.GetAudioAccessorHash
+	reaper.GetAudioAccessorHash(${1:accessor}, ${2:hashNeed128})
+snippet reaper.GetAudioAccessorSamples
+	reaper.GetAudioAccessorSamples(${1:accessor}, ${2:samplerate}, ${3:numchannels}, ${4:starttime_sec}, ${5:numsamplesperchannel}, ${6:samplebuffer})
+snippet reaper.GetAudioAccessorStartTime
+	reaper.GetAudioAccessorStartTime(${1:accessor})
+snippet reaper.GetAudioDeviceInfo
+	reaper.GetAudioDeviceInfo(${1:attribute})
+snippet gfx.getchar
+	gfx.getchar(${1:char})
+snippet reaper.GetConfigWantsDock
+	reaper.GetConfigWantsDock(${1:ident_str})
+snippet reaper.GetCurrentProjectInLoadSave
+	reaper.GetCurrentProjectInLoadSave()
+snippet reaper.GetCursorContext
+	reaper.GetCursorContext()
+snippet reaper.GetCursorContext2
+	reaper.GetCursorContext2(${1:want_last_valid})
+snippet reaper.GetCursorPosition
+	reaper.GetCursorPosition()
+snippet reaper.GetCursorPositionEx
+	reaper.GetCursorPositionEx(${1:proj})
+snippet reaper.GetDisplayedMediaItemColor
+	reaper.GetDisplayedMediaItemColor(${1:item})
+snippet reaper.GetDisplayedMediaItemColor2
+	reaper.GetDisplayedMediaItemColor2(${1:item}, ${2:take})
+snippet gfx.getdropfile
+	gfx.getdropfile(${1:idx})
+snippet reaper.GetEnvelopeInfo_Value
+	reaper.GetEnvelopeInfo_Value(${1:env}, ${2:parmname})
+snippet reaper.GetEnvelopeName
+	reaper.GetEnvelopeName(${1:env})
+snippet reaper.GetEnvelopePoint
+	reaper.GetEnvelopePoint(${1:envelope}, ${2:ptidx})
+snippet reaper.GetEnvelopePointByTime
+	reaper.GetEnvelopePointByTime(${1:envelope}, ${2:time})
+snippet reaper.GetEnvelopePointByTimeEx
+	reaper.GetEnvelopePointByTimeEx(${1:envelope}, ${2:autoitem_idx}, ${3:time})
+snippet reaper.GetEnvelopePointEx
+	reaper.GetEnvelopePointEx(${1:envelope}, ${2:autoitem_idx}, ${3:ptidx})
+snippet reaper.GetEnvelopeScalingMode
+	reaper.GetEnvelopeScalingMode(${1:env})
+snippet reaper.GetEnvelopeStateChunk
+	reaper.GetEnvelopeStateChunk(${1:env}, ${2:str}, ${3:isundo})
+snippet reaper.GetExePath
+	reaper.GetExePath()
+snippet reaper.GetExtState
+	reaper.GetExtState(${1:section}, ${2:key})
+snippet reaper.GetFocusedFX
+	reaper.GetFocusedFX()
+snippet reaper.GetFocusedFX2
+	reaper.GetFocusedFX2()
+snippet gfx.getfont
+	gfx.getfont()
+snippet reaper.GetFreeDiskSpaceForRecordPath
+	reaper.GetFreeDiskSpaceForRecordPath(${1:proj}, ${2:pathidx})
+snippet reaper.GetFXEnvelope
+	reaper.GetFXEnvelope(${1:track}, ${2:fxindex}, ${3:parameterindex}, ${4:create})
+snippet reaper.GetGlobalAutomationOverride
+	reaper.GetGlobalAutomationOverride()
+snippet reaper.GetHZoomLevel
+	reaper.GetHZoomLevel()
+snippet gfx.getimgdim
+	gfx.getimgdim(${1:handle})
+snippet reaper.GetInputChannelName
+	reaper.GetInputChannelName(${1:channelIndex})
+snippet reaper.GetInputOutputLatency
+	reaper.GetInputOutputLatency()
+snippet reaper.GetItemEditingTime2
+	reaper.GetItemEditingTime2()
+snippet reaper.GetItemFromPoint
+	reaper.GetItemFromPoint(${1:screen_x}, ${2:screen_y}, ${3:allow_locked})
+snippet reaper.GetItemProjectContext
+	reaper.GetItemProjectContext(${1:item})
+snippet reaper.GetItemStateChunk
+	reaper.GetItemStateChunk(${1:item}, ${2:str}, ${3:isundo})
+snippet reaper.GetLastColorThemeFile
+	reaper.GetLastColorThemeFile()
+snippet reaper.GetLastMarkerAndCurRegion
+	reaper.GetLastMarkerAndCurRegion(${1:proj}, ${2:time})
+snippet reaper.GetLastTouchedFX
+	reaper.GetLastTouchedFX()
+snippet reaper.GetLastTouchedTrack
+	reaper.GetLastTouchedTrack()
+snippet reaper.GetMainHwnd
+	reaper.GetMainHwnd()
+snippet reaper.GetMasterMuteSoloFlags
+	reaper.GetMasterMuteSoloFlags()
+snippet reaper.GetMasterTrack
+	reaper.GetMasterTrack(${1:proj})
+snippet reaper.GetMasterTrackVisibility
+	reaper.GetMasterTrackVisibility()
+snippet reaper.GetMaxMidiInputs
+	reaper.GetMaxMidiInputs()
+snippet reaper.GetMaxMidiOutputs
+	reaper.GetMaxMidiOutputs()
+snippet reaper.GetMediaFileMetadata
+	reaper.GetMediaFileMetadata(${1:mediaSource}, ${2:identifier})
+snippet reaper.GetMediaItem
+	reaper.GetMediaItem(${1:proj}, ${2:itemidx})
+snippet reaper.GetMediaItem_Track
+	reaper.GetMediaItem_Track(${1:item})
+snippet reaper.GetMediaItemInfo_Value
+	reaper.GetMediaItemInfo_Value(${1:item}, ${2:parmname})
+snippet reaper.GetMediaItemNumTakes
+	reaper.GetMediaItemNumTakes(${1:item})
+snippet reaper.GetMediaItemTake
+	reaper.GetMediaItemTake(${1:item}, ${2:tk})
+snippet reaper.GetMediaItemTake_Item
+	reaper.GetMediaItemTake_Item(${1:take})
+snippet reaper.GetMediaItemTake_Peaks
+	reaper.GetMediaItemTake_Peaks(${1:take}, ${2:peakrate}, ${3:starttime}, ${4:numchannels}, ${5:numsamplesperchannel}, ${6:want_extra_type}, ${7:buf})
+snippet reaper.GetMediaItemTake_Source
+	reaper.GetMediaItemTake_Source(${1:take})
+snippet reaper.GetMediaItemTake_Track
+	reaper.GetMediaItemTake_Track(${1:take})
+snippet reaper.GetMediaItemTakeByGUID
+	reaper.GetMediaItemTakeByGUID(${1:project}, ${2:guidGUID})
+snippet reaper.GetMediaItemTakeInfo_Value
+	reaper.GetMediaItemTakeInfo_Value(${1:take}, ${2:parmname})
+snippet reaper.GetMediaItemTrack
+	reaper.GetMediaItemTrack(${1:item})
+snippet reaper.GetMediaSourceFileName
+	reaper.GetMediaSourceFileName(${1:source})
+snippet reaper.GetMediaSourceLength
+	reaper.GetMediaSourceLength(${1:source})
+snippet reaper.GetMediaSourceNumChannels
+	reaper.GetMediaSourceNumChannels(${1:source})
+snippet reaper.GetMediaSourceParent
+	reaper.GetMediaSourceParent(${1:src})
+snippet reaper.GetMediaSourceSampleRate
+	reaper.GetMediaSourceSampleRate(${1:source})
+snippet reaper.GetMediaSourceType
+	reaper.GetMediaSourceType(${1:source})
+snippet reaper.GetMediaTrackInfo_Value
+	reaper.GetMediaTrackInfo_Value(${1:tr}, ${2:parmname})
+snippet reaper.GetMIDIInputName
+	reaper.GetMIDIInputName(${1:dev}, ${2:nameout})
+snippet reaper.GetMIDIOutputName
+	reaper.GetMIDIOutputName(${1:dev}, ${2:nameout})
+snippet reaper.GetMixerScroll
+	reaper.GetMixerScroll()
+snippet reaper.GetMouseModifier
+	reaper.GetMouseModifier(${1:context}, ${2:modifier_flag})
+snippet reaper.GetMousePosition
+	reaper.GetMousePosition()
+snippet reaper.GetNumAudioInputs
+	reaper.GetNumAudioInputs()
+snippet reaper.GetNumAudioOutputs
+	reaper.GetNumAudioOutputs()
+snippet reaper.GetNumMIDIInputs
+	reaper.GetNumMIDIInputs()
+snippet reaper.GetNumMIDIOutputs
+	reaper.GetNumMIDIOutputs()
+snippet reaper.GetNumTakeMarkers
+	reaper.GetNumTakeMarkers(${1:take})
+snippet reaper.GetNumTracks
+	reaper.GetNumTracks()
+snippet reaper.GetOS
+	reaper.GetOS()
+snippet reaper.GetOutputChannelName
+	reaper.GetOutputChannelName(${1:channelIndex})
+snippet reaper.GetOutputLatency
+	reaper.GetOutputLatency()
+snippet reaper.GetParentTrack
+	reaper.GetParentTrack(${1:track})
+snippet reaper.GetPeakFileName
+	reaper.GetPeakFileName(${1:fn})
+snippet reaper.GetPeakFileNameEx
+	reaper.GetPeakFileNameEx(${1:fn}, ${2:buf}, ${3:forWrite})
+snippet reaper.GetPeakFileNameEx2
+	reaper.GetPeakFileNameEx2(${1:fn}, ${2:buf}, ${3:forWrite}, ${4:peaksfileextension})
+snippet gfx.getpixel
+	gfx.getpixel()
+snippet reaper.GetPlayPosition
+	reaper.GetPlayPosition()
+snippet reaper.GetPlayPosition2
+	reaper.GetPlayPosition2()
+snippet reaper.GetPlayPosition2Ex
+	reaper.GetPlayPosition2Ex(${1:proj})
+snippet reaper.GetPlayPositionEx
+	reaper.GetPlayPositionEx(${1:proj})
+snippet reaper.GetPlayState
+	reaper.GetPlayState()
+snippet reaper.GetPlayStateEx
+	reaper.GetPlayStateEx(${1:proj})
+snippet reaper.GetProjectLength
+	reaper.GetProjectLength(${1:proj})
+snippet reaper.GetProjectName
+	reaper.GetProjectName(${1:proj})
+snippet reaper.GetProjectPath
+	reaper.GetProjectPath()
+snippet reaper.GetProjectPathEx
+	reaper.GetProjectPathEx(${1:proj})
+snippet reaper.GetProjectStateChangeCount
+	reaper.GetProjectStateChangeCount(${1:proj})
+snippet reaper.GetProjectTimeOffset
+	reaper.GetProjectTimeOffset(${1:proj}, ${2:rndframe})
+snippet reaper.GetProjectTimeSignature
+	reaper.GetProjectTimeSignature()
+snippet reaper.GetProjectTimeSignature2
+	reaper.GetProjectTimeSignature2(${1:proj})
+snippet reaper.GetProjExtState
+	reaper.GetProjExtState(${1:proj}, ${2:extname}, ${3:key})
+snippet reaper.GetResourcePath
+	reaper.GetResourcePath()
+snippet reaper.GetSelectedEnvelope
+	reaper.GetSelectedEnvelope(${1:proj})
+snippet reaper.GetSelectedMediaItem
+	reaper.GetSelectedMediaItem(${1:proj}, ${2:selitem})
+snippet reaper.GetSelectedTrack
+	reaper.GetSelectedTrack(${1:proj}, ${2:seltrackidx})
+snippet reaper.GetSelectedTrack2
+	reaper.GetSelectedTrack2(${1:proj}, ${2:seltrackidx}, ${3:wantmaster})
+snippet reaper.GetSelectedTrackEnvelope
+	reaper.GetSelectedTrackEnvelope(${1:proj})
+snippet reaper.GetSet_ArrangeView2
+	reaper.GetSet_ArrangeView2(${1:proj}, ${2:isSet}, ${3:screen_x_start}, ${4:screen_x_end}, ${5:start_time}, ${6:end_time})
+snippet reaper.GetSet_LoopTimeRange
+	reaper.GetSet_LoopTimeRange(${1:isSet}, ${2:isLoop}, ${3:start}, ${4:end}, ${5:allowautoseek})
+snippet reaper.GetSet_LoopTimeRange2
+	reaper.GetSet_LoopTimeRange2(${1:proj}, ${2:isSet}, ${3:isLoop}, ${4:start}, ${5:end}, ${6:allowautoseek})
+snippet reaper.GetSetAutomationItemInfo
+	reaper.GetSetAutomationItemInfo(${1:env}, ${2:autoitem_idx}, ${3:desc}, ${4:value}, ${5:is_set})
+snippet reaper.GetSetAutomationItemInfo_String
+	reaper.GetSetAutomationItemInfo_String(${1:env}, ${2:autoitem_idx}, ${3:desc}, ${4:valuestrNeedBig}, ${5:is_set})
+snippet reaper.GetSetEnvelopeInfo_String
+	reaper.GetSetEnvelopeInfo_String(${1:env}, ${2:parmname}, ${3:stringNeedBig}, ${4:setNewValue})
+snippet reaper.GetSetEnvelopeState
+	reaper.GetSetEnvelopeState(${1:env}, ${2:str})
+snippet reaper.GetSetEnvelopeState2
+	reaper.GetSetEnvelopeState2(${1:env}, ${2:str}, ${3:isundo})
+snippet reaper.GetSetItemState
+	reaper.GetSetItemState(${1:item}, ${2:str})
+snippet reaper.GetSetItemState2
+	reaper.GetSetItemState2(${1:item}, ${2:str}, ${3:isundo})
+snippet reaper.GetSetMediaItemInfo_String
+	reaper.GetSetMediaItemInfo_String(${1:item}, ${2:parmname}, ${3:stringNeedBig}, ${4:setNewValue})
+snippet reaper.GetSetMediaItemTakeInfo_String
+	reaper.GetSetMediaItemTakeInfo_String(${1:tk}, ${2:parmname}, ${3:stringNeedBig}, ${4:setNewValue})
+snippet reaper.GetSetMediaTrackInfo_String
+	reaper.GetSetMediaTrackInfo_String(${1:tr}, ${2:parmname}, ${3:stringNeedBig}, ${4:setNewValue})
+snippet reaper.GetSetProjectAuthor
+	reaper.GetSetProjectAuthor(${1:proj}, ${2:set}, ${3:author})
+snippet reaper.GetSetProjectGrid
+	reaper.GetSetProjectGrid(${1:project}, ${2:set}, ${3:division}, ${4:swingmode}, ${5:swingamt})
+snippet reaper.GetSetProjectInfo
+	reaper.GetSetProjectInfo(${1:project}, ${2:desc}, ${3:value}, ${4:is_set})
+snippet reaper.GetSetProjectInfo_String
+	reaper.GetSetProjectInfo_String(${1:project}, ${2:desc}, ${3:valuestrNeedBig}, ${4:is_set})
+snippet reaper.GetSetProjectNotes
+	reaper.GetSetProjectNotes(${1:proj}, ${2:set}, ${3:notes})
+snippet reaper.GetSetRepeat
+	reaper.GetSetRepeat(${1:val})
+snippet reaper.GetSetRepeatEx
+	reaper.GetSetRepeatEx(${1:proj}, ${2:val})
+snippet reaper.GetSetTrackGroupMembership
+	reaper.GetSetTrackGroupMembership(${1:tr}, ${2:groupname}, ${3:setmask}, ${4:setvalue})
+snippet reaper.GetSetTrackGroupMembershipHigh
+	reaper.GetSetTrackGroupMembershipHigh(${1:tr}, ${2:groupname}, ${3:setmask}, ${4:setvalue})
+snippet reaper.GetSetTrackSendInfo_String
+	reaper.GetSetTrackSendInfo_String(${1:tr}, ${2:category}, ${3:sendidx}, ${4:parmname}, ${5:stringNeedBig}, ${6:setNewValue})
+snippet reaper.GetSetTrackState
+	reaper.GetSetTrackState(${1:track}, ${2:str})
+snippet reaper.GetSetTrackState2
+	reaper.GetSetTrackState2(${1:track}, ${2:str}, ${3:isundo})
+snippet reaper.GetSubProjectFromSource
+	reaper.GetSubProjectFromSource(${1:src})
+snippet reaper.GetTake
+	reaper.GetTake(${1:item}, ${2:takeidx})
+snippet reaper.GetTakeEnvelope
+	reaper.GetTakeEnvelope(${1:take}, ${2:envidx})
+snippet reaper.GetTakeEnvelopeByName
+	reaper.GetTakeEnvelopeByName(${1:take}, ${2:envname})
+snippet reaper.GetTakeMarker
+	reaper.GetTakeMarker(${1:take}, ${2:idx})
+snippet reaper.GetTakeName
+	reaper.GetTakeName(${1:take})
+snippet reaper.GetTakeNumStretchMarkers
+	reaper.GetTakeNumStretchMarkers(${1:take})
+snippet reaper.GetTakeStretchMarker
+	reaper.GetTakeStretchMarker(${1:take}, ${2:idx})
+snippet reaper.GetTakeStretchMarkerSlope
+	reaper.GetTakeStretchMarkerSlope(${1:take}, ${2:idx})
+snippet reaper.GetTCPFXParm
+	reaper.GetTCPFXParm(${1:project}, ${2:track}, ${3:index})
+snippet reaper.GetTempoMatchPlayRate
+	reaper.GetTempoMatchPlayRate(${1:source}, ${2:srcscale}, ${3:position}, ${4:mult})
+snippet reaper.GetTempoTimeSigMarker
+	reaper.GetTempoTimeSigMarker(${1:proj}, ${2:ptidx})
+snippet reaper.GetThemeColor
+	reaper.GetThemeColor(${1:ini_key}, ${2:flags})
+snippet reaper.GetThingFromPoint
+	reaper.GetThingFromPoint(${1:screen_x}, ${2:screen_y})
+snippet reaper.GetToggleCommandState
+	reaper.GetToggleCommandState(${1:command_id})
+snippet reaper.GetToggleCommandStateEx
+	reaper.GetToggleCommandStateEx(${1:section_id}, ${2:command_id})
+snippet reaper.GetTooltipWindow
+	reaper.GetTooltipWindow()
+snippet reaper.GetTrack
+	reaper.GetTrack(${1:proj}, ${2:trackidx})
+snippet reaper.GetTrackAutomationMode
+	reaper.GetTrackAutomationMode(${1:tr})
+snippet reaper.GetTrackColor
+	reaper.GetTrackColor(${1:track})
+snippet reaper.GetTrackDepth
+	reaper.GetTrackDepth(${1:track})
+snippet reaper.GetTrackEnvelope
+	reaper.GetTrackEnvelope(${1:track}, ${2:envidx})
+snippet reaper.GetTrackEnvelopeByChunkName
+	reaper.GetTrackEnvelopeByChunkName(${1:tr}, ${2:cfgchunkname_or_guid})
+snippet reaper.GetTrackEnvelopeByName
+	reaper.GetTrackEnvelopeByName(${1:track}, ${2:envname})
+snippet reaper.GetTrackFromPoint
+	reaper.GetTrackFromPoint(${1:screen_x}, ${2:screen_y})
+snippet reaper.GetTrackGUID
+	reaper.GetTrackGUID(${1:tr})
+snippet reaper.GetTrackMediaItem
+	reaper.GetTrackMediaItem(${1:tr}, ${2:itemidx})
+snippet reaper.GetTrackMIDILyrics
+	reaper.GetTrackMIDILyrics(${1:track}, ${2:flag})
+snippet reaper.GetTrackMIDINoteName
+	reaper.GetTrackMIDINoteName(${1:track}, ${2:pitch}, ${3:chan})
+snippet reaper.GetTrackMIDINoteNameEx
+	reaper.GetTrackMIDINoteNameEx(${1:proj}, ${2:track}, ${3:pitch}, ${4:chan})
+snippet reaper.GetTrackMIDINoteRange
+	reaper.GetTrackMIDINoteRange(${1:proj}, ${2:track})
+snippet reaper.GetTrackName
+	reaper.GetTrackName(${1:track})
+snippet reaper.GetTrackNumMediaItems
+	reaper.GetTrackNumMediaItems(${1:tr})
+snippet reaper.GetTrackNumSends
+	reaper.GetTrackNumSends(${1:tr}, ${2:category})
+snippet reaper.GetTrackReceiveName
+	reaper.GetTrackReceiveName(${1:track}, ${2:recv_index})
+snippet reaper.GetTrackReceiveUIMute
+	reaper.GetTrackReceiveUIMute(${1:track}, ${2:recv_index})
+snippet reaper.GetTrackReceiveUIVolPan
+	reaper.GetTrackReceiveUIVolPan(${1:track}, ${2:recv_index})
+snippet reaper.GetTrackSendInfo_Value
+	reaper.GetTrackSendInfo_Value(${1:tr}, ${2:category}, ${3:sendidx}, ${4:parmname})
+snippet reaper.GetTrackSendName
+	reaper.GetTrackSendName(${1:track}, ${2:send_index})
+snippet reaper.GetTrackSendUIMute
+	reaper.GetTrackSendUIMute(${1:track}, ${2:send_index})
+snippet reaper.GetTrackSendUIVolPan
+	reaper.GetTrackSendUIVolPan(${1:track}, ${2:send_index})
+snippet reaper.GetTrackState
+	reaper.GetTrackState(${1:track})
+snippet reaper.GetTrackStateChunk
+	reaper.GetTrackStateChunk(${1:track}, ${2:str}, ${3:isundo})
+snippet reaper.GetTrackUIMute
+	reaper.GetTrackUIMute(${1:track})
+snippet reaper.GetTrackUIPan
+	reaper.GetTrackUIPan(${1:track})
+snippet reaper.GetTrackUIVolPan
+	reaper.GetTrackUIVolPan(${1:track})
+snippet reaper.GetUnderrunTime
+	reaper.GetUnderrunTime()
+snippet reaper.GetUserFileNameForRead
+	reaper.GetUserFileNameForRead(${1:filenameNeed4096}, ${2:title}, ${3:defext})
+snippet reaper.GetUserInputs
+	reaper.GetUserInputs(${1:title}, ${2:num_inputs}, ${3:captions_csv}, ${4:retvals_csv})
+snippet reaper.gmem_attach
+	reaper.gmem_attach(${1:sharedMemoryName})
+snippet reaper.gmem_read
+	reaper.gmem_read(${1:index})
+snippet reaper.gmem_write
+	reaper.gmem_write(${1:index}, ${2:value})
+snippet reaper.GoToMarker
+	reaper.GoToMarker(${1:proj}, ${2:marker_index}, ${3:use_timeline_order})
+snippet reaper.GoToRegion
+	reaper.GoToRegion(${1:proj}, ${2:region_index}, ${3:use_timeline_order})
+snippet reaper.GR_SelectColor
+	reaper.GR_SelectColor(${1:hwnd})
+snippet gfx.gradrect
+	gfx.gradrect(${1:x}, ${2:y}, ${3:w}, ${4:h}, ${5:r}, ${6:g}, ${7:b}, ${8:a}, ${9:drdx}, ${10:dgdx}, ${11:dbdx}, ${12:dadx}, ${13:drdy}, ${14:dgdy}, ${15:dbdy}, ${16:dady})
+snippet reaper.GSC_mainwnd
+	reaper.GSC_mainwnd(${1:t})
+snippet reaper.guidToString
+	reaper.guidToString(${1:gGUID}, ${2:destNeed64})
+snippet reaper.HasExtState
+	reaper.HasExtState(${1:section}, ${2:key})
+snippet reaper.HasTrackMIDIPrograms
+	reaper.HasTrackMIDIPrograms(${1:track})
+snippet reaper.HasTrackMIDIProgramsEx
+	reaper.HasTrackMIDIProgramsEx(${1:proj}, ${2:track})
+snippet reaper.Help_Set
+	reaper.Help_Set(${1:helpstring}, ${2:is_temporary_help})
+snippet ifft
+	ifft(${1:size}, ${2:permute}, ${3:offset})
+snippet ifft_real
+	ifft_real(${1:size}, ${2:permute}, ${3:offset})
+snippet reaper.image_resolve_fn
+	reaper.image_resolve_fn(${1:in}, ${2:out})
+snippet reaper.ImGui_AcceptDragDropPayload
+	reaper.ImGui_AcceptDragDropPayload(${1:ctx}, ${2:type}, ${3:payload}, ${4:flagsIn})
+snippet reaper.ImGui_AcceptDragDropPayloadFiles
+	reaper.ImGui_AcceptDragDropPayloadFiles(${1:ctx}, ${2:count}, ${3:flagsIn})
+snippet reaper.ImGui_AcceptDragDropPayloadRGB
+	reaper.ImGui_AcceptDragDropPayloadRGB(${1:ctx}, ${2:rgb}, ${3:flagsIn})
+snippet reaper.ImGui_AcceptDragDropPayloadRGBA
+	reaper.ImGui_AcceptDragDropPayloadRGBA(${1:ctx}, ${2:rgba}, ${3:flagsIn})
+snippet reaper.ImGui_AlignTextToFramePadding
+	reaper.ImGui_AlignTextToFramePadding(${1:ctx})
+snippet reaper.ImGui_ArrowButton
+	reaper.ImGui_ArrowButton(${1:ctx}, ${2:str_id}, ${3:dir})
+snippet reaper.ImGui_AttachFont
+	reaper.ImGui_AttachFont(${1:font})
+snippet reaper.ImGui_Begin
+	reaper.ImGui_Begin(${1:ctx}, ${2:name}, ${3:p_open}, ${4:flagsIn})
+snippet reaper.ImGui_BeginChild
+	reaper.ImGui_BeginChild(${1:ctx}, ${2:str_id}, ${3:size_wIn}, ${4:size_hIn}, ${5:borderIn}, ${6:flagsIn})
+snippet reaper.ImGui_BeginChildFrame
+	reaper.ImGui_BeginChildFrame(${1:ctx}, ${2:str_id}, ${3:size_w}, ${4:size_h}, ${5:flagsIn})
+snippet reaper.ImGui_BeginCombo
+	reaper.ImGui_BeginCombo(${1:ctx}, ${2:label}, ${3:preview_value}, ${4:flagsIn})
+snippet reaper.ImGui_BeginDisabled
+	reaper.ImGui_BeginDisabled(${1:ctx}, ${2:disabledIn})
+snippet reaper.ImGui_BeginDragDropSource
+	reaper.ImGui_BeginDragDropSource(${1:ctx}, ${2:flagsIn})
+snippet reaper.ImGui_BeginDragDropTarget
+	reaper.ImGui_BeginDragDropTarget(${1:ctx})
+snippet reaper.ImGui_BeginGroup
+	reaper.ImGui_BeginGroup(${1:ctx})
+snippet reaper.ImGui_BeginListBox
+	reaper.ImGui_BeginListBox(${1:ctx}, ${2:label}, ${3:size_wIn}, ${4:size_hIn})
+snippet reaper.ImGui_BeginMenu
+	reaper.ImGui_BeginMenu(${1:ctx}, ${2:label}, ${3:enabledIn})
+snippet reaper.ImGui_BeginMenuBar
+	reaper.ImGui_BeginMenuBar(${1:ctx})
+snippet reaper.ImGui_BeginPopup
+	reaper.ImGui_BeginPopup(${1:ctx}, ${2:str_id}, ${3:flagsIn})
+snippet reaper.ImGui_BeginPopupContextItem
+	reaper.ImGui_BeginPopupContextItem(${1:ctx}, ${2:str_idIn}, ${3:popup_flagsIn})
+snippet reaper.ImGui_BeginPopupContextWindow
+	reaper.ImGui_BeginPopupContextWindow(${1:ctx}, ${2:str_idIn}, ${3:popup_flagsIn})
+snippet reaper.ImGui_BeginPopupModal
+	reaper.ImGui_BeginPopupModal(${1:ctx}, ${2:name}, ${3:p_open}, ${4:flagsIn})
+snippet reaper.ImGui_BeginTabBar
+	reaper.ImGui_BeginTabBar(${1:ctx}, ${2:str_id}, ${3:flagsIn})
+snippet reaper.ImGui_BeginTabItem
+	reaper.ImGui_BeginTabItem(${1:ctx}, ${2:label}, ${3:p_open}, ${4:flagsIn})
+snippet reaper.ImGui_BeginTable
+	reaper.ImGui_BeginTable(${1:ctx}, ${2:str_id}, ${3:column}, ${4:flagsIn}, ${5:outer_size_wIn}, ${6:outer_size_hIn}, ${7:inner_widthIn})
+snippet reaper.ImGui_BeginTooltip
+	reaper.ImGui_BeginTooltip(${1:ctx})
+snippet reaper.ImGui_Bullet
+	reaper.ImGui_Bullet(${1:ctx})
+snippet reaper.ImGui_BulletText
+	reaper.ImGui_BulletText(${1:ctx}, ${2:text})
+snippet reaper.ImGui_Button
+	reaper.ImGui_Button(${1:ctx}, ${2:label}, ${3:size_wIn}, ${4:size_hIn})
+snippet reaper.ImGui_ButtonFlags_MouseButtonLeft
+	reaper.ImGui_ButtonFlags_MouseButtonLeft()
+snippet reaper.ImGui_ButtonFlags_MouseButtonMiddle
+	reaper.ImGui_ButtonFlags_MouseButtonMiddle()
+snippet reaper.ImGui_ButtonFlags_MouseButtonRight
+	reaper.ImGui_ButtonFlags_MouseButtonRight()
+snippet reaper.ImGui_ButtonFlags_None
+	reaper.ImGui_ButtonFlags_None()
+snippet reaper.ImGui_CalcItemWidth
+	reaper.ImGui_CalcItemWidth(${1:ctx})
+snippet reaper.ImGui_CalcTextSize
+	reaper.ImGui_CalcTextSize(${1:ctx}, ${2:text}, ${3:w}, ${4:h}, ${5:hide_text_after_double_hashIn}, ${6:wrap_widthIn})
+snippet reaper.ImGui_CaptureKeyboardFromApp
+	reaper.ImGui_CaptureKeyboardFromApp(${1:ctx}, ${2:want_capture_keyboard_valueIn})
+snippet reaper.ImGui_Checkbox
+	reaper.ImGui_Checkbox(${1:ctx}, ${2:label}, ${3:v})
+snippet reaper.ImGui_CheckboxFlags
+	reaper.ImGui_CheckboxFlags(${1:ctx}, ${2:label}, ${3:flags}, ${4:flags_value})
+snippet reaper.ImGui_CloseCurrentPopup
+	reaper.ImGui_CloseCurrentPopup(${1:ctx})
+snippet reaper.ImGui_Col_Border
+	reaper.ImGui_Col_Border()
+snippet reaper.ImGui_Col_BorderShadow
+	reaper.ImGui_Col_BorderShadow()
+snippet reaper.ImGui_Col_Button
+	reaper.ImGui_Col_Button()
+snippet reaper.ImGui_Col_ButtonActive
+	reaper.ImGui_Col_ButtonActive()
+snippet reaper.ImGui_Col_ButtonHovered
+	reaper.ImGui_Col_ButtonHovered()
+snippet reaper.ImGui_Col_CheckMark
+	reaper.ImGui_Col_CheckMark()
+snippet reaper.ImGui_Col_ChildBg
+	reaper.ImGui_Col_ChildBg()
+snippet reaper.ImGui_Col_DockingEmptyBg
+	reaper.ImGui_Col_DockingEmptyBg()
+snippet reaper.ImGui_Col_DockingPreview
+	reaper.ImGui_Col_DockingPreview()
+snippet reaper.ImGui_Col_DragDropTarget
+	reaper.ImGui_Col_DragDropTarget()
+snippet reaper.ImGui_Col_FrameBg
+	reaper.ImGui_Col_FrameBg()
+snippet reaper.ImGui_Col_FrameBgActive
+	reaper.ImGui_Col_FrameBgActive()
+snippet reaper.ImGui_Col_FrameBgHovered
+	reaper.ImGui_Col_FrameBgHovered()
+snippet reaper.ImGui_Col_Header
+	reaper.ImGui_Col_Header()
+snippet reaper.ImGui_Col_HeaderActive
+	reaper.ImGui_Col_HeaderActive()
+snippet reaper.ImGui_Col_HeaderHovered
+	reaper.ImGui_Col_HeaderHovered()
+snippet reaper.ImGui_Col_MenuBarBg
+	reaper.ImGui_Col_MenuBarBg()
+snippet reaper.ImGui_Col_ModalWindowDimBg
+	reaper.ImGui_Col_ModalWindowDimBg()
+snippet reaper.ImGui_Col_NavHighlight
+	reaper.ImGui_Col_NavHighlight()
+snippet reaper.ImGui_Col_NavWindowingDimBg
+	reaper.ImGui_Col_NavWindowingDimBg()
+snippet reaper.ImGui_Col_NavWindowingHighlight
+	reaper.ImGui_Col_NavWindowingHighlight()
+snippet reaper.ImGui_Col_PlotHistogram
+	reaper.ImGui_Col_PlotHistogram()
+snippet reaper.ImGui_Col_PlotHistogramHovered
+	reaper.ImGui_Col_PlotHistogramHovered()
+snippet reaper.ImGui_Col_PlotLines
+	reaper.ImGui_Col_PlotLines()
+snippet reaper.ImGui_Col_PlotLinesHovered
+	reaper.ImGui_Col_PlotLinesHovered()
+snippet reaper.ImGui_Col_PopupBg
+	reaper.ImGui_Col_PopupBg()
+snippet reaper.ImGui_Col_ResizeGrip
+	reaper.ImGui_Col_ResizeGrip()
+snippet reaper.ImGui_Col_ResizeGripActive
+	reaper.ImGui_Col_ResizeGripActive()
+snippet reaper.ImGui_Col_ResizeGripHovered
+	reaper.ImGui_Col_ResizeGripHovered()
+snippet reaper.ImGui_Col_ScrollbarBg
+	reaper.ImGui_Col_ScrollbarBg()
+snippet reaper.ImGui_Col_ScrollbarGrab
+	reaper.ImGui_Col_ScrollbarGrab()
+snippet reaper.ImGui_Col_ScrollbarGrabActive
+	reaper.ImGui_Col_ScrollbarGrabActive()
+snippet reaper.ImGui_Col_ScrollbarGrabHovered
+	reaper.ImGui_Col_ScrollbarGrabHovered()
+snippet reaper.ImGui_Col_Separator
+	reaper.ImGui_Col_Separator()
+snippet reaper.ImGui_Col_SeparatorActive
+	reaper.ImGui_Col_SeparatorActive()
+snippet reaper.ImGui_Col_SeparatorHovered
+	reaper.ImGui_Col_SeparatorHovered()
+snippet reaper.ImGui_Col_SliderGrab
+	reaper.ImGui_Col_SliderGrab()
+snippet reaper.ImGui_Col_SliderGrabActive
+	reaper.ImGui_Col_SliderGrabActive()
+snippet reaper.ImGui_Col_Tab
+	reaper.ImGui_Col_Tab()
+snippet reaper.ImGui_Col_TabActive
+	reaper.ImGui_Col_TabActive()
+snippet reaper.ImGui_Col_TabHovered
+	reaper.ImGui_Col_TabHovered()
+snippet reaper.ImGui_Col_TableBorderLight
+	reaper.ImGui_Col_TableBorderLight()
+snippet reaper.ImGui_Col_TableBorderStrong
+	reaper.ImGui_Col_TableBorderStrong()
+snippet reaper.ImGui_Col_TableHeaderBg
+	reaper.ImGui_Col_TableHeaderBg()
+snippet reaper.ImGui_Col_TableRowBg
+	reaper.ImGui_Col_TableRowBg()
+snippet reaper.ImGui_Col_TableRowBgAlt
+	reaper.ImGui_Col_TableRowBgAlt()
+snippet reaper.ImGui_Col_TabUnfocused
+	reaper.ImGui_Col_TabUnfocused()
+snippet reaper.ImGui_Col_TabUnfocusedActive
+	reaper.ImGui_Col_TabUnfocusedActive()
+snippet reaper.ImGui_Col_Text
+	reaper.ImGui_Col_Text()
+snippet reaper.ImGui_Col_TextDisabled
+	reaper.ImGui_Col_TextDisabled()
+snippet reaper.ImGui_Col_TextSelectedBg
+	reaper.ImGui_Col_TextSelectedBg()
+snippet reaper.ImGui_Col_TitleBg
+	reaper.ImGui_Col_TitleBg()
+snippet reaper.ImGui_Col_TitleBgActive
+	reaper.ImGui_Col_TitleBgActive()
+snippet reaper.ImGui_Col_TitleBgCollapsed
+	reaper.ImGui_Col_TitleBgCollapsed()
+snippet reaper.ImGui_Col_WindowBg
+	reaper.ImGui_Col_WindowBg()
+snippet reaper.ImGui_CollapsingHeader
+	reaper.ImGui_CollapsingHeader(${1:ctx}, ${2:label}, ${3:p_visible}, ${4:flagsIn})
+snippet reaper.ImGui_ColorButton
+	reaper.ImGui_ColorButton(${1:ctx}, ${2:desc_id}, ${3:col_rgba}, ${4:flagsIn}, ${5:size_wIn}, ${6:size_hIn})
+snippet reaper.ImGui_ColorConvertHSVtoRGB
+	reaper.ImGui_ColorConvertHSVtoRGB(${1:h}, ${2:s}, ${3:v}, ${4:alphaIn})
+snippet reaper.ImGui_ColorConvertNative
+	reaper.ImGui_ColorConvertNative(${1:rgb})
+snippet reaper.ImGui_ColorConvertRGBtoHSV
+	reaper.ImGui_ColorConvertRGBtoHSV(${1:r}, ${2:g}, ${3:b}, ${4:alphaIn})
+snippet reaper.ImGui_ColorEdit3
+	reaper.ImGui_ColorEdit3(${1:ctx}, ${2:label}, ${3:col_rgb}, ${4:flagsIn})
+snippet reaper.ImGui_ColorEdit4
+	reaper.ImGui_ColorEdit4(${1:ctx}, ${2:label}, ${3:col_rgba}, ${4:flagsIn})
+snippet reaper.ImGui_ColorEditFlags_AlphaBar
+	reaper.ImGui_ColorEditFlags_AlphaBar()
+snippet reaper.ImGui_ColorEditFlags_AlphaPreview
+	reaper.ImGui_ColorEditFlags_AlphaPreview()
+snippet reaper.ImGui_ColorEditFlags_AlphaPreviewHalf
+	reaper.ImGui_ColorEditFlags_AlphaPreviewHalf()
+snippet reaper.ImGui_ColorEditFlags_DisplayHex
+	reaper.ImGui_ColorEditFlags_DisplayHex()
+snippet reaper.ImGui_ColorEditFlags_DisplayHSV
+	reaper.ImGui_ColorEditFlags_DisplayHSV()
+snippet reaper.ImGui_ColorEditFlags_DisplayRGB
+	reaper.ImGui_ColorEditFlags_DisplayRGB()
+snippet reaper.ImGui_ColorEditFlags_Float
+	reaper.ImGui_ColorEditFlags_Float()
+snippet reaper.ImGui_ColorEditFlags_InputHSV
+	reaper.ImGui_ColorEditFlags_InputHSV()
+snippet reaper.ImGui_ColorEditFlags_InputRGB
+	reaper.ImGui_ColorEditFlags_InputRGB()
+snippet reaper.ImGui_ColorEditFlags_NoAlpha
+	reaper.ImGui_ColorEditFlags_NoAlpha()
+snippet reaper.ImGui_ColorEditFlags_NoBorder
+	reaper.ImGui_ColorEditFlags_NoBorder()
+snippet reaper.ImGui_ColorEditFlags_NoDragDrop
+	reaper.ImGui_ColorEditFlags_NoDragDrop()
+snippet reaper.ImGui_ColorEditFlags_NoInputs
+	reaper.ImGui_ColorEditFlags_NoInputs()
+snippet reaper.ImGui_ColorEditFlags_NoLabel
+	reaper.ImGui_ColorEditFlags_NoLabel()
+snippet reaper.ImGui_ColorEditFlags_None
+	reaper.ImGui_ColorEditFlags_None()
+snippet reaper.ImGui_ColorEditFlags_NoOptions
+	reaper.ImGui_ColorEditFlags_NoOptions()
+snippet reaper.ImGui_ColorEditFlags_NoPicker
+	reaper.ImGui_ColorEditFlags_NoPicker()
+snippet reaper.ImGui_ColorEditFlags_NoSidePreview
+	reaper.ImGui_ColorEditFlags_NoSidePreview()
+snippet reaper.ImGui_ColorEditFlags_NoSmallPreview
+	reaper.ImGui_ColorEditFlags_NoSmallPreview()
+snippet reaper.ImGui_ColorEditFlags_NoTooltip
+	reaper.ImGui_ColorEditFlags_NoTooltip()
+snippet reaper.ImGui_ColorEditFlags_PickerHueBar
+	reaper.ImGui_ColorEditFlags_PickerHueBar()
+snippet reaper.ImGui_ColorEditFlags_PickerHueWheel
+	reaper.ImGui_ColorEditFlags_PickerHueWheel()
+snippet reaper.ImGui_ColorEditFlags_Uint8
+	reaper.ImGui_ColorEditFlags_Uint8()
+snippet reaper.ImGui_ColorPicker3
+	reaper.ImGui_ColorPicker3(${1:ctx}, ${2:label}, ${3:col_rgb}, ${4:flagsIn})
+snippet reaper.ImGui_ColorPicker4
+	reaper.ImGui_ColorPicker4(${1:ctx}, ${2:label}, ${3:col_rgba}, ${4:flagsIn}, ${5:ref_colIn})
+snippet reaper.ImGui_Combo
+	reaper.ImGui_Combo(${1:ctx}, ${2:label}, ${3:current_item}, ${4:items}, ${5:popup_max_height_in_itemsIn})
+snippet reaper.ImGui_ComboFlags_HeightLarge
+	reaper.ImGui_ComboFlags_HeightLarge()
+snippet reaper.ImGui_ComboFlags_HeightLargest
+	reaper.ImGui_ComboFlags_HeightLargest()
+snippet reaper.ImGui_ComboFlags_HeightRegular
+	reaper.ImGui_ComboFlags_HeightRegular()
+snippet reaper.ImGui_ComboFlags_HeightSmall
+	reaper.ImGui_ComboFlags_HeightSmall()
+snippet reaper.ImGui_ComboFlags_NoArrowButton
+	reaper.ImGui_ComboFlags_NoArrowButton()
+snippet reaper.ImGui_ComboFlags_None
+	reaper.ImGui_ComboFlags_None()
+snippet reaper.ImGui_ComboFlags_NoPreview
+	reaper.ImGui_ComboFlags_NoPreview()
+snippet reaper.ImGui_ComboFlags_PopupAlignLeft
+	reaper.ImGui_ComboFlags_PopupAlignLeft()
+snippet reaper.ImGui_Cond_Always
+	reaper.ImGui_Cond_Always()
+snippet reaper.ImGui_Cond_Appearing
+	reaper.ImGui_Cond_Appearing()
+snippet reaper.ImGui_Cond_FirstUseEver
+	reaper.ImGui_Cond_FirstUseEver()
+snippet reaper.ImGui_Cond_Once
+	reaper.ImGui_Cond_Once()
+snippet reaper.ImGui_ConfigFlags_DockingEnable
+	reaper.ImGui_ConfigFlags_DockingEnable()
+snippet reaper.ImGui_ConfigFlags_NavEnableKeyboard
+	reaper.ImGui_ConfigFlags_NavEnableKeyboard()
+snippet reaper.ImGui_ConfigFlags_NavEnableSetMousePos
+	reaper.ImGui_ConfigFlags_NavEnableSetMousePos()
+snippet reaper.ImGui_ConfigFlags_NoMouse
+	reaper.ImGui_ConfigFlags_NoMouse()
+snippet reaper.ImGui_ConfigFlags_NoMouseCursorChange
+	reaper.ImGui_ConfigFlags_NoMouseCursorChange()
+snippet reaper.ImGui_ConfigFlags_None
+	reaper.ImGui_ConfigFlags_None()
+snippet reaper.ImGui_ConfigFlags_NoSavedSettings
+	reaper.ImGui_ConfigFlags_NoSavedSettings()
+snippet reaper.ImGui_CreateContext
+	reaper.ImGui_CreateContext(${1:label}, ${2:config_flagsIn})
+snippet reaper.ImGui_CreateFont
+	reaper.ImGui_CreateFont(${1:family_or_file}, ${2:size}, ${3:flagsIn})
+snippet reaper.ImGui_CreateListClipper
+	reaper.ImGui_CreateListClipper(${1:ctx})
+snippet reaper.ImGui_CreateTextFilter
+	reaper.ImGui_CreateTextFilter(${1:default_filterIn})
+snippet reaper.ImGui_DestroyContext
+	reaper.ImGui_DestroyContext(${1:ctx})
+snippet reaper.ImGui_DetachFont
+	reaper.ImGui_DetachFont(${1:font})
+snippet reaper.ImGui_Dir_Down
+	reaper.ImGui_Dir_Down()
+snippet reaper.ImGui_Dir_Left
+	reaper.ImGui_Dir_Left()
+snippet reaper.ImGui_Dir_None
+	reaper.ImGui_Dir_None()
+snippet reaper.ImGui_Dir_Right
+	reaper.ImGui_Dir_Right()
+snippet reaper.ImGui_Dir_Up
+	reaper.ImGui_Dir_Up()
+snippet reaper.ImGui_DragDouble
+	reaper.ImGui_DragDouble(${1:ctx}, ${2:label}, ${3:v}, ${4:v_speedIn}, ${5:v_minIn}, ${6:v_maxIn}, ${7:formatIn}, ${8:flagsIn})
+snippet reaper.ImGui_DragDouble2
+	reaper.ImGui_DragDouble2(${1:ctx}, ${2:label}, ${3:v1}, ${4:v2}, ${5:v_speedIn}, ${6:v_minIn}, ${7:v_maxIn}, ${8:formatIn}, ${9:flagsIn})
+snippet reaper.ImGui_DragDouble3
+	reaper.ImGui_DragDouble3(${1:ctx}, ${2:label}, ${3:v1}, ${4:v2}, ${5:v3}, ${6:v_speedIn}, ${7:v_minIn}, ${8:v_maxIn}, ${9:formatIn}, ${10:flagsIn})
+snippet reaper.ImGui_DragDouble4
+	reaper.ImGui_DragDouble4(${1:ctx}, ${2:label}, ${3:v1}, ${4:v2}, ${5:v3}, ${6:v4}, ${7:v_speedIn}, ${8:v_minIn}, ${9:v_maxIn}, ${10:formatIn}, ${11:flagsIn})
+snippet reaper.ImGui_DragDoubleN
+	reaper.ImGui_DragDoubleN(${1:ctx}, ${2:values}, ${3:speedIn}, ${4:minIn}, ${5:maxIn}, ${6:formatIn}, ${7:flagsIn})
+snippet reaper.ImGui_DragDropFlags_AcceptBeforeDelivery
+	reaper.ImGui_DragDropFlags_AcceptBeforeDelivery()
+snippet reaper.ImGui_DragDropFlags_AcceptNoDrawDefaultRect
+	reaper.ImGui_DragDropFlags_AcceptNoDrawDefaultRect()
+snippet reaper.ImGui_DragDropFlags_AcceptNoPreviewTooltip
+	reaper.ImGui_DragDropFlags_AcceptNoPreviewTooltip()
+snippet reaper.ImGui_DragDropFlags_AcceptPeekOnly
+	reaper.ImGui_DragDropFlags_AcceptPeekOnly()
+snippet reaper.ImGui_DragDropFlags_None
+	reaper.ImGui_DragDropFlags_None()
+snippet reaper.ImGui_DragDropFlags_SourceAllowNullID
+	reaper.ImGui_DragDropFlags_SourceAllowNullID()
+snippet reaper.ImGui_DragDropFlags_SourceAutoExpirePayload
+	reaper.ImGui_DragDropFlags_SourceAutoExpirePayload()
+snippet reaper.ImGui_DragDropFlags_SourceExtern
+	reaper.ImGui_DragDropFlags_SourceExtern()
+snippet reaper.ImGui_DragDropFlags_SourceNoDisableHover
+	reaper.ImGui_DragDropFlags_SourceNoDisableHover()
+snippet reaper.ImGui_DragDropFlags_SourceNoHoldToOpenOthers
+	reaper.ImGui_DragDropFlags_SourceNoHoldToOpenOthers()
+snippet reaper.ImGui_DragDropFlags_SourceNoPreviewTooltip
+	reaper.ImGui_DragDropFlags_SourceNoPreviewTooltip()
+snippet reaper.ImGui_DragFloatRange2
+	reaper.ImGui_DragFloatRange2(${1:ctx}, ${2:label}, ${3:v_current_min}, ${4:v_current_max}, ${5:v_speedIn}, ${6:v_minIn}, ${7:v_maxIn}, ${8:formatIn}, ${9:format_maxIn}, ${10:flagsIn})
+snippet reaper.ImGui_DragInt
+	reaper.ImGui_DragInt(${1:ctx}, ${2:label}, ${3:v}, ${4:v_speedIn}, ${5:v_minIn}, ${6:v_maxIn}, ${7:formatIn}, ${8:flagsIn})
+snippet reaper.ImGui_DragInt2
+	reaper.ImGui_DragInt2(${1:ctx}, ${2:label}, ${3:v1}, ${4:v2}, ${5:v_speedIn}, ${6:v_minIn}, ${7:v_maxIn}, ${8:formatIn}, ${9:flagsIn})
+snippet reaper.ImGui_DragInt3
+	reaper.ImGui_DragInt3(${1:ctx}, ${2:label}, ${3:v1}, ${4:v2}, ${5:v3}, ${6:v_speedIn}, ${7:v_minIn}, ${8:v_maxIn}, ${9:formatIn}, ${10:flagsIn})
+snippet reaper.ImGui_DragInt4
+	reaper.ImGui_DragInt4(${1:ctx}, ${2:label}, ${3:v1}, ${4:v2}, ${5:v3}, ${6:v4}, ${7:v_speedIn}, ${8:v_minIn}, ${9:v_maxIn}, ${10:formatIn}, ${11:flagsIn})
+snippet reaper.ImGui_DragIntRange2
+	reaper.ImGui_DragIntRange2(${1:ctx}, ${2:label}, ${3:v_current_min}, ${4:v_current_max}, ${5:v_speedIn}, ${6:v_minIn}, ${7:v_maxIn}, ${8:formatIn}, ${9:format_maxIn}, ${10:flagsIn})
+snippet reaper.ImGui_DrawFlags_Closed
+	reaper.ImGui_DrawFlags_Closed()
+snippet reaper.ImGui_DrawFlags_None
+	reaper.ImGui_DrawFlags_None()
+snippet reaper.ImGui_DrawFlags_RoundCornersAll
+	reaper.ImGui_DrawFlags_RoundCornersAll()
+snippet reaper.ImGui_DrawFlags_RoundCornersBottom
+	reaper.ImGui_DrawFlags_RoundCornersBottom()
+snippet reaper.ImGui_DrawFlags_RoundCornersBottomLeft
+	reaper.ImGui_DrawFlags_RoundCornersBottomLeft()
+snippet reaper.ImGui_DrawFlags_RoundCornersBottomRight
+	reaper.ImGui_DrawFlags_RoundCornersBottomRight()
+snippet reaper.ImGui_DrawFlags_RoundCornersLeft
+	reaper.ImGui_DrawFlags_RoundCornersLeft()
+snippet reaper.ImGui_DrawFlags_RoundCornersNone
+	reaper.ImGui_DrawFlags_RoundCornersNone()
+snippet reaper.ImGui_DrawFlags_RoundCornersRight
+	reaper.ImGui_DrawFlags_RoundCornersRight()
+snippet reaper.ImGui_DrawFlags_RoundCornersTop
+	reaper.ImGui_DrawFlags_RoundCornersTop()
+snippet reaper.ImGui_DrawFlags_RoundCornersTopLeft
+	reaper.ImGui_DrawFlags_RoundCornersTopLeft()
+snippet reaper.ImGui_DrawFlags_RoundCornersTopRight
+	reaper.ImGui_DrawFlags_RoundCornersTopRight()
+snippet reaper.ImGui_DrawList_AddBezierCubic
+	reaper.ImGui_DrawList_AddBezierCubic(${1:draw_list}, ${2:p1_x}, ${3:p1_y}, ${4:p2_x}, ${5:p2_y}, ${6:p3_x}, ${7:p3_y}, ${8:p4_x}, ${9:p4_y}, ${10:col_rgba}, ${11:thickness}, ${12:num_segmentsIn})
+snippet reaper.ImGui_DrawList_AddBezierQuadratic
+	reaper.ImGui_DrawList_AddBezierQuadratic(${1:draw_list}, ${2:p1_x}, ${3:p1_y}, ${4:p2_x}, ${5:p2_y}, ${6:p3_x}, ${7:p3_y}, ${8:col_rgba}, ${9:thickness}, ${10:num_segmentsIn})
+snippet reaper.ImGui_DrawList_AddCircle
+	reaper.ImGui_DrawList_AddCircle(${1:draw_list}, ${2:center_x}, ${3:center_y}, ${4:radius}, ${5:col_rgba}, ${6:num_segmentsIn}, ${7:thicknessIn})
+snippet reaper.ImGui_DrawList_AddCircleFilled
+	reaper.ImGui_DrawList_AddCircleFilled(${1:draw_list}, ${2:center_x}, ${3:center_y}, ${4:radius}, ${5:col_rgba}, ${6:num_segmentsIn})
+snippet reaper.ImGui_DrawList_AddConvexPolyFilled
+	reaper.ImGui_DrawList_AddConvexPolyFilled(${1:points}, ${2:col_rgba})
+snippet reaper.ImGui_DrawList_AddLine
+	reaper.ImGui_DrawList_AddLine(${1:draw_list}, ${2:p1_x}, ${3:p1_y}, ${4:p2_x}, ${5:p2_y}, ${6:col_rgba}, ${7:thicknessIn})
+snippet reaper.ImGui_DrawList_AddNgon
+	reaper.ImGui_DrawList_AddNgon(${1:draw_list}, ${2:center_x}, ${3:center_y}, ${4:radius}, ${5:col_rgba}, ${6:num_segments}, ${7:thicknessIn})
+snippet reaper.ImGui_DrawList_AddNgonFilled
+	reaper.ImGui_DrawList_AddNgonFilled(${1:draw_list}, ${2:center_x}, ${3:center_y}, ${4:radius}, ${5:col_rgba}, ${6:num_segments})
+snippet reaper.ImGui_DrawList_AddPolyline
+	reaper.ImGui_DrawList_AddPolyline(${1:points}, ${2:col_rgba}, ${3:flags}, ${4:thickness})
+snippet reaper.ImGui_DrawList_AddQuad
+	reaper.ImGui_DrawList_AddQuad(${1:draw_list}, ${2:p1_x}, ${3:p1_y}, ${4:p2_x}, ${5:p2_y}, ${6:p3_x}, ${7:p3_y}, ${8:p4_x}, ${9:p4_y}, ${10:col_rgba}, ${11:thicknessIn})
+snippet reaper.ImGui_DrawList_AddQuadFilled
+	reaper.ImGui_DrawList_AddQuadFilled(${1:draw_list}, ${2:p1_x}, ${3:p1_y}, ${4:p2_x}, ${5:p2_y}, ${6:p3_x}, ${7:p3_y}, ${8:p4_x}, ${9:p4_y}, ${10:col_rgba})
+snippet reaper.ImGui_DrawList_AddRect
+	reaper.ImGui_DrawList_AddRect(${1:draw_list}, ${2:p_min_x}, ${3:p_min_y}, ${4:p_max_x}, ${5:p_max_y}, ${6:col_rgba}, ${7:roundingIn}, ${8:flagsIn}, ${9:thicknessIn})
+snippet reaper.ImGui_DrawList_AddRectFilled
+	reaper.ImGui_DrawList_AddRectFilled(${1:draw_list}, ${2:p_min_x}, ${3:p_min_y}, ${4:p_max_x}, ${5:p_max_y}, ${6:col_rgba}, ${7:roundingIn}, ${8:flagsIn})
+snippet reaper.ImGui_DrawList_AddRectFilledMultiColor
+	reaper.ImGui_DrawList_AddRectFilledMultiColor(${1:draw_list}, ${2:p_min_x}, ${3:p_min_y}, ${4:p_max_x}, ${5:p_max_y}, ${6:col_upr_left}, ${7:col_upr_right}, ${8:col_bot_right}, ${9:col_bot_left})
+snippet reaper.ImGui_DrawList_AddText
+	reaper.ImGui_DrawList_AddText(${1:draw_list}, ${2:x}, ${3:y}, ${4:col_rgba}, ${5:text})
+snippet reaper.ImGui_DrawList_AddTextEx
+	reaper.ImGui_DrawList_AddTextEx(${1:font}, ${2:font_size}, ${3:pos_x}, ${4:pos_y}, ${5:col_rgba}, ${6:text}, ${7:wrap_widthIn}, ${8:cpu_fine_clip_rect_xIn}, ${9:cpu_fine_clip_rect_yIn}, ${10:cpu_fine_clip_rect_wIn}, ${11:cpu_fine_clip_rect_hIn})
+snippet reaper.ImGui_DrawList_AddTriangle
+	reaper.ImGui_DrawList_AddTriangle(${1:draw_list}, ${2:p1_x}, ${3:p1_y}, ${4:p2_x}, ${5:p2_y}, ${6:p3_x}, ${7:p3_y}, ${8:col_rgba}, ${9:thicknessIn})
+snippet reaper.ImGui_DrawList_AddTriangleFilled
+	reaper.ImGui_DrawList_AddTriangleFilled(${1:draw_list}, ${2:p1_x}, ${3:p1_y}, ${4:p2_x}, ${5:p2_y}, ${6:p3_x}, ${7:p3_y}, ${8:col_rgba})
+snippet reaper.ImGui_DrawList_PathArcTo
+	reaper.ImGui_DrawList_PathArcTo(${1:draw_list}, ${2:center_x}, ${3:center_y}, ${4:radius}, ${5:a_min}, ${6:a_max}, ${7:num_segmentsIn})
+snippet reaper.ImGui_DrawList_PathArcToFast
+	reaper.ImGui_DrawList_PathArcToFast(${1:draw_list}, ${2:center_x}, ${3:center_y}, ${4:radius}, ${5:a_min_of_12}, ${6:a_max_of_12})
+snippet reaper.ImGui_DrawList_PathBezierCubicCurveTo
+	reaper.ImGui_DrawList_PathBezierCubicCurveTo(${1:draw_list}, ${2:p2_x}, ${3:p2_y}, ${4:p3_x}, ${5:p3_y}, ${6:p4_x}, ${7:p4_y}, ${8:num_segmentsIn})
+snippet reaper.ImGui_DrawList_PathBezierQuadraticCurveTo
+	reaper.ImGui_DrawList_PathBezierQuadraticCurveTo(${1:draw_list}, ${2:p2_x}, ${3:p2_y}, ${4:p3_x}, ${5:p3_y}, ${6:num_segmentsIn})
+snippet reaper.ImGui_DrawList_PathClear
+	reaper.ImGui_DrawList_PathClear(${1:draw_list})
+snippet reaper.ImGui_DrawList_PathFillConvex
+	reaper.ImGui_DrawList_PathFillConvex(${1:draw_list}, ${2:col_rgba})
+snippet reaper.ImGui_DrawList_PathLineTo
+	reaper.ImGui_DrawList_PathLineTo(${1:draw_list}, ${2:pos_x}, ${3:pos_y})
+snippet reaper.ImGui_DrawList_PathRect
+	reaper.ImGui_DrawList_PathRect(${1:draw_list}, ${2:rect_min_x}, ${3:rect_min_y}, ${4:rect_max_x}, ${5:rect_max_y}, ${6:roundingIn}, ${7:flagsIn})
+snippet reaper.ImGui_DrawList_PathStroke
+	reaper.ImGui_DrawList_PathStroke(${1:draw_list}, ${2:col_rgba}, ${3:flagsIn}, ${4:thicknessIn})
+snippet reaper.ImGui_DrawList_PopClipRect
+	reaper.ImGui_DrawList_PopClipRect(${1:draw_list})
+snippet reaper.ImGui_DrawList_PushClipRect
+	reaper.ImGui_DrawList_PushClipRect(${1:draw_list}, ${2:clip_rect_min_x}, ${3:clip_rect_min_y}, ${4:clip_rect_max_x}, ${5:clip_rect_max_y}, ${6:intersect_with_current_clip_rectIn})
+snippet reaper.ImGui_DrawList_PushClipRectFullScreen
+	reaper.ImGui_DrawList_PushClipRectFullScreen(${1:draw_list})
+snippet reaper.ImGui_Dummy
+	reaper.ImGui_Dummy(${1:ctx}, ${2:size_w}, ${3:size_h})
+snippet reaper.ImGui_End
+	reaper.ImGui_End(${1:ctx})
+snippet reaper.ImGui_EndChild
+	reaper.ImGui_EndChild(${1:ctx})
+snippet reaper.ImGui_EndChildFrame
+	reaper.ImGui_EndChildFrame(${1:ctx})
+snippet reaper.ImGui_EndCombo
+	reaper.ImGui_EndCombo(${1:ctx})
+snippet reaper.ImGui_EndDisabled
+	reaper.ImGui_EndDisabled(${1:ctx})
+snippet reaper.ImGui_EndDragDropSource
+	reaper.ImGui_EndDragDropSource(${1:ctx})
+snippet reaper.ImGui_EndDragDropTarget
+	reaper.ImGui_EndDragDropTarget(${1:ctx})
+snippet reaper.ImGui_EndGroup
+	reaper.ImGui_EndGroup(${1:ctx})
+snippet reaper.ImGui_EndListBox
+	reaper.ImGui_EndListBox(${1:ctx})
+snippet reaper.ImGui_EndMenu
+	reaper.ImGui_EndMenu(${1:ctx})
+snippet reaper.ImGui_EndMenuBar
+	reaper.ImGui_EndMenuBar(${1:ctx})
+snippet reaper.ImGui_EndPopup
+	reaper.ImGui_EndPopup(${1:ctx})
+snippet reaper.ImGui_EndTabBar
+	reaper.ImGui_EndTabBar(${1:ctx})
+snippet reaper.ImGui_EndTabItem
+	reaper.ImGui_EndTabItem(${1:ctx})
+snippet reaper.ImGui_EndTable
+	reaper.ImGui_EndTable(${1:ctx})
+snippet reaper.ImGui_EndTooltip
+	reaper.ImGui_EndTooltip(${1:ctx})
+snippet reaper.ImGui_FocusedFlags_AnyWindow
+	reaper.ImGui_FocusedFlags_AnyWindow()
+snippet reaper.ImGui_FocusedFlags_ChildWindows
+	reaper.ImGui_FocusedFlags_ChildWindows()
+snippet reaper.ImGui_FocusedFlags_DockHierarchy
+	reaper.ImGui_FocusedFlags_DockHierarchy()
+snippet reaper.ImGui_FocusedFlags_None
+	reaper.ImGui_FocusedFlags_None()
+snippet reaper.ImGui_FocusedFlags_NoPopupHierarchy
+	reaper.ImGui_FocusedFlags_NoPopupHierarchy()
+snippet reaper.ImGui_FocusedFlags_RootAndChildWindows
+	reaper.ImGui_FocusedFlags_RootAndChildWindows()
+snippet reaper.ImGui_FocusedFlags_RootWindow
+	reaper.ImGui_FocusedFlags_RootWindow()
+snippet reaper.ImGui_FontFlags_Bold
+	reaper.ImGui_FontFlags_Bold()
+snippet reaper.ImGui_FontFlags_Italic
+	reaper.ImGui_FontFlags_Italic()
+snippet reaper.ImGui_FontFlags_None
+	reaper.ImGui_FontFlags_None()
+snippet reaper.ImGui_GetBackgroundDrawList
+	reaper.ImGui_GetBackgroundDrawList(${1:ctx})
+snippet reaper.ImGui_GetClipboardText
+	reaper.ImGui_GetClipboardText(${1:ctx})
+snippet reaper.ImGui_GetColor
+	reaper.ImGui_GetColor(${1:ctx}, ${2:idx}, ${3:alpha_mulIn})
+snippet reaper.ImGui_GetColorEx
+	reaper.ImGui_GetColorEx(${1:ctx}, ${2:col_rgba})
+snippet reaper.ImGui_GetConfigFlags
+	reaper.ImGui_GetConfigFlags(${1:ctx})
+snippet reaper.ImGui_GetContentRegionAvail
+	reaper.ImGui_GetContentRegionAvail(${1:ctx})
+snippet reaper.ImGui_GetContentRegionMax
+	reaper.ImGui_GetContentRegionMax(${1:ctx})
+snippet reaper.ImGui_GetCursorPos
+	reaper.ImGui_GetCursorPos(${1:ctx})
+snippet reaper.ImGui_GetCursorPosX
+	reaper.ImGui_GetCursorPosX(${1:ctx})
+snippet reaper.ImGui_GetCursorPosY
+	reaper.ImGui_GetCursorPosY(${1:ctx})
+snippet reaper.ImGui_GetCursorScreenPos
+	reaper.ImGui_GetCursorScreenPos(${1:ctx})
+snippet reaper.ImGui_GetCursorStartPos
+	reaper.ImGui_GetCursorStartPos(${1:ctx})
+snippet reaper.ImGui_GetDeltaTime
+	reaper.ImGui_GetDeltaTime(${1:ctx})
+snippet reaper.ImGui_GetDragDropPayload
+	reaper.ImGui_GetDragDropPayload(${1:ctx})
+snippet reaper.ImGui_GetDragDropPayloadFile
+	reaper.ImGui_GetDragDropPayloadFile(${1:ctx}, ${2:index})
+snippet reaper.ImGui_GetFont
+	reaper.ImGui_GetFont(${1:ctx})
+snippet reaper.ImGui_GetFontSize
+	reaper.ImGui_GetFontSize(${1:ctx})
+snippet reaper.ImGui_GetForegroundDrawList
+	reaper.ImGui_GetForegroundDrawList(${1:ctx})
+snippet reaper.ImGui_GetFrameCount
+	reaper.ImGui_GetFrameCount(${1:ctx})
+snippet reaper.ImGui_GetFrameHeight
+	reaper.ImGui_GetFrameHeight(${1:ctx})
+snippet reaper.ImGui_GetFrameHeightWithSpacing
+	reaper.ImGui_GetFrameHeightWithSpacing(${1:ctx})
+snippet reaper.ImGui_GetInputQueueCharacter
+	reaper.ImGui_GetInputQueueCharacter(${1:ctx}, ${2:idx})
+snippet reaper.ImGui_GetItemRectMax
+	reaper.ImGui_GetItemRectMax(${1:ctx})
+snippet reaper.ImGui_GetItemRectMin
+	reaper.ImGui_GetItemRectMin(${1:ctx})
+snippet reaper.ImGui_GetItemRectSize
+	reaper.ImGui_GetItemRectSize(${1:ctx})
+snippet reaper.ImGui_GetKeyDownDuration
+	reaper.ImGui_GetKeyDownDuration(${1:ctx}, ${2:key})
+snippet reaper.ImGui_GetKeyMods
+	reaper.ImGui_GetKeyMods(${1:ctx})
+snippet reaper.ImGui_GetKeyPressedAmount
+	reaper.ImGui_GetKeyPressedAmount(${1:ctx}, ${2:key}, ${3:repeat_delay}, ${4:rate})
+snippet reaper.ImGui_GetMainViewport
+	reaper.ImGui_GetMainViewport(${1:ctx})
+snippet reaper.ImGui_GetMouseClickedCount
+	reaper.ImGui_GetMouseClickedCount(${1:ctx}, ${2:button})
+snippet reaper.ImGui_GetMouseClickedPos
+	reaper.ImGui_GetMouseClickedPos(${1:ctx}, ${2:button})
+snippet reaper.ImGui_GetMouseCursor
+	reaper.ImGui_GetMouseCursor(${1:ctx})
+snippet reaper.ImGui_GetMouseDelta
+	reaper.ImGui_GetMouseDelta(${1:ctx})
+snippet reaper.ImGui_GetMouseDownDuration
+	reaper.ImGui_GetMouseDownDuration(${1:ctx}, ${2:button})
+snippet reaper.ImGui_GetMouseDragDelta
+	reaper.ImGui_GetMouseDragDelta(${1:ctx}, ${2:x}, ${3:y}, ${4:buttonIn}, ${5:lock_thresholdIn})
+snippet reaper.ImGui_GetMousePos
+	reaper.ImGui_GetMousePos(${1:ctx})
+snippet reaper.ImGui_GetMousePosOnOpeningCurrentPopup
+	reaper.ImGui_GetMousePosOnOpeningCurrentPopup(${1:ctx})
+snippet reaper.ImGui_GetMouseWheel
+	reaper.ImGui_GetMouseWheel(${1:ctx})
+snippet reaper.ImGui_GetScrollMaxX
+	reaper.ImGui_GetScrollMaxX(${1:ctx})
+snippet reaper.ImGui_GetScrollMaxY
+	reaper.ImGui_GetScrollMaxY(${1:ctx})
+snippet reaper.ImGui_GetScrollX
+	reaper.ImGui_GetScrollX(${1:ctx})
+snippet reaper.ImGui_GetScrollY
+	reaper.ImGui_GetScrollY(${1:ctx})
+snippet reaper.ImGui_GetStyleColor
+	reaper.ImGui_GetStyleColor(${1:ctx}, ${2:idx})
+snippet reaper.ImGui_GetStyleVar
+	reaper.ImGui_GetStyleVar(${1:ctx}, ${2:var_idx})
+snippet reaper.ImGui_GetTextLineHeight
+	reaper.ImGui_GetTextLineHeight(${1:ctx})
+snippet reaper.ImGui_GetTime
+	reaper.ImGui_GetTime(${1:ctx})
+snippet reaper.ImGui_GetTreeNodeToLabelSpacing
+	reaper.ImGui_GetTreeNodeToLabelSpacing(${1:ctx})
+snippet reaper.ImGui_GetVersion
+	reaper.ImGui_GetVersion()
+snippet reaper.ImGui_GetWindowContentRegionMax
+	reaper.ImGui_GetWindowContentRegionMax(${1:ctx})
+snippet reaper.ImGui_GetWindowContentRegionMin
+	reaper.ImGui_GetWindowContentRegionMin(${1:ctx})
+snippet reaper.ImGui_GetWindowDockID
+	reaper.ImGui_GetWindowDockID(${1:ctx})
+snippet reaper.ImGui_GetWindowDrawList
+	reaper.ImGui_GetWindowDrawList(${1:ctx})
+snippet reaper.ImGui_GetWindowHeight
+	reaper.ImGui_GetWindowHeight(${1:ctx})
+snippet reaper.ImGui_GetWindowPos
+	reaper.ImGui_GetWindowPos(${1:ctx})
+snippet reaper.ImGui_GetWindowSize
+	reaper.ImGui_GetWindowSize(${1:ctx})
+snippet reaper.ImGui_GetWindowWidth
+	reaper.ImGui_GetWindowWidth(${1:ctx})
+snippet reaper.ImGui_HoveredFlags_AllowWhenBlockedByActiveItem
+	reaper.ImGui_HoveredFlags_AllowWhenBlockedByActiveItem()
+snippet reaper.ImGui_HoveredFlags_AllowWhenBlockedByPopup
+	reaper.ImGui_HoveredFlags_AllowWhenBlockedByPopup()
+snippet reaper.ImGui_HoveredFlags_AllowWhenDisabled
+	reaper.ImGui_HoveredFlags_AllowWhenDisabled()
+snippet reaper.ImGui_HoveredFlags_AllowWhenOverlapped
+	reaper.ImGui_HoveredFlags_AllowWhenOverlapped()
+snippet reaper.ImGui_HoveredFlags_AnyWindow
+	reaper.ImGui_HoveredFlags_AnyWindow()
+snippet reaper.ImGui_HoveredFlags_ChildWindows
+	reaper.ImGui_HoveredFlags_ChildWindows()
+snippet reaper.ImGui_HoveredFlags_DockHierarchy
+	reaper.ImGui_HoveredFlags_DockHierarchy()
+snippet reaper.ImGui_HoveredFlags_None
+	reaper.ImGui_HoveredFlags_None()
+snippet reaper.ImGui_HoveredFlags_NoPopupHierarchy
+	reaper.ImGui_HoveredFlags_NoPopupHierarchy()
+snippet reaper.ImGui_HoveredFlags_RectOnly
+	reaper.ImGui_HoveredFlags_RectOnly()
+snippet reaper.ImGui_HoveredFlags_RootAndChildWindows
+	reaper.ImGui_HoveredFlags_RootAndChildWindows()
+snippet reaper.ImGui_HoveredFlags_RootWindow
+	reaper.ImGui_HoveredFlags_RootWindow()
+snippet reaper.ImGui_Indent
+	reaper.ImGui_Indent(${1:ctx}, ${2:indent_wIn})
+snippet reaper.ImGui_InputDouble
+	reaper.ImGui_InputDouble(${1:ctx}, ${2:label}, ${3:v}, ${4:stepIn}, ${5:step_fastIn}, ${6:formatIn}, ${7:flagsIn})
+snippet reaper.ImGui_InputDouble2
+	reaper.ImGui_InputDouble2(${1:ctx}, ${2:label}, ${3:v1}, ${4:v2}, ${5:formatIn}, ${6:flagsIn})
+snippet reaper.ImGui_InputDouble3
+	reaper.ImGui_InputDouble3(${1:ctx}, ${2:label}, ${3:v1}, ${4:v2}, ${5:v3}, ${6:formatIn}, ${7:flagsIn})
+snippet reaper.ImGui_InputDouble4
+	reaper.ImGui_InputDouble4(${1:ctx}, ${2:label}, ${3:v1}, ${4:v2}, ${5:v3}, ${6:v4}, ${7:formatIn}, ${8:flagsIn})
+snippet reaper.ImGui_InputDoubleN
+	reaper.ImGui_InputDoubleN(${1:ctx}, ${2:values}, ${3:stepIn}, ${4:step_fastIn}, ${5:formatIn}, ${6:flagsIn})
+snippet reaper.ImGui_InputInt
+	reaper.ImGui_InputInt(${1:ctx}, ${2:label}, ${3:v}, ${4:stepIn}, ${5:step_fastIn}, ${6:flagsIn})
+snippet reaper.ImGui_InputInt2
+	reaper.ImGui_InputInt2(${1:ctx}, ${2:label}, ${3:v1}, ${4:v2}, ${5:flagsIn})
+snippet reaper.ImGui_InputInt3
+	reaper.ImGui_InputInt3(${1:ctx}, ${2:label}, ${3:v1}, ${4:v2}, ${5:v3}, ${6:flagsIn})
+snippet reaper.ImGui_InputInt4
+	reaper.ImGui_InputInt4(${1:ctx}, ${2:label}, ${3:v1}, ${4:v2}, ${5:v3}, ${6:v4}, ${7:flagsIn})
+snippet reaper.ImGui_InputText
+	reaper.ImGui_InputText(${1:ctx}, ${2:label}, ${3:buf}, ${4:flagsIn})
+snippet reaper.ImGui_InputTextFlags_AllowTabInput
+	reaper.ImGui_InputTextFlags_AllowTabInput()
+snippet reaper.ImGui_InputTextFlags_AlwaysOverwrite
+	reaper.ImGui_InputTextFlags_AlwaysOverwrite()
+snippet reaper.ImGui_InputTextFlags_AutoSelectAll
+	reaper.ImGui_InputTextFlags_AutoSelectAll()
+snippet reaper.ImGui_InputTextFlags_CharsDecimal
+	reaper.ImGui_InputTextFlags_CharsDecimal()
+snippet reaper.ImGui_InputTextFlags_CharsHexadecimal
+	reaper.ImGui_InputTextFlags_CharsHexadecimal()
+snippet reaper.ImGui_InputTextFlags_CharsNoBlank
+	reaper.ImGui_InputTextFlags_CharsNoBlank()
+snippet reaper.ImGui_InputTextFlags_CharsScientific
+	reaper.ImGui_InputTextFlags_CharsScientific()
+snippet reaper.ImGui_InputTextFlags_CharsUppercase
+	reaper.ImGui_InputTextFlags_CharsUppercase()
+snippet reaper.ImGui_InputTextFlags_CtrlEnterForNewLine
+	reaper.ImGui_InputTextFlags_CtrlEnterForNewLine()
+snippet reaper.ImGui_InputTextFlags_EnterReturnsTrue
+	reaper.ImGui_InputTextFlags_EnterReturnsTrue()
+snippet reaper.ImGui_InputTextFlags_NoHorizontalScroll
+	reaper.ImGui_InputTextFlags_NoHorizontalScroll()
+snippet reaper.ImGui_InputTextFlags_None
+	reaper.ImGui_InputTextFlags_None()
+snippet reaper.ImGui_InputTextFlags_NoUndoRedo
+	reaper.ImGui_InputTextFlags_NoUndoRedo()
+snippet reaper.ImGui_InputTextFlags_Password
+	reaper.ImGui_InputTextFlags_Password()
+snippet reaper.ImGui_InputTextFlags_ReadOnly
+	reaper.ImGui_InputTextFlags_ReadOnly()
+snippet reaper.ImGui_InputTextMultiline
+	reaper.ImGui_InputTextMultiline(${1:ctx}, ${2:label}, ${3:buf}, ${4:size_wIn}, ${5:size_hIn}, ${6:flagsIn})
+snippet reaper.ImGui_InputTextWithHint
+	reaper.ImGui_InputTextWithHint(${1:ctx}, ${2:label}, ${3:hint}, ${4:buf}, ${5:flagsIn})
+snippet reaper.ImGui_InvisibleButton
+	reaper.ImGui_InvisibleButton(${1:ctx}, ${2:str_id}, ${3:size_w}, ${4:size_h}, ${5:flagsIn})
+snippet reaper.ImGui_IsAnyItemActive
+	reaper.ImGui_IsAnyItemActive(${1:ctx})
+snippet reaper.ImGui_IsAnyItemFocused
+	reaper.ImGui_IsAnyItemFocused(${1:ctx})
+snippet reaper.ImGui_IsAnyItemHovered
+	reaper.ImGui_IsAnyItemHovered(${1:ctx})
+snippet reaper.ImGui_IsAnyMouseDown
+	reaper.ImGui_IsAnyMouseDown(${1:ctx})
+snippet reaper.ImGui_IsItemActivated
+	reaper.ImGui_IsItemActivated(${1:ctx})
+snippet reaper.ImGui_IsItemActive
+	reaper.ImGui_IsItemActive(${1:ctx})
+snippet reaper.ImGui_IsItemClicked
+	reaper.ImGui_IsItemClicked(${1:ctx}, ${2:mouse_buttonIn})
+snippet reaper.ImGui_IsItemDeactivated
+	reaper.ImGui_IsItemDeactivated(${1:ctx})
+snippet reaper.ImGui_IsItemDeactivatedAfterEdit
+	reaper.ImGui_IsItemDeactivatedAfterEdit(${1:ctx})
+snippet reaper.ImGui_IsItemEdited
+	reaper.ImGui_IsItemEdited(${1:ctx})
+snippet reaper.ImGui_IsItemFocused
+	reaper.ImGui_IsItemFocused(${1:ctx})
+snippet reaper.ImGui_IsItemHovered
+	reaper.ImGui_IsItemHovered(${1:ctx}, ${2:flagsIn})
+snippet reaper.ImGui_IsItemToggledOpen
+	reaper.ImGui_IsItemToggledOpen(${1:ctx})
+snippet reaper.ImGui_IsItemVisible
+	reaper.ImGui_IsItemVisible(${1:ctx})
+snippet reaper.ImGui_IsKeyDown
+	reaper.ImGui_IsKeyDown(${1:ctx}, ${2:key})
+snippet reaper.ImGui_IsKeyPressed
+	reaper.ImGui_IsKeyPressed(${1:ctx}, ${2:key}, ${3:repeatIn})
+snippet reaper.ImGui_IsKeyReleased
+	reaper.ImGui_IsKeyReleased(${1:ctx}, ${2:key})
+snippet reaper.ImGui_IsMouseClicked
+	reaper.ImGui_IsMouseClicked(${1:ctx}, ${2:button}, ${3:repeatIn})
+snippet reaper.ImGui_IsMouseDoubleClicked
+	reaper.ImGui_IsMouseDoubleClicked(${1:ctx}, ${2:button})
+snippet reaper.ImGui_IsMouseDown
+	reaper.ImGui_IsMouseDown(${1:ctx}, ${2:button})
+snippet reaper.ImGui_IsMouseDragging
+	reaper.ImGui_IsMouseDragging(${1:ctx}, ${2:button}, ${3:lock_thresholdIn})
+snippet reaper.ImGui_IsMouseHoveringRect
+	reaper.ImGui_IsMouseHoveringRect(${1:ctx}, ${2:r_min_x}, ${3:r_min_y}, ${4:r_max_x}, ${5:r_max_y}, ${6:clipIn})
+snippet reaper.ImGui_IsMousePosValid
+	reaper.ImGui_IsMousePosValid(${1:ctx}, ${2:mouse_pos_xIn}, ${3:mouse_pos_yIn})
+snippet reaper.ImGui_IsMouseReleased
+	reaper.ImGui_IsMouseReleased(${1:ctx}, ${2:button})
+snippet reaper.ImGui_IsPopupOpen
+	reaper.ImGui_IsPopupOpen(${1:ctx}, ${2:str_id}, ${3:flagsIn})
+snippet reaper.ImGui_IsRectVisible
+	reaper.ImGui_IsRectVisible(${1:ctx}, ${2:size_w}, ${3:size_h})
+snippet reaper.ImGui_IsRectVisibleEx
+	reaper.ImGui_IsRectVisibleEx(${1:ctx}, ${2:rect_min_x}, ${3:rect_min_y}, ${4:rect_max_x}, ${5:rect_max_y})
+snippet reaper.ImGui_IsWindowAppearing
+	reaper.ImGui_IsWindowAppearing(${1:ctx})
+snippet reaper.ImGui_IsWindowCollapsed
+	reaper.ImGui_IsWindowCollapsed(${1:ctx})
+snippet reaper.ImGui_IsWindowDocked
+	reaper.ImGui_IsWindowDocked(${1:ctx})
+snippet reaper.ImGui_IsWindowFocused
+	reaper.ImGui_IsWindowFocused(${1:ctx}, ${2:flagsIn})
+snippet reaper.ImGui_IsWindowHovered
+	reaper.ImGui_IsWindowHovered(${1:ctx}, ${2:flagsIn})
+snippet reaper.ImGui_Key_0
+	reaper.ImGui_Key_0()
+snippet reaper.ImGui_Key_1
+	reaper.ImGui_Key_1()
+snippet reaper.ImGui_Key_2
+	reaper.ImGui_Key_2()
+snippet reaper.ImGui_Key_3
+	reaper.ImGui_Key_3()
+snippet reaper.ImGui_Key_4
+	reaper.ImGui_Key_4()
+snippet reaper.ImGui_Key_5
+	reaper.ImGui_Key_5()
+snippet reaper.ImGui_Key_6
+	reaper.ImGui_Key_6()
+snippet reaper.ImGui_Key_7
+	reaper.ImGui_Key_7()
+snippet reaper.ImGui_Key_8
+	reaper.ImGui_Key_8()
+snippet reaper.ImGui_Key_9
+	reaper.ImGui_Key_9()
+snippet reaper.ImGui_Key_A
+	reaper.ImGui_Key_A()
+snippet reaper.ImGui_Key_Apostrophe
+	reaper.ImGui_Key_Apostrophe()
+snippet reaper.ImGui_Key_B
+	reaper.ImGui_Key_B()
+snippet reaper.ImGui_Key_Backslash
+	reaper.ImGui_Key_Backslash()
+snippet reaper.ImGui_Key_Backspace
+	reaper.ImGui_Key_Backspace()
+snippet reaper.ImGui_Key_C
+	reaper.ImGui_Key_C()
+snippet reaper.ImGui_Key_CapsLock
+	reaper.ImGui_Key_CapsLock()
+snippet reaper.ImGui_Key_Comma
+	reaper.ImGui_Key_Comma()
+snippet reaper.ImGui_Key_D
+	reaper.ImGui_Key_D()
+snippet reaper.ImGui_Key_Delete
+	reaper.ImGui_Key_Delete()
+snippet reaper.ImGui_Key_DownArrow
+	reaper.ImGui_Key_DownArrow()
+snippet reaper.ImGui_Key_E
+	reaper.ImGui_Key_E()
+snippet reaper.ImGui_Key_End
+	reaper.ImGui_Key_End()
+snippet reaper.ImGui_Key_Enter
+	reaper.ImGui_Key_Enter()
+snippet reaper.ImGui_Key_Equal
+	reaper.ImGui_Key_Equal()
+snippet reaper.ImGui_Key_Escape
+	reaper.ImGui_Key_Escape()
+snippet reaper.ImGui_Key_F
+	reaper.ImGui_Key_F()
+snippet reaper.ImGui_Key_F1
+	reaper.ImGui_Key_F1()
+snippet reaper.ImGui_Key_F10
+	reaper.ImGui_Key_F10()
+snippet reaper.ImGui_Key_F11
+	reaper.ImGui_Key_F11()
+snippet reaper.ImGui_Key_F12
+	reaper.ImGui_Key_F12()
+snippet reaper.ImGui_Key_F2
+	reaper.ImGui_Key_F2()
+snippet reaper.ImGui_Key_F3
+	reaper.ImGui_Key_F3()
+snippet reaper.ImGui_Key_F4
+	reaper.ImGui_Key_F4()
+snippet reaper.ImGui_Key_F5
+	reaper.ImGui_Key_F5()
+snippet reaper.ImGui_Key_F6
+	reaper.ImGui_Key_F6()
+snippet reaper.ImGui_Key_F7
+	reaper.ImGui_Key_F7()
+snippet reaper.ImGui_Key_F8
+	reaper.ImGui_Key_F8()
+snippet reaper.ImGui_Key_F9
+	reaper.ImGui_Key_F9()
+snippet reaper.ImGui_Key_G
+	reaper.ImGui_Key_G()
+snippet reaper.ImGui_Key_GraveAccent
+	reaper.ImGui_Key_GraveAccent()
+snippet reaper.ImGui_Key_H
+	reaper.ImGui_Key_H()
+snippet reaper.ImGui_Key_Home
+	reaper.ImGui_Key_Home()
+snippet reaper.ImGui_Key_I
+	reaper.ImGui_Key_I()
+snippet reaper.ImGui_Key_Insert
+	reaper.ImGui_Key_Insert()
+snippet reaper.ImGui_Key_J
+	reaper.ImGui_Key_J()
+snippet reaper.ImGui_Key_K
+	reaper.ImGui_Key_K()
+snippet reaper.ImGui_Key_Keypad0
+	reaper.ImGui_Key_Keypad0()
+snippet reaper.ImGui_Key_Keypad1
+	reaper.ImGui_Key_Keypad1()
+snippet reaper.ImGui_Key_Keypad2
+	reaper.ImGui_Key_Keypad2()
+snippet reaper.ImGui_Key_Keypad3
+	reaper.ImGui_Key_Keypad3()
+snippet reaper.ImGui_Key_Keypad4
+	reaper.ImGui_Key_Keypad4()
+snippet reaper.ImGui_Key_Keypad5
+	reaper.ImGui_Key_Keypad5()
+snippet reaper.ImGui_Key_Keypad6
+	reaper.ImGui_Key_Keypad6()
+snippet reaper.ImGui_Key_Keypad7
+	reaper.ImGui_Key_Keypad7()
+snippet reaper.ImGui_Key_Keypad8
+	reaper.ImGui_Key_Keypad8()
+snippet reaper.ImGui_Key_Keypad9
+	reaper.ImGui_Key_Keypad9()
+snippet reaper.ImGui_Key_KeypadAdd
+	reaper.ImGui_Key_KeypadAdd()
+snippet reaper.ImGui_Key_KeypadDecimal
+	reaper.ImGui_Key_KeypadDecimal()
+snippet reaper.ImGui_Key_KeypadDivide
+	reaper.ImGui_Key_KeypadDivide()
+snippet reaper.ImGui_Key_KeypadEnter
+	reaper.ImGui_Key_KeypadEnter()
+snippet reaper.ImGui_Key_KeypadEqual
+	reaper.ImGui_Key_KeypadEqual()
+snippet reaper.ImGui_Key_KeypadMultiply
+	reaper.ImGui_Key_KeypadMultiply()
+snippet reaper.ImGui_Key_KeypadSubtract
+	reaper.ImGui_Key_KeypadSubtract()
+snippet reaper.ImGui_Key_L
+	reaper.ImGui_Key_L()
+snippet reaper.ImGui_Key_LeftAlt
+	reaper.ImGui_Key_LeftAlt()
+snippet reaper.ImGui_Key_LeftArrow
+	reaper.ImGui_Key_LeftArrow()
+snippet reaper.ImGui_Key_LeftBracket
+	reaper.ImGui_Key_LeftBracket()
+snippet reaper.ImGui_Key_LeftCtrl
+	reaper.ImGui_Key_LeftCtrl()
+snippet reaper.ImGui_Key_LeftShift
+	reaper.ImGui_Key_LeftShift()
+snippet reaper.ImGui_Key_LeftSuper
+	reaper.ImGui_Key_LeftSuper()
+snippet reaper.ImGui_Key_M
+	reaper.ImGui_Key_M()
+snippet reaper.ImGui_Key_Menu
+	reaper.ImGui_Key_Menu()
+snippet reaper.ImGui_Key_Minus
+	reaper.ImGui_Key_Minus()
+snippet reaper.ImGui_Key_ModAlt
+	reaper.ImGui_Key_ModAlt()
+snippet reaper.ImGui_Key_ModCtrl
+	reaper.ImGui_Key_ModCtrl()
+snippet reaper.ImGui_Key_ModShift
+	reaper.ImGui_Key_ModShift()
+snippet reaper.ImGui_Key_ModSuper
+	reaper.ImGui_Key_ModSuper()
+snippet reaper.ImGui_Key_N
+	reaper.ImGui_Key_N()
+snippet reaper.ImGui_Key_NumLock
+	reaper.ImGui_Key_NumLock()
+snippet reaper.ImGui_Key_O
+	reaper.ImGui_Key_O()
+snippet reaper.ImGui_Key_P
+	reaper.ImGui_Key_P()
+snippet reaper.ImGui_Key_PageDown
+	reaper.ImGui_Key_PageDown()
+snippet reaper.ImGui_Key_PageUp
+	reaper.ImGui_Key_PageUp()
+snippet reaper.ImGui_Key_Pause
+	reaper.ImGui_Key_Pause()
+snippet reaper.ImGui_Key_Period
+	reaper.ImGui_Key_Period()
+snippet reaper.ImGui_Key_PrintScreen
+	reaper.ImGui_Key_PrintScreen()
+snippet reaper.ImGui_Key_Q
+	reaper.ImGui_Key_Q()
+snippet reaper.ImGui_Key_R
+	reaper.ImGui_Key_R()
+snippet reaper.ImGui_Key_RightAlt
+	reaper.ImGui_Key_RightAlt()
+snippet reaper.ImGui_Key_RightArrow
+	reaper.ImGui_Key_RightArrow()
+snippet reaper.ImGui_Key_RightBracket
+	reaper.ImGui_Key_RightBracket()
+snippet reaper.ImGui_Key_RightCtrl
+	reaper.ImGui_Key_RightCtrl()
+snippet reaper.ImGui_Key_RightShift
+	reaper.ImGui_Key_RightShift()
+snippet reaper.ImGui_Key_RightSuper
+	reaper.ImGui_Key_RightSuper()
+snippet reaper.ImGui_Key_S
+	reaper.ImGui_Key_S()
+snippet reaper.ImGui_Key_ScrollLock
+	reaper.ImGui_Key_ScrollLock()
+snippet reaper.ImGui_Key_Semicolon
+	reaper.ImGui_Key_Semicolon()
+snippet reaper.ImGui_Key_Slash
+	reaper.ImGui_Key_Slash()
+snippet reaper.ImGui_Key_Space
+	reaper.ImGui_Key_Space()
+snippet reaper.ImGui_Key_T
+	reaper.ImGui_Key_T()
+snippet reaper.ImGui_Key_Tab
+	reaper.ImGui_Key_Tab()
+snippet reaper.ImGui_Key_U
+	reaper.ImGui_Key_U()
+snippet reaper.ImGui_Key_UpArrow
+	reaper.ImGui_Key_UpArrow()
+snippet reaper.ImGui_Key_V
+	reaper.ImGui_Key_V()
+snippet reaper.ImGui_Key_W
+	reaper.ImGui_Key_W()
+snippet reaper.ImGui_Key_X
+	reaper.ImGui_Key_X()
+snippet reaper.ImGui_Key_Y
+	reaper.ImGui_Key_Y()
+snippet reaper.ImGui_Key_Z
+	reaper.ImGui_Key_Z()
+snippet reaper.ImGui_KeyModFlags_Alt
+	reaper.ImGui_KeyModFlags_Alt()
+snippet reaper.ImGui_KeyModFlags_Ctrl
+	reaper.ImGui_KeyModFlags_Ctrl()
+snippet reaper.ImGui_KeyModFlags_None
+	reaper.ImGui_KeyModFlags_None()
+snippet reaper.ImGui_KeyModFlags_Shift
+	reaper.ImGui_KeyModFlags_Shift()
+snippet reaper.ImGui_KeyModFlags_Super
+	reaper.ImGui_KeyModFlags_Super()
+snippet reaper.ImGui_LabelText
+	reaper.ImGui_LabelText(${1:ctx}, ${2:label}, ${3:text})
+snippet reaper.ImGui_ListBox
+	reaper.ImGui_ListBox(${1:ctx}, ${2:label}, ${3:current_item}, ${4:items}, ${5:height_in_itemsIn})
+snippet reaper.ImGui_ListClipper_Begin
+	reaper.ImGui_ListClipper_Begin(${1:clipper}, ${2:items_count}, ${3:items_heightIn})
+snippet reaper.ImGui_ListClipper_End
+	reaper.ImGui_ListClipper_End(${1:clipper})
+snippet reaper.ImGui_ListClipper_ForceDisplayRangeByIndices
+	reaper.ImGui_ListClipper_ForceDisplayRangeByIndices(${1:clipper}, ${2:item_min}, ${3:item_max})
+snippet reaper.ImGui_ListClipper_GetDisplayRange
+	reaper.ImGui_ListClipper_GetDisplayRange(${1:clipper})
+snippet reaper.ImGui_ListClipper_Step
+	reaper.ImGui_ListClipper_Step(${1:clipper})
+snippet reaper.ImGui_LogFinish
+	reaper.ImGui_LogFinish(${1:ctx})
+snippet reaper.ImGui_LogText
+	reaper.ImGui_LogText(${1:ctx}, ${2:text})
+snippet reaper.ImGui_LogToClipboard
+	reaper.ImGui_LogToClipboard(${1:ctx}, ${2:auto_open_depthIn})
+snippet reaper.ImGui_LogToFile
+	reaper.ImGui_LogToFile(${1:ctx}, ${2:auto_open_depthIn}, ${3:filenameIn})
+snippet reaper.ImGui_LogToTTY
+	reaper.ImGui_LogToTTY(${1:ctx}, ${2:auto_open_depthIn})
+snippet reaper.ImGui_MenuItem
+	reaper.ImGui_MenuItem(${1:ctx}, ${2:label}, ${3:shortcutIn}, ${4:p_selected}, ${5:enabledIn})
+snippet reaper.ImGui_MouseButton_Left
+	reaper.ImGui_MouseButton_Left()
+snippet reaper.ImGui_MouseButton_Middle
+	reaper.ImGui_MouseButton_Middle()
+snippet reaper.ImGui_MouseButton_Right
+	reaper.ImGui_MouseButton_Right()
+snippet reaper.ImGui_MouseCursor_Arrow
+	reaper.ImGui_MouseCursor_Arrow()
+snippet reaper.ImGui_MouseCursor_Hand
+	reaper.ImGui_MouseCursor_Hand()
+snippet reaper.ImGui_MouseCursor_NotAllowed
+	reaper.ImGui_MouseCursor_NotAllowed()
+snippet reaper.ImGui_MouseCursor_ResizeAll
+	reaper.ImGui_MouseCursor_ResizeAll()
+snippet reaper.ImGui_MouseCursor_ResizeEW
+	reaper.ImGui_MouseCursor_ResizeEW()
+snippet reaper.ImGui_MouseCursor_ResizeNESW
+	reaper.ImGui_MouseCursor_ResizeNESW()
+snippet reaper.ImGui_MouseCursor_ResizeNS
+	reaper.ImGui_MouseCursor_ResizeNS()
+snippet reaper.ImGui_MouseCursor_ResizeNWSE
+	reaper.ImGui_MouseCursor_ResizeNWSE()
+snippet reaper.ImGui_MouseCursor_TextInput
+	reaper.ImGui_MouseCursor_TextInput()
+snippet reaper.ImGui_NewLine
+	reaper.ImGui_NewLine(${1:ctx})
+snippet reaper.ImGui_NumericLimits_Float
+	reaper.ImGui_NumericLimits_Float()
+snippet reaper.ImGui_OpenPopup
+	reaper.ImGui_OpenPopup(${1:ctx}, ${2:str_id}, ${3:popup_flagsIn})
+snippet reaper.ImGui_OpenPopupOnItemClick
+	reaper.ImGui_OpenPopupOnItemClick(${1:ctx}, ${2:str_idIn}, ${3:popup_flagsIn})
+snippet reaper.ImGui_PlotHistogram
+	reaper.ImGui_PlotHistogram(${1:ctx}, ${2:values}, ${3:values_offsetIn}, ${4:overlay_textIn}, ${5:scale_minIn}, ${6:scale_maxIn}, ${7:graph_size_wIn}, ${8:graph_size_hIn})
+snippet reaper.ImGui_PlotLines
+	reaper.ImGui_PlotLines(${1:ctx}, ${2:values}, ${3:values_offsetIn}, ${4:overlay_textIn}, ${5:scale_minIn}, ${6:scale_maxIn}, ${7:graph_size_wIn}, ${8:graph_size_hIn})
+snippet reaper.ImGui_PointConvertNative
+	reaper.ImGui_PointConvertNative(${1:ctx}, ${2:x}, ${3:y}, ${4:to_nativeIn})
+snippet reaper.ImGui_PopAllowKeyboardFocus
+	reaper.ImGui_PopAllowKeyboardFocus(${1:ctx})
+snippet reaper.ImGui_PopButtonRepeat
+	reaper.ImGui_PopButtonRepeat(${1:ctx})
+snippet reaper.ImGui_PopClipRect
+	reaper.ImGui_PopClipRect(${1:ctx})
+snippet reaper.ImGui_PopFont
+	reaper.ImGui_PopFont(${1:ctx})
+snippet reaper.ImGui_PopID
+	reaper.ImGui_PopID(${1:ctx})
+snippet reaper.ImGui_PopItemWidth
+	reaper.ImGui_PopItemWidth(${1:ctx})
+snippet reaper.ImGui_PopStyleColor
+	reaper.ImGui_PopStyleColor(${1:ctx}, ${2:countIn})
+snippet reaper.ImGui_PopStyleVar
+	reaper.ImGui_PopStyleVar(${1:ctx}, ${2:countIn})
+snippet reaper.ImGui_PopTextWrapPos
+	reaper.ImGui_PopTextWrapPos(${1:ctx})
+snippet reaper.ImGui_PopupFlags_AnyPopup
+	reaper.ImGui_PopupFlags_AnyPopup()
+snippet reaper.ImGui_PopupFlags_AnyPopupId
+	reaper.ImGui_PopupFlags_AnyPopupId()
+snippet reaper.ImGui_PopupFlags_AnyPopupLevel
+	reaper.ImGui_PopupFlags_AnyPopupLevel()
+snippet reaper.ImGui_PopupFlags_MouseButtonLeft
+	reaper.ImGui_PopupFlags_MouseButtonLeft()
+snippet reaper.ImGui_PopupFlags_MouseButtonMiddle
+	reaper.ImGui_PopupFlags_MouseButtonMiddle()
+snippet reaper.ImGui_PopupFlags_MouseButtonRight
+	reaper.ImGui_PopupFlags_MouseButtonRight()
+snippet reaper.ImGui_PopupFlags_None
+	reaper.ImGui_PopupFlags_None()
+snippet reaper.ImGui_PopupFlags_NoOpenOverExistingPopup
+	reaper.ImGui_PopupFlags_NoOpenOverExistingPopup()
+snippet reaper.ImGui_PopupFlags_NoOpenOverItems
+	reaper.ImGui_PopupFlags_NoOpenOverItems()
+snippet reaper.ImGui_ProgressBar
+	reaper.ImGui_ProgressBar(${1:ctx}, ${2:fraction}, ${3:size_arg_wIn}, ${4:size_arg_hIn}, ${5:overlayIn})
+snippet reaper.ImGui_PushAllowKeyboardFocus
+	reaper.ImGui_PushAllowKeyboardFocus(${1:ctx}, ${2:allow_keyboard_focus})
+snippet reaper.ImGui_PushButtonRepeat
+	reaper.ImGui_PushButtonRepeat(${1:ctx}, ${2:repeat})
+snippet reaper.ImGui_PushClipRect
+	reaper.ImGui_PushClipRect(${1:ctx}, ${2:clip_rect_min_x}, ${3:clip_rect_min_y}, ${4:clip_rect_max_x}, ${5:clip_rect_max_y}, ${6:intersect_with_current_clip_rect})
+snippet reaper.ImGui_PushFont
+	reaper.ImGui_PushFont(${1:font})
+snippet reaper.ImGui_PushID
+	reaper.ImGui_PushID(${1:ctx}, ${2:str_id})
+snippet reaper.ImGui_PushItemWidth
+	reaper.ImGui_PushItemWidth(${1:ctx}, ${2:item_width})
+snippet reaper.ImGui_PushStyleColor
+	reaper.ImGui_PushStyleColor(${1:ctx}, ${2:idx}, ${3:col_rgba})
+snippet reaper.ImGui_PushStyleVar
+	reaper.ImGui_PushStyleVar(${1:ctx}, ${2:var_idx}, ${3:val1}, ${4:val2In})
+snippet reaper.ImGui_PushTextWrapPos
+	reaper.ImGui_PushTextWrapPos(${1:ctx}, ${2:wrap_local_pos_xIn})
+snippet reaper.ImGui_RadioButton
+	reaper.ImGui_RadioButton(${1:ctx}, ${2:label}, ${3:active})
+snippet reaper.ImGui_RadioButtonEx
+	reaper.ImGui_RadioButtonEx(${1:ctx}, ${2:label}, ${3:v}, ${4:v_button})
+snippet reaper.ImGui_ResetMouseDragDelta
+	reaper.ImGui_ResetMouseDragDelta(${1:ctx}, ${2:buttonIn})
+snippet reaper.ImGui_SameLine
+	reaper.ImGui_SameLine(${1:ctx}, ${2:offset_from_start_xIn}, ${3:spacingIn})
+snippet reaper.ImGui_Selectable
+	reaper.ImGui_Selectable(${1:ctx}, ${2:label}, ${3:p_selected}, ${4:flagsIn}, ${5:size_wIn}, ${6:size_hIn})
+snippet reaper.ImGui_SelectableFlags_AllowDoubleClick
+	reaper.ImGui_SelectableFlags_AllowDoubleClick()
+snippet reaper.ImGui_SelectableFlags_AllowItemOverlap
+	reaper.ImGui_SelectableFlags_AllowItemOverlap()
+snippet reaper.ImGui_SelectableFlags_Disabled
+	reaper.ImGui_SelectableFlags_Disabled()
+snippet reaper.ImGui_SelectableFlags_DontClosePopups
+	reaper.ImGui_SelectableFlags_DontClosePopups()
+snippet reaper.ImGui_SelectableFlags_None
+	reaper.ImGui_SelectableFlags_None()
+snippet reaper.ImGui_SelectableFlags_SpanAllColumns
+	reaper.ImGui_SelectableFlags_SpanAllColumns()
+snippet reaper.ImGui_Separator
+	reaper.ImGui_Separator(${1:ctx})
+snippet reaper.ImGui_SetClipboardText
+	reaper.ImGui_SetClipboardText(${1:ctx}, ${2:text})
+snippet reaper.ImGui_SetColorEditOptions
+	reaper.ImGui_SetColorEditOptions(${1:ctx}, ${2:flags})
+snippet reaper.ImGui_SetConfigFlags
+	reaper.ImGui_SetConfigFlags(${1:ctx}, ${2:flags})
+snippet reaper.ImGui_SetCursorPos
+	reaper.ImGui_SetCursorPos(${1:ctx}, ${2:local_pos_x}, ${3:local_pos_y})
+snippet reaper.ImGui_SetCursorPosX
+	reaper.ImGui_SetCursorPosX(${1:ctx}, ${2:local_x})
+snippet reaper.ImGui_SetCursorPosY
+	reaper.ImGui_SetCursorPosY(${1:ctx}, ${2:local_y})
+snippet reaper.ImGui_SetCursorScreenPos
+	reaper.ImGui_SetCursorScreenPos(${1:ctx}, ${2:pos_x}, ${3:pos_y})
+snippet reaper.ImGui_SetDragDropPayload
+	reaper.ImGui_SetDragDropPayload(${1:ctx}, ${2:type}, ${3:data}, ${4:condIn})
+snippet reaper.ImGui_SetItemAllowOverlap
+	reaper.ImGui_SetItemAllowOverlap(${1:ctx})
+snippet reaper.ImGui_SetItemDefaultFocus
+	reaper.ImGui_SetItemDefaultFocus(${1:ctx})
+snippet reaper.ImGui_SetKeyboardFocusHere
+	reaper.ImGui_SetKeyboardFocusHere(${1:ctx}, ${2:offsetIn})
+snippet reaper.ImGui_SetMouseCursor
+	reaper.ImGui_SetMouseCursor(${1:ctx}, ${2:cursor_type})
+snippet reaper.ImGui_SetNextItemOpen
+	reaper.ImGui_SetNextItemOpen(${1:ctx}, ${2:is_open}, ${3:condIn})
+snippet reaper.ImGui_SetNextItemWidth
+	reaper.ImGui_SetNextItemWidth(${1:ctx}, ${2:item_width})
+snippet reaper.ImGui_SetNextWindowBgAlpha
+	reaper.ImGui_SetNextWindowBgAlpha(${1:ctx}, ${2:alpha})
+snippet reaper.ImGui_SetNextWindowCollapsed
+	reaper.ImGui_SetNextWindowCollapsed(${1:ctx}, ${2:collapsed}, ${3:condIn})
+snippet reaper.ImGui_SetNextWindowContentSize
+	reaper.ImGui_SetNextWindowContentSize(${1:ctx}, ${2:size_w}, ${3:size_h})
+snippet reaper.ImGui_SetNextWindowDockID
+	reaper.ImGui_SetNextWindowDockID(${1:ctx}, ${2:dock_id}, ${3:condIn})
+snippet reaper.ImGui_SetNextWindowFocus
+	reaper.ImGui_SetNextWindowFocus(${1:ctx})
+snippet reaper.ImGui_SetNextWindowPos
+	reaper.ImGui_SetNextWindowPos(${1:ctx}, ${2:pos_x}, ${3:pos_y}, ${4:condIn}, ${5:pivot_xIn}, ${6:pivot_yIn})
+snippet reaper.ImGui_SetNextWindowSize
+	reaper.ImGui_SetNextWindowSize(${1:ctx}, ${2:size_w}, ${3:size_h}, ${4:condIn})
+snippet reaper.ImGui_SetNextWindowSizeConstraints
+	reaper.ImGui_SetNextWindowSizeConstraints(${1:ctx}, ${2:size_min_w}, ${3:size_min_h}, ${4:size_max_w}, ${5:size_max_h})
+snippet reaper.ImGui_SetScrollFromPosX
+	reaper.ImGui_SetScrollFromPosX(${1:ctx}, ${2:local_x}, ${3:center_x_ratioIn})
+snippet reaper.ImGui_SetScrollFromPosY
+	reaper.ImGui_SetScrollFromPosY(${1:ctx}, ${2:local_y}, ${3:center_y_ratioIn})
+snippet reaper.ImGui_SetScrollHereX
+	reaper.ImGui_SetScrollHereX(${1:ctx}, ${2:center_x_ratioIn})
+snippet reaper.ImGui_SetScrollHereY
+	reaper.ImGui_SetScrollHereY(${1:ctx}, ${2:center_y_ratioIn})
+snippet reaper.ImGui_SetScrollX
+	reaper.ImGui_SetScrollX(${1:ctx}, ${2:scroll_x})
+snippet reaper.ImGui_SetScrollY
+	reaper.ImGui_SetScrollY(${1:ctx}, ${2:scroll_y})
+snippet reaper.ImGui_SetTabItemClosed
+	reaper.ImGui_SetTabItemClosed(${1:ctx}, ${2:tab_or_docked_window_label})
+snippet reaper.ImGui_SetTooltip
+	reaper.ImGui_SetTooltip(${1:ctx}, ${2:text})
+snippet reaper.ImGui_SetWindowCollapsed
+	reaper.ImGui_SetWindowCollapsed(${1:ctx}, ${2:collapsed}, ${3:condIn})
+snippet reaper.ImGui_SetWindowCollapsedEx
+	reaper.ImGui_SetWindowCollapsedEx(${1:ctx}, ${2:name}, ${3:collapsed}, ${4:condIn})
+snippet reaper.ImGui_SetWindowFocus
+	reaper.ImGui_SetWindowFocus(${1:ctx})
+snippet reaper.ImGui_SetWindowFocusEx
+	reaper.ImGui_SetWindowFocusEx(${1:ctx}, ${2:name})
+snippet reaper.ImGui_SetWindowPos
+	reaper.ImGui_SetWindowPos(${1:ctx}, ${2:pos_x}, ${3:pos_y}, ${4:condIn})
+snippet reaper.ImGui_SetWindowPosEx
+	reaper.ImGui_SetWindowPosEx(${1:ctx}, ${2:name}, ${3:pos_x}, ${4:pos_y}, ${5:condIn})
+snippet reaper.ImGui_SetWindowSize
+	reaper.ImGui_SetWindowSize(${1:ctx}, ${2:size_w}, ${3:size_h}, ${4:condIn})
+snippet reaper.ImGui_SetWindowSizeEx
+	reaper.ImGui_SetWindowSizeEx(${1:ctx}, ${2:name}, ${3:size_w}, ${4:size_h}, ${5:condIn})
+snippet reaper.ImGui_ShowAboutWindow
+	reaper.ImGui_ShowAboutWindow(${1:ctx}, ${2:p_open})
+snippet reaper.ImGui_ShowMetricsWindow
+	reaper.ImGui_ShowMetricsWindow(${1:ctx}, ${2:p_open})
+snippet reaper.ImGui_ShowStackToolWindow
+	reaper.ImGui_ShowStackToolWindow(${1:ctx}, ${2:p_open})
+snippet reaper.ImGui_SliderAngle
+	reaper.ImGui_SliderAngle(${1:ctx}, ${2:label}, ${3:v_rad}, ${4:v_degrees_minIn}, ${5:v_degrees_maxIn}, ${6:formatIn}, ${7:flagsIn})
+snippet reaper.ImGui_SliderDouble
+	reaper.ImGui_SliderDouble(${1:ctx}, ${2:label}, ${3:v}, ${4:v_min}, ${5:v_max}, ${6:formatIn}, ${7:flagsIn})
+snippet reaper.ImGui_SliderDouble2
+	reaper.ImGui_SliderDouble2(${1:ctx}, ${2:label}, ${3:v1}, ${4:v2}, ${5:v_min}, ${6:v_max}, ${7:formatIn}, ${8:flagsIn})
+snippet reaper.ImGui_SliderDouble3
+	reaper.ImGui_SliderDouble3(${1:ctx}, ${2:label}, ${3:v1}, ${4:v2}, ${5:v3}, ${6:v_min}, ${7:v_max}, ${8:formatIn}, ${9:flagsIn})
+snippet reaper.ImGui_SliderDouble4
+	reaper.ImGui_SliderDouble4(${1:ctx}, ${2:label}, ${3:v1}, ${4:v2}, ${5:v3}, ${6:v4}, ${7:v_min}, ${8:v_max}, ${9:formatIn}, ${10:flagsIn})
+snippet reaper.ImGui_SliderDoubleN
+	reaper.ImGui_SliderDoubleN(${1:ctx}, ${2:values}, ${3:v_min}, ${4:v_max}, ${5:formatIn}, ${6:flagsIn})
+snippet reaper.ImGui_SliderFlags_AlwaysClamp
+	reaper.ImGui_SliderFlags_AlwaysClamp()
+snippet reaper.ImGui_SliderFlags_Logarithmic
+	reaper.ImGui_SliderFlags_Logarithmic()
+snippet reaper.ImGui_SliderFlags_NoInput
+	reaper.ImGui_SliderFlags_NoInput()
+snippet reaper.ImGui_SliderFlags_None
+	reaper.ImGui_SliderFlags_None()
+snippet reaper.ImGui_SliderFlags_NoRoundToFormat
+	reaper.ImGui_SliderFlags_NoRoundToFormat()
+snippet reaper.ImGui_SliderInt
+	reaper.ImGui_SliderInt(${1:ctx}, ${2:label}, ${3:v}, ${4:v_min}, ${5:v_max}, ${6:formatIn}, ${7:flagsIn})
+snippet reaper.ImGui_SliderInt2
+	reaper.ImGui_SliderInt2(${1:ctx}, ${2:label}, ${3:v1}, ${4:v2}, ${5:v_min}, ${6:v_max}, ${7:formatIn}, ${8:flagsIn})
+snippet reaper.ImGui_SliderInt3
+	reaper.ImGui_SliderInt3(${1:ctx}, ${2:label}, ${3:v1}, ${4:v2}, ${5:v3}, ${6:v_min}, ${7:v_max}, ${8:formatIn}, ${9:flagsIn})
+snippet reaper.ImGui_SliderInt4
+	reaper.ImGui_SliderInt4(${1:ctx}, ${2:label}, ${3:v1}, ${4:v2}, ${5:v3}, ${6:v4}, ${7:v_min}, ${8:v_max}, ${9:formatIn}, ${10:flagsIn})
+snippet reaper.ImGui_SmallButton
+	reaper.ImGui_SmallButton(${1:ctx}, ${2:label})
+snippet reaper.ImGui_SortDirection_Ascending
+	reaper.ImGui_SortDirection_Ascending()
+snippet reaper.ImGui_SortDirection_Descending
+	reaper.ImGui_SortDirection_Descending()
+snippet reaper.ImGui_SortDirection_None
+	reaper.ImGui_SortDirection_None()
+snippet reaper.ImGui_Spacing
+	reaper.ImGui_Spacing(${1:ctx})
+snippet reaper.ImGui_StyleVar_Alpha
+	reaper.ImGui_StyleVar_Alpha()
+snippet reaper.ImGui_StyleVar_ButtonTextAlign
+	reaper.ImGui_StyleVar_ButtonTextAlign()
+snippet reaper.ImGui_StyleVar_CellPadding
+	reaper.ImGui_StyleVar_CellPadding()
+snippet reaper.ImGui_StyleVar_ChildBorderSize
+	reaper.ImGui_StyleVar_ChildBorderSize()
+snippet reaper.ImGui_StyleVar_ChildRounding
+	reaper.ImGui_StyleVar_ChildRounding()
+snippet reaper.ImGui_StyleVar_DisabledAlpha
+	reaper.ImGui_StyleVar_DisabledAlpha()
+snippet reaper.ImGui_StyleVar_FrameBorderSize
+	reaper.ImGui_StyleVar_FrameBorderSize()
+snippet reaper.ImGui_StyleVar_FramePadding
+	reaper.ImGui_StyleVar_FramePadding()
+snippet reaper.ImGui_StyleVar_FrameRounding
+	reaper.ImGui_StyleVar_FrameRounding()
+snippet reaper.ImGui_StyleVar_GrabMinSize
+	reaper.ImGui_StyleVar_GrabMinSize()
+snippet reaper.ImGui_StyleVar_GrabRounding
+	reaper.ImGui_StyleVar_GrabRounding()
+snippet reaper.ImGui_StyleVar_IndentSpacing
+	reaper.ImGui_StyleVar_IndentSpacing()
+snippet reaper.ImGui_StyleVar_ItemInnerSpacing
+	reaper.ImGui_StyleVar_ItemInnerSpacing()
+snippet reaper.ImGui_StyleVar_ItemSpacing
+	reaper.ImGui_StyleVar_ItemSpacing()
+snippet reaper.ImGui_StyleVar_PopupBorderSize
+	reaper.ImGui_StyleVar_PopupBorderSize()
+snippet reaper.ImGui_StyleVar_PopupRounding
+	reaper.ImGui_StyleVar_PopupRounding()
+snippet reaper.ImGui_StyleVar_ScrollbarRounding
+	reaper.ImGui_StyleVar_ScrollbarRounding()
+snippet reaper.ImGui_StyleVar_ScrollbarSize
+	reaper.ImGui_StyleVar_ScrollbarSize()
+snippet reaper.ImGui_StyleVar_SelectableTextAlign
+	reaper.ImGui_StyleVar_SelectableTextAlign()
+snippet reaper.ImGui_StyleVar_TabRounding
+	reaper.ImGui_StyleVar_TabRounding()
+snippet reaper.ImGui_StyleVar_WindowBorderSize
+	reaper.ImGui_StyleVar_WindowBorderSize()
+snippet reaper.ImGui_StyleVar_WindowMinSize
+	reaper.ImGui_StyleVar_WindowMinSize()
+snippet reaper.ImGui_StyleVar_WindowPadding
+	reaper.ImGui_StyleVar_WindowPadding()
+snippet reaper.ImGui_StyleVar_WindowRounding
+	reaper.ImGui_StyleVar_WindowRounding()
+snippet reaper.ImGui_StyleVar_WindowTitleAlign
+	reaper.ImGui_StyleVar_WindowTitleAlign()
+snippet reaper.ImGui_TabBarFlags_AutoSelectNewTabs
+	reaper.ImGui_TabBarFlags_AutoSelectNewTabs()
+snippet reaper.ImGui_TabBarFlags_FittingPolicyResizeDown
+	reaper.ImGui_TabBarFlags_FittingPolicyResizeDown()
+snippet reaper.ImGui_TabBarFlags_FittingPolicyScroll
+	reaper.ImGui_TabBarFlags_FittingPolicyScroll()
+snippet reaper.ImGui_TabBarFlags_NoCloseWithMiddleMouseButton
+	reaper.ImGui_TabBarFlags_NoCloseWithMiddleMouseButton()
+snippet reaper.ImGui_TabBarFlags_None
+	reaper.ImGui_TabBarFlags_None()
+snippet reaper.ImGui_TabBarFlags_NoTabListScrollingButtons
+	reaper.ImGui_TabBarFlags_NoTabListScrollingButtons()
+snippet reaper.ImGui_TabBarFlags_NoTooltip
+	reaper.ImGui_TabBarFlags_NoTooltip()
+snippet reaper.ImGui_TabBarFlags_Reorderable
+	reaper.ImGui_TabBarFlags_Reorderable()
+snippet reaper.ImGui_TabBarFlags_TabListPopupButton
+	reaper.ImGui_TabBarFlags_TabListPopupButton()
+snippet reaper.ImGui_TabItemButton
+	reaper.ImGui_TabItemButton(${1:ctx}, ${2:label}, ${3:flagsIn})
+snippet reaper.ImGui_TabItemFlags_Leading
+	reaper.ImGui_TabItemFlags_Leading()
+snippet reaper.ImGui_TabItemFlags_NoCloseWithMiddleMouseButton
+	reaper.ImGui_TabItemFlags_NoCloseWithMiddleMouseButton()
+snippet reaper.ImGui_TabItemFlags_None
+	reaper.ImGui_TabItemFlags_None()
+snippet reaper.ImGui_TabItemFlags_NoPushId
+	reaper.ImGui_TabItemFlags_NoPushId()
+snippet reaper.ImGui_TabItemFlags_NoReorder
+	reaper.ImGui_TabItemFlags_NoReorder()
+snippet reaper.ImGui_TabItemFlags_NoTooltip
+	reaper.ImGui_TabItemFlags_NoTooltip()
+snippet reaper.ImGui_TabItemFlags_SetSelected
+	reaper.ImGui_TabItemFlags_SetSelected()
+snippet reaper.ImGui_TabItemFlags_Trailing
+	reaper.ImGui_TabItemFlags_Trailing()
+snippet reaper.ImGui_TabItemFlags_UnsavedDocument
+	reaper.ImGui_TabItemFlags_UnsavedDocument()
+snippet reaper.ImGui_TableBgTarget_CellBg
+	reaper.ImGui_TableBgTarget_CellBg()
+snippet reaper.ImGui_TableBgTarget_None
+	reaper.ImGui_TableBgTarget_None()
+snippet reaper.ImGui_TableBgTarget_RowBg0
+	reaper.ImGui_TableBgTarget_RowBg0()
+snippet reaper.ImGui_TableBgTarget_RowBg1
+	reaper.ImGui_TableBgTarget_RowBg1()
+snippet reaper.ImGui_TableColumnFlags_DefaultHide
+	reaper.ImGui_TableColumnFlags_DefaultHide()
+snippet reaper.ImGui_TableColumnFlags_DefaultSort
+	reaper.ImGui_TableColumnFlags_DefaultSort()
+snippet reaper.ImGui_TableColumnFlags_Disabled
+	reaper.ImGui_TableColumnFlags_Disabled()
+snippet reaper.ImGui_TableColumnFlags_IndentDisable
+	reaper.ImGui_TableColumnFlags_IndentDisable()
+snippet reaper.ImGui_TableColumnFlags_IndentEnable
+	reaper.ImGui_TableColumnFlags_IndentEnable()
+snippet reaper.ImGui_TableColumnFlags_IsEnabled
+	reaper.ImGui_TableColumnFlags_IsEnabled()
+snippet reaper.ImGui_TableColumnFlags_IsHovered
+	reaper.ImGui_TableColumnFlags_IsHovered()
+snippet reaper.ImGui_TableColumnFlags_IsSorted
+	reaper.ImGui_TableColumnFlags_IsSorted()
+snippet reaper.ImGui_TableColumnFlags_IsVisible
+	reaper.ImGui_TableColumnFlags_IsVisible()
+snippet reaper.ImGui_TableColumnFlags_NoClip
+	reaper.ImGui_TableColumnFlags_NoClip()
+snippet reaper.ImGui_TableColumnFlags_NoHeaderLabel
+	reaper.ImGui_TableColumnFlags_NoHeaderLabel()
+snippet reaper.ImGui_TableColumnFlags_NoHeaderWidth
+	reaper.ImGui_TableColumnFlags_NoHeaderWidth()
+snippet reaper.ImGui_TableColumnFlags_NoHide
+	reaper.ImGui_TableColumnFlags_NoHide()
+snippet reaper.ImGui_TableColumnFlags_None
+	reaper.ImGui_TableColumnFlags_None()
+snippet reaper.ImGui_TableColumnFlags_NoReorder
+	reaper.ImGui_TableColumnFlags_NoReorder()
+snippet reaper.ImGui_TableColumnFlags_NoResize
+	reaper.ImGui_TableColumnFlags_NoResize()
+snippet reaper.ImGui_TableColumnFlags_NoSort
+	reaper.ImGui_TableColumnFlags_NoSort()
+snippet reaper.ImGui_TableColumnFlags_NoSortAscending
+	reaper.ImGui_TableColumnFlags_NoSortAscending()
+snippet reaper.ImGui_TableColumnFlags_NoSortDescending
+	reaper.ImGui_TableColumnFlags_NoSortDescending()
+snippet reaper.ImGui_TableColumnFlags_PreferSortAscending
+	reaper.ImGui_TableColumnFlags_PreferSortAscending()
+snippet reaper.ImGui_TableColumnFlags_PreferSortDescending
+	reaper.ImGui_TableColumnFlags_PreferSortDescending()
+snippet reaper.ImGui_TableColumnFlags_WidthFixed
+	reaper.ImGui_TableColumnFlags_WidthFixed()
+snippet reaper.ImGui_TableColumnFlags_WidthStretch
+	reaper.ImGui_TableColumnFlags_WidthStretch()
+snippet reaper.ImGui_TableFlags_Borders
+	reaper.ImGui_TableFlags_Borders()
+snippet reaper.ImGui_TableFlags_BordersH
+	reaper.ImGui_TableFlags_BordersH()
+snippet reaper.ImGui_TableFlags_BordersInner
+	reaper.ImGui_TableFlags_BordersInner()
+snippet reaper.ImGui_TableFlags_BordersInnerH
+	reaper.ImGui_TableFlags_BordersInnerH()
+snippet reaper.ImGui_TableFlags_BordersInnerV
+	reaper.ImGui_TableFlags_BordersInnerV()
+snippet reaper.ImGui_TableFlags_BordersOuter
+	reaper.ImGui_TableFlags_BordersOuter()
+snippet reaper.ImGui_TableFlags_BordersOuterH
+	reaper.ImGui_TableFlags_BordersOuterH()
+snippet reaper.ImGui_TableFlags_BordersOuterV
+	reaper.ImGui_TableFlags_BordersOuterV()
+snippet reaper.ImGui_TableFlags_BordersV
+	reaper.ImGui_TableFlags_BordersV()
+snippet reaper.ImGui_TableFlags_ContextMenuInBody
+	reaper.ImGui_TableFlags_ContextMenuInBody()
+snippet reaper.ImGui_TableFlags_Hideable
+	reaper.ImGui_TableFlags_Hideable()
+snippet reaper.ImGui_TableFlags_NoClip
+	reaper.ImGui_TableFlags_NoClip()
+snippet reaper.ImGui_TableFlags_NoKeepColumnsVisible
+	reaper.ImGui_TableFlags_NoKeepColumnsVisible()
+snippet reaper.ImGui_TableFlags_None
+	reaper.ImGui_TableFlags_None()
+snippet reaper.ImGui_TableFlags_NoPadInnerX
+	reaper.ImGui_TableFlags_NoPadInnerX()
+snippet reaper.ImGui_TableFlags_NoPadOuterX
+	reaper.ImGui_TableFlags_NoPadOuterX()
+snippet reaper.ImGui_TableFlags_NoSavedSettings
+	reaper.ImGui_TableFlags_NoSavedSettings()
+snippet reaper.ImGui_TableFlags_PadOuterX
+	reaper.ImGui_TableFlags_PadOuterX()
+snippet reaper.ImGui_TableFlags_PreciseWidths
+	reaper.ImGui_TableFlags_PreciseWidths()
+snippet reaper.ImGui_TableFlags_Reorderable
+	reaper.ImGui_TableFlags_Reorderable()
+snippet reaper.ImGui_TableFlags_Resizable
+	reaper.ImGui_TableFlags_Resizable()
+snippet reaper.ImGui_TableFlags_RowBg
+	reaper.ImGui_TableFlags_RowBg()
+snippet reaper.ImGui_TableFlags_ScrollX
+	reaper.ImGui_TableFlags_ScrollX()
+snippet reaper.ImGui_TableFlags_ScrollY
+	reaper.ImGui_TableFlags_ScrollY()
+snippet reaper.ImGui_TableFlags_SizingFixedFit
+	reaper.ImGui_TableFlags_SizingFixedFit()
+snippet reaper.ImGui_TableFlags_SizingFixedSame
+	reaper.ImGui_TableFlags_SizingFixedSame()
+snippet reaper.ImGui_TableFlags_SizingStretchProp
+	reaper.ImGui_TableFlags_SizingStretchProp()
+snippet reaper.ImGui_TableFlags_SizingStretchSame
+	reaper.ImGui_TableFlags_SizingStretchSame()
+snippet reaper.ImGui_TableFlags_Sortable
+	reaper.ImGui_TableFlags_Sortable()
+snippet reaper.ImGui_TableFlags_SortMulti
+	reaper.ImGui_TableFlags_SortMulti()
+snippet reaper.ImGui_TableFlags_SortTristate
+	reaper.ImGui_TableFlags_SortTristate()
+snippet reaper.ImGui_TableGetColumnCount
+	reaper.ImGui_TableGetColumnCount(${1:ctx})
+snippet reaper.ImGui_TableGetColumnFlags
+	reaper.ImGui_TableGetColumnFlags(${1:ctx}, ${2:column_nIn})
+snippet reaper.ImGui_TableGetColumnIndex
+	reaper.ImGui_TableGetColumnIndex(${1:ctx})
+snippet reaper.ImGui_TableGetColumnName
+	reaper.ImGui_TableGetColumnName(${1:ctx}, ${2:column_nIn})
+snippet reaper.ImGui_TableGetColumnSortSpecs
+	reaper.ImGui_TableGetColumnSortSpecs(${1:ctx}, ${2:id})
+snippet reaper.ImGui_TableGetRowIndex
+	reaper.ImGui_TableGetRowIndex(${1:ctx})
+snippet reaper.ImGui_TableHeader
+	reaper.ImGui_TableHeader(${1:ctx}, ${2:label})
+snippet reaper.ImGui_TableHeadersRow
+	reaper.ImGui_TableHeadersRow(${1:ctx})
+snippet reaper.ImGui_TableNeedSort
+	reaper.ImGui_TableNeedSort(${1:ctx})
+snippet reaper.ImGui_TableNextColumn
+	reaper.ImGui_TableNextColumn(${1:ctx})
+snippet reaper.ImGui_TableNextRow
+	reaper.ImGui_TableNextRow(${1:ctx}, ${2:row_flagsIn}, ${3:min_row_heightIn})
+snippet reaper.ImGui_TableRowFlags_Headers
+	reaper.ImGui_TableRowFlags_Headers()
+snippet reaper.ImGui_TableRowFlags_None
+	reaper.ImGui_TableRowFlags_None()
+snippet reaper.ImGui_TableSetBgColor
+	reaper.ImGui_TableSetBgColor(${1:ctx}, ${2:target}, ${3:color_rgba}, ${4:column_nIn})
+snippet reaper.ImGui_TableSetColumnEnabled
+	reaper.ImGui_TableSetColumnEnabled(${1:ctx}, ${2:column_n}, ${3:v})
+snippet reaper.ImGui_TableSetColumnIndex
+	reaper.ImGui_TableSetColumnIndex(${1:ctx}, ${2:column_n})
+snippet reaper.ImGui_TableSetupColumn
+	reaper.ImGui_TableSetupColumn(${1:ctx}, ${2:label}, ${3:flagsIn}, ${4:init_width_or_weightIn}, ${5:user_idIn})
+snippet reaper.ImGui_TableSetupScrollFreeze
+	reaper.ImGui_TableSetupScrollFreeze(${1:ctx}, ${2:cols}, ${3:rows})
+snippet reaper.ImGui_Text
+	reaper.ImGui_Text(${1:ctx}, ${2:text})
+snippet reaper.ImGui_TextColored
+	reaper.ImGui_TextColored(${1:ctx}, ${2:col_rgba}, ${3:text})
+snippet reaper.ImGui_TextDisabled
+	reaper.ImGui_TextDisabled(${1:ctx}, ${2:text})
+snippet reaper.ImGui_TextFilter_Clear
+	reaper.ImGui_TextFilter_Clear(${1:filter})
+snippet reaper.ImGui_TextFilter_Draw
+	reaper.ImGui_TextFilter_Draw(${1:ctx}, ${2:labelIn}, ${3:widthIn})
+snippet reaper.ImGui_TextFilter_Get
+	reaper.ImGui_TextFilter_Get(${1:filter})
+snippet reaper.ImGui_TextFilter_IsActive
+	reaper.ImGui_TextFilter_IsActive(${1:filter})
+snippet reaper.ImGui_TextFilter_PassFilter
+	reaper.ImGui_TextFilter_PassFilter(${1:filter}, ${2:text})
+snippet reaper.ImGui_TextFilter_Set
+	reaper.ImGui_TextFilter_Set(${1:filter}, ${2:filter_text})
+snippet reaper.ImGui_TextWrapped
+	reaper.ImGui_TextWrapped(${1:ctx}, ${2:text})
+snippet reaper.ImGui_TreeNode
+	reaper.ImGui_TreeNode(${1:ctx}, ${2:label}, ${3:flagsIn})
+snippet reaper.ImGui_TreeNodeEx
+	reaper.ImGui_TreeNodeEx(${1:ctx}, ${2:str_id}, ${3:label}, ${4:flagsIn})
+snippet reaper.ImGui_TreeNodeFlags_AllowItemOverlap
+	reaper.ImGui_TreeNodeFlags_AllowItemOverlap()
+snippet reaper.ImGui_TreeNodeFlags_Bullet
+	reaper.ImGui_TreeNodeFlags_Bullet()
+snippet reaper.ImGui_TreeNodeFlags_CollapsingHeader
+	reaper.ImGui_TreeNodeFlags_CollapsingHeader()
+snippet reaper.ImGui_TreeNodeFlags_DefaultOpen
+	reaper.ImGui_TreeNodeFlags_DefaultOpen()
+snippet reaper.ImGui_TreeNodeFlags_Framed
+	reaper.ImGui_TreeNodeFlags_Framed()
+snippet reaper.ImGui_TreeNodeFlags_FramePadding
+	reaper.ImGui_TreeNodeFlags_FramePadding()
+snippet reaper.ImGui_TreeNodeFlags_Leaf
+	reaper.ImGui_TreeNodeFlags_Leaf()
+snippet reaper.ImGui_TreeNodeFlags_NoAutoOpenOnLog
+	reaper.ImGui_TreeNodeFlags_NoAutoOpenOnLog()
+snippet reaper.ImGui_TreeNodeFlags_None
+	reaper.ImGui_TreeNodeFlags_None()
+snippet reaper.ImGui_TreeNodeFlags_NoTreePushOnOpen
+	reaper.ImGui_TreeNodeFlags_NoTreePushOnOpen()
+snippet reaper.ImGui_TreeNodeFlags_OpenOnArrow
+	reaper.ImGui_TreeNodeFlags_OpenOnArrow()
+snippet reaper.ImGui_TreeNodeFlags_OpenOnDoubleClick
+	reaper.ImGui_TreeNodeFlags_OpenOnDoubleClick()
+snippet reaper.ImGui_TreeNodeFlags_Selected
+	reaper.ImGui_TreeNodeFlags_Selected()
+snippet reaper.ImGui_TreeNodeFlags_SpanAvailWidth
+	reaper.ImGui_TreeNodeFlags_SpanAvailWidth()
+snippet reaper.ImGui_TreeNodeFlags_SpanFullWidth
+	reaper.ImGui_TreeNodeFlags_SpanFullWidth()
+snippet reaper.ImGui_TreePop
+	reaper.ImGui_TreePop(${1:ctx})
+snippet reaper.ImGui_TreePush
+	reaper.ImGui_TreePush(${1:ctx}, ${2:str_id})
+snippet reaper.ImGui_Unindent
+	reaper.ImGui_Unindent(${1:ctx}, ${2:indent_wIn})
+snippet reaper.ImGui_ValidatePtr
+	reaper.ImGui_ValidatePtr(${1:pointer}, ${2:type})
+snippet reaper.ImGui_Viewport_GetCenter
+	reaper.ImGui_Viewport_GetCenter(${1:viewport})
+snippet reaper.ImGui_Viewport_GetPos
+	reaper.ImGui_Viewport_GetPos(${1:viewport})
+snippet reaper.ImGui_Viewport_GetSize
+	reaper.ImGui_Viewport_GetSize(${1:viewport})
+snippet reaper.ImGui_Viewport_GetWorkCenter
+	reaper.ImGui_Viewport_GetWorkCenter(${1:viewport})
+snippet reaper.ImGui_Viewport_GetWorkPos
+	reaper.ImGui_Viewport_GetWorkPos(${1:viewport})
+snippet reaper.ImGui_Viewport_GetWorkSize
+	reaper.ImGui_Viewport_GetWorkSize(${1:viewport})
+snippet reaper.ImGui_VSliderDouble
+	reaper.ImGui_VSliderDouble(${1:ctx}, ${2:label}, ${3:size_w}, ${4:size_h}, ${5:v}, ${6:v_min}, ${7:v_max}, ${8:formatIn}, ${9:flagsIn})
+snippet reaper.ImGui_VSliderInt
+	reaper.ImGui_VSliderInt(${1:ctx}, ${2:label}, ${3:size_w}, ${4:size_h}, ${5:v}, ${6:v_min}, ${7:v_max}, ${8:formatIn}, ${9:flagsIn})
+snippet reaper.ImGui_WindowFlags_AlwaysAutoResize
+	reaper.ImGui_WindowFlags_AlwaysAutoResize()
+snippet reaper.ImGui_WindowFlags_AlwaysHorizontalScrollbar
+	reaper.ImGui_WindowFlags_AlwaysHorizontalScrollbar()
+snippet reaper.ImGui_WindowFlags_AlwaysUseWindowPadding
+	reaper.ImGui_WindowFlags_AlwaysUseWindowPadding()
+snippet reaper.ImGui_WindowFlags_AlwaysVerticalScrollbar
+	reaper.ImGui_WindowFlags_AlwaysVerticalScrollbar()
+snippet reaper.ImGui_WindowFlags_HorizontalScrollbar
+	reaper.ImGui_WindowFlags_HorizontalScrollbar()
+snippet reaper.ImGui_WindowFlags_MenuBar
+	reaper.ImGui_WindowFlags_MenuBar()
+snippet reaper.ImGui_WindowFlags_NoBackground
+	reaper.ImGui_WindowFlags_NoBackground()
+snippet reaper.ImGui_WindowFlags_NoCollapse
+	reaper.ImGui_WindowFlags_NoCollapse()
+snippet reaper.ImGui_WindowFlags_NoDecoration
+	reaper.ImGui_WindowFlags_NoDecoration()
+snippet reaper.ImGui_WindowFlags_NoDocking
+	reaper.ImGui_WindowFlags_NoDocking()
+snippet reaper.ImGui_WindowFlags_NoFocusOnAppearing
+	reaper.ImGui_WindowFlags_NoFocusOnAppearing()
+snippet reaper.ImGui_WindowFlags_NoInputs
+	reaper.ImGui_WindowFlags_NoInputs()
+snippet reaper.ImGui_WindowFlags_NoMouseInputs
+	reaper.ImGui_WindowFlags_NoMouseInputs()
+snippet reaper.ImGui_WindowFlags_NoMove
+	reaper.ImGui_WindowFlags_NoMove()
+snippet reaper.ImGui_WindowFlags_NoNav
+	reaper.ImGui_WindowFlags_NoNav()
+snippet reaper.ImGui_WindowFlags_NoNavFocus
+	reaper.ImGui_WindowFlags_NoNavFocus()
+snippet reaper.ImGui_WindowFlags_NoNavInputs
+	reaper.ImGui_WindowFlags_NoNavInputs()
+snippet reaper.ImGui_WindowFlags_None
+	reaper.ImGui_WindowFlags_None()
+snippet reaper.ImGui_WindowFlags_NoResize
+	reaper.ImGui_WindowFlags_NoResize()
+snippet reaper.ImGui_WindowFlags_NoSavedSettings
+	reaper.ImGui_WindowFlags_NoSavedSettings()
+snippet reaper.ImGui_WindowFlags_NoScrollbar
+	reaper.ImGui_WindowFlags_NoScrollbar()
+snippet reaper.ImGui_WindowFlags_NoScrollWithMouse
+	reaper.ImGui_WindowFlags_NoScrollWithMouse()
+snippet reaper.ImGui_WindowFlags_NoTitleBar
+	reaper.ImGui_WindowFlags_NoTitleBar()
+snippet reaper.ImGui_WindowFlags_TopMost
+	reaper.ImGui_WindowFlags_TopMost()
+snippet reaper.ImGui_WindowFlags_UnsavedDocument
+	reaper.ImGui_WindowFlags_UnsavedDocument()
+snippet gfx.init
+	gfx.init(${1:name}, ${2:width}, ${3:height}, ${4:dockstate}, ${5:xpos}, ${6:ypos})
+snippet reaper.InsertAutomationItem
+	reaper.InsertAutomationItem(${1:env}, ${2:pool_id}, ${3:position}, ${4:length})
+snippet reaper.InsertEnvelopePoint
+	reaper.InsertEnvelopePoint(${1:envelope}, ${2:time}, ${3:value}, ${4:shape}, ${5:tension}, ${6:selected}, ${7:noSortIn})
+snippet reaper.InsertEnvelopePointEx
+	reaper.InsertEnvelopePointEx(${1:envelope}, ${2:autoitem_idx}, ${3:time}, ${4:value}, ${5:shape}, ${6:tension}, ${7:selected}, ${8:noSortIn})
+snippet reaper.InsertMedia
+	reaper.InsertMedia(${1:file}, ${2:mode})
+snippet reaper.InsertMediaSection
+	reaper.InsertMediaSection(${1:file}, ${2:mode}, ${3:startpct}, ${4:endpct}, ${5:pitchshift})
+snippet reaper.InsertTrackAtIndex
+	reaper.InsertTrackAtIndex(${1:idx}, ${2:wantDefaults})
+snippet reaper.IsMediaExtension
+	reaper.IsMediaExtension(${1:ext}, ${2:wantOthers})
+snippet reaper.IsMediaItemSelected
+	reaper.IsMediaItemSelected(${1:item})
+snippet reaper.IsProjectDirty
+	reaper.IsProjectDirty(${1:proj})
+snippet reaper.IsTrackSelected
+	reaper.IsTrackSelected(${1:track})
+snippet reaper.IsTrackVisible
+	reaper.IsTrackVisible(${1:track}, ${2:mixer})
+snippet reaper.joystick_create
+	reaper.joystick_create(${1:guidGUID})
+snippet reaper.joystick_destroy
+	reaper.joystick_destroy(${1:device})
+snippet reaper.joystick_enum
+	reaper.joystick_enum(${1:index})
+snippet reaper.joystick_getaxis
+	reaper.joystick_getaxis(${1:dev}, ${2:axis})
+snippet reaper.joystick_getbuttonmask
+	reaper.joystick_getbuttonmask(${1:dev})
+snippet reaper.joystick_getinfo
+	reaper.joystick_getinfo(${1:dev})
+snippet reaper.joystick_getpov
+	reaper.joystick_getpov(${1:dev}, ${2:pov})
+snippet reaper.joystick_update
+	reaper.joystick_update(${1:dev})
+snippet reaper.JS_Actions_CountShortcuts
+	reaper.JS_Actions_CountShortcuts(${1:section}, ${2:cmdID})
+snippet reaper.JS_Actions_DeleteShortcut
+	reaper.JS_Actions_DeleteShortcut(${1:section}, ${2:cmdID}, ${3:shortcutidx})
+snippet reaper.JS_Actions_DoShortcutDialog
+	reaper.JS_Actions_DoShortcutDialog(${1:section}, ${2:cmdID}, ${3:shortcutidx})
+snippet reaper.JS_Actions_GetShortcutDesc
+	reaper.JS_Actions_GetShortcutDesc(${1:section}, ${2:cmdID}, ${3:shortcutidx})
+snippet reaper.JS_Byte
+	reaper.JS_Byte(${1:pointer}, ${2:offset})
+snippet reaper.JS_Composite
+	reaper.JS_Composite(${1:windowHWND}, ${2:dstx}, ${3:dsty}, ${4:dstw}, ${5:dsth}, ${6:sysBitmap}, ${7:srcx}, ${8:srcy}, ${9:srcw}, ${10:srch}, ${11:autoUpdate})
+snippet reaper.JS_Composite_Delay
+	reaper.JS_Composite_Delay(${1:windowHWND}, ${2:minTime}, ${3:maxTime}, ${4:numBitmapsWhenMax})
+snippet reaper.JS_Composite_ListBitmaps
+	reaper.JS_Composite_ListBitmaps(${1:windowHWND})
+snippet reaper.JS_Composite_Unlink
+	reaper.JS_Composite_Unlink(${1:windowHWND}, ${2:bitmap}, ${3:autoUpdate})
+snippet reaper.JS_Dialog_BrowseForFolder
+	reaper.JS_Dialog_BrowseForFolder(${1:caption}, ${2:initialFolder})
+snippet reaper.JS_Dialog_BrowseForOpenFiles
+	reaper.JS_Dialog_BrowseForOpenFiles(${1:windowTitle}, ${2:initialFolder}, ${3:initialFile}, ${4:extensionList}, ${5:allowMultiple})
+snippet reaper.JS_Dialog_BrowseForSaveFile
+	reaper.JS_Dialog_BrowseForSaveFile(${1:windowTitle}, ${2:initialFolder}, ${3:initialFile}, ${4:extensionList})
+snippet reaper.JS_Double
+	reaper.JS_Double(${1:pointer}, ${2:offset})
+snippet reaper.JS_File_Stat
+	reaper.JS_File_Stat(${1:filePath})
+snippet reaper.JS_GDI_Blit
+	reaper.JS_GDI_Blit(${1:destHDC}, ${2:dstx}, ${3:dsty}, ${4:sourceHDC}, ${5:srcx}, ${6:srxy}, ${7:width}, ${8:height}, ${9:mode})
+snippet reaper.JS_GDI_CreateFillBrush
+	reaper.JS_GDI_CreateFillBrush(${1:color})
+snippet reaper.JS_GDI_CreateFont
+	reaper.JS_GDI_CreateFont(${1:height}, ${2:weight}, ${3:angle}, ${4:italic}, ${5:underline}, ${6:strike}, ${7:fontName})
+snippet reaper.JS_GDI_CreatePen
+	reaper.JS_GDI_CreatePen(${1:width}, ${2:color})
+snippet reaper.JS_GDI_DeleteObject
+	reaper.JS_GDI_DeleteObject(${1:GDIObject})
+snippet reaper.JS_GDI_DrawText
+	reaper.JS_GDI_DrawText(${1:deviceHDC}, ${2:text}, ${3:len}, ${4:left}, ${5:top}, ${6:right}, ${7:bottom}, ${8:align})
+snippet reaper.JS_GDI_FillEllipse
+	reaper.JS_GDI_FillEllipse(${1:deviceHDC}, ${2:left}, ${3:top}, ${4:right}, ${5:bottom})
+snippet reaper.JS_GDI_FillPolygon
+	reaper.JS_GDI_FillPolygon(${1:deviceHDC}, ${2:packedX}, ${3:packedY}, ${4:numPoints})
+snippet reaper.JS_GDI_FillRect
+	reaper.JS_GDI_FillRect(${1:deviceHDC}, ${2:left}, ${3:top}, ${4:right}, ${5:bottom})
+snippet reaper.JS_GDI_FillRoundRect
+	reaper.JS_GDI_FillRoundRect(${1:deviceHDC}, ${2:left}, ${3:top}, ${4:right}, ${5:bottom}, ${6:xrnd}, ${7:yrnd})
+snippet reaper.JS_GDI_GetClientDC
+	reaper.JS_GDI_GetClientDC(${1:windowHWND})
+snippet reaper.JS_GDI_GetScreenDC
+	reaper.JS_GDI_GetScreenDC()
+snippet reaper.JS_GDI_GetSysColor
+	reaper.JS_GDI_GetSysColor(${1:GUIElement})
+snippet reaper.JS_GDI_GetTextColor
+	reaper.JS_GDI_GetTextColor(${1:deviceHDC})
+snippet reaper.JS_GDI_GetWindowDC
+	reaper.JS_GDI_GetWindowDC(${1:windowHWND})
+snippet reaper.JS_GDI_Line
+	reaper.JS_GDI_Line(${1:deviceHDC}, ${2:x1}, ${3:y1}, ${4:x2}, ${5:y2})
+snippet reaper.JS_GDI_Polyline
+	reaper.JS_GDI_Polyline(${1:deviceHDC}, ${2:packedX}, ${3:packedY}, ${4:numPoints})
+snippet reaper.JS_GDI_ReleaseDC
+	reaper.JS_GDI_ReleaseDC(${1:deviceHDC}, ${2:windowHWND})
+snippet reaper.JS_GDI_SelectObject
+	reaper.JS_GDI_SelectObject(${1:deviceHDC}, ${2:GDIObject})
+snippet reaper.JS_GDI_SetPixel
+	reaper.JS_GDI_SetPixel(${1:deviceHDC}, ${2:x}, ${3:y}, ${4:color})
+snippet reaper.JS_GDI_SetTextBkColor
+	reaper.JS_GDI_SetTextBkColor(${1:deviceHDC}, ${2:color})
+snippet reaper.JS_GDI_SetTextBkMode
+	reaper.JS_GDI_SetTextBkMode(${1:deviceHDC}, ${2:mode})
+snippet reaper.JS_GDI_SetTextColor
+	reaper.JS_GDI_SetTextColor(${1:deviceHDC}, ${2:color})
+snippet reaper.JS_GDI_StretchBlit
+	reaper.JS_GDI_StretchBlit(${1:destHDC}, ${2:dstx}, ${3:dsty}, ${4:dstw}, ${5:dsth}, ${6:sourceHDC}, ${7:srcx}, ${8:srxy}, ${9:srcw}, ${10:srch}, ${11:mode})
+snippet reaper.JS_Int
+	reaper.JS_Int(${1:pointer}, ${2:offset})
+snippet reaper.JS_LICE_AlterBitmapHSV
+	reaper.JS_LICE_AlterBitmapHSV(${1:bitmap}, ${2:hue}, ${3:saturation}, ${4:value})
+snippet reaper.JS_LICE_AlterRectHSV
+	reaper.JS_LICE_AlterRectHSV(${1:bitmap}, ${2:x}, ${3:y}, ${4:w}, ${5:h}, ${6:hue}, ${7:saturation}, ${8:value})
+snippet reaper.JS_LICE_Arc
+	reaper.JS_LICE_Arc(${1:bitmap}, ${2:cx}, ${3:cy}, ${4:r}, ${5:minAngle}, ${6:maxAngle}, ${7:color}, ${8:alpha}, ${9:mode}, ${10:antialias})
+snippet reaper.JS_LICE_ArrayAllBitmaps
+	reaper.JS_LICE_ArrayAllBitmaps(${1:reaperarray})
+snippet reaper.JS_LICE_Bezier
+	reaper.JS_LICE_Bezier(${1:bitmap}, ${2:xstart}, ${3:ystart}, ${4:xctl1}, ${5:yctl1}, ${6:xctl2}, ${7:yctl2}, ${8:xend}, ${9:yend}, ${10:tol}, ${11:color}, ${12:alpha}, ${13:mode}, ${14:antialias})
+snippet reaper.JS_LICE_Blit
+	reaper.JS_LICE_Blit(${1:destBitmap}, ${2:dstx}, ${3:dsty}, ${4:sourceBitmap}, ${5:srcx}, ${6:srcy}, ${7:width}, ${8:height}, ${9:alpha}, ${10:mode})
+snippet reaper.JS_LICE_Circle
+	reaper.JS_LICE_Circle(${1:bitmap}, ${2:cx}, ${3:cy}, ${4:r}, ${5:color}, ${6:alpha}, ${7:mode}, ${8:antialias})
+snippet reaper.JS_LICE_Clear
+	reaper.JS_LICE_Clear(${1:bitmap}, ${2:color})
+snippet reaper.JS_LICE_CreateBitmap
+	reaper.JS_LICE_CreateBitmap(${1:isSysBitmap}, ${2:width}, ${3:height})
+snippet reaper.JS_LICE_CreateFont
+	reaper.JS_LICE_CreateFont()
+snippet reaper.JS_LICE_DestroyBitmap
+	reaper.JS_LICE_DestroyBitmap(${1:bitmap})
+snippet reaper.JS_LICE_DestroyFont
+	reaper.JS_LICE_DestroyFont(${1:LICEFont})
+snippet reaper.JS_LICE_DrawChar
+	reaper.JS_LICE_DrawChar(${1:bitmap}, ${2:x}, ${3:y}, ${4:c}, ${5:color}, ${6:alpha}, ${7:mode})
+snippet reaper.JS_LICE_DrawText
+	reaper.JS_LICE_DrawText(${1:bitmap}, ${2:LICEFont}, ${3:text}, ${4:textLen}, ${5:x1}, ${6:y1}, ${7:x2}, ${8:y2})
+snippet reaper.JS_LICE_FillCircle
+	reaper.JS_LICE_FillCircle(${1:bitmap}, ${2:cx}, ${3:cy}, ${4:r}, ${5:color}, ${6:alpha}, ${7:mode}, ${8:antialias})
+snippet reaper.JS_LICE_FillPolygon
+	reaper.JS_LICE_FillPolygon(${1:bitmap}, ${2:packedX}, ${3:packedY}, ${4:numPoints}, ${5:color}, ${6:alpha}, ${7:mode})
+snippet reaper.JS_LICE_FillRect
+	reaper.JS_LICE_FillRect(${1:bitmap}, ${2:x}, ${3:y}, ${4:w}, ${5:h}, ${6:color}, ${7:alpha}, ${8:mode})
+snippet reaper.JS_LICE_FillTriangle
+	reaper.JS_LICE_FillTriangle(${1:bitmap}, ${2:x1}, ${3:y1}, ${4:x2}, ${5:y2}, ${6:x3}, ${7:y3}, ${8:color}, ${9:alpha}, ${10:mode})
+snippet reaper.JS_LICE_GetDC
+	reaper.JS_LICE_GetDC(${1:bitmap})
+snippet reaper.JS_LICE_GetHeight
+	reaper.JS_LICE_GetHeight(${1:bitmap})
+snippet reaper.JS_LICE_GetPixel
+	reaper.JS_LICE_GetPixel(${1:bitmap}, ${2:x}, ${3:y})
+snippet reaper.JS_LICE_GetWidth
+	reaper.JS_LICE_GetWidth(${1:bitmap})
+snippet reaper.JS_LICE_GradRect
+	reaper.JS_LICE_GradRect(${1:bitmap}, ${2:dstx}, ${3:dsty}, ${4:dstw}, ${5:dsth}, ${6:ir}, ${7:ig}, ${8:ib}, ${9:ia}, ${10:drdx}, ${11:dgdx}, ${12:dbdx}, ${13:dadx}, ${14:drdy}, ${15:dgdy}, ${16:dbdy}, ${17:dady}, ${18:mode})
+snippet reaper.JS_LICE_IsFlipped
+	reaper.JS_LICE_IsFlipped(${1:bitmap})
+snippet reaper.JS_LICE_Line
+	reaper.JS_LICE_Line(${1:bitmap}, ${2:x1}, ${3:y1}, ${4:x2}, ${5:y2}, ${6:color}, ${7:alpha}, ${8:mode}, ${9:antialias})
+snippet reaper.JS_LICE_ListAllBitmaps
+	reaper.JS_LICE_ListAllBitmaps()
+snippet reaper.JS_LICE_LoadJPG
+	reaper.JS_LICE_LoadJPG(${1:filename})
+snippet reaper.JS_LICE_LoadJPGFromMemory
+	reaper.JS_LICE_LoadJPGFromMemory(${1:buffer}, ${2:bufsize})
+snippet reaper.JS_LICE_LoadPNG
+	reaper.JS_LICE_LoadPNG(${1:filename})
+snippet reaper.JS_LICE_LoadPNGFromMemory
+	reaper.JS_LICE_LoadPNGFromMemory(${1:buffer}, ${2:bufsize})
+snippet reaper.JS_LICE_MeasureText
+	reaper.JS_LICE_MeasureText(${1:text})
+snippet reaper.JS_LICE_ProcessRect
+	reaper.JS_LICE_ProcessRect(${1:bitmap}, ${2:x}, ${3:y}, ${4:w}, ${5:h}, ${6:mode}, ${7:operand})
+snippet reaper.JS_LICE_PutPixel
+	reaper.JS_LICE_PutPixel(${1:bitmap}, ${2:x}, ${3:y}, ${4:color}, ${5:alpha}, ${6:mode})
+snippet reaper.JS_LICE_Resize
+	reaper.JS_LICE_Resize(${1:bitmap}, ${2:width}, ${3:height})
+snippet reaper.JS_LICE_RotatedBlit
+	reaper.JS_LICE_RotatedBlit(${1:destBitmap}, ${2:dstx}, ${3:dsty}, ${4:dstw}, ${5:dsth}, ${6:sourceBitmap}, ${7:srcx}, ${8:srcy}, ${9:srcw}, ${10:srch}, ${11:angle}, ${12:rotxcent}, ${13:rotycent}, ${14:cliptosourcerect}, ${15:alpha}, ${16:mode})
+snippet reaper.JS_LICE_RoundRect
+	reaper.JS_LICE_RoundRect(${1:bitmap}, ${2:x}, ${3:y}, ${4:w}, ${5:h}, ${6:cornerradius}, ${7:color}, ${8:alpha}, ${9:mode}, ${10:antialias})
+snippet reaper.JS_LICE_ScaledBlit
+	reaper.JS_LICE_ScaledBlit(${1:destBitmap}, ${2:dstx}, ${3:dsty}, ${4:dstw}, ${5:dsth}, ${6:srcBitmap}, ${7:srcx}, ${8:srcy}, ${9:srcw}, ${10:srch}, ${11:alpha}, ${12:mode})
+snippet reaper.JS_LICE_SetAlphaFromColorMask
+	reaper.JS_LICE_SetAlphaFromColorMask(${1:bitmap}, ${2:colorRGB})
+snippet reaper.JS_LICE_SetFontBkColor
+	reaper.JS_LICE_SetFontBkColor(${1:LICEFont}, ${2:color})
+snippet reaper.JS_LICE_SetFontColor
+	reaper.JS_LICE_SetFontColor(${1:LICEFont}, ${2:color})
+snippet reaper.JS_LICE_SetFontFromGDI
+	reaper.JS_LICE_SetFontFromGDI(${1:LICEFont}, ${2:GDIFont}, ${3:moreFormats})
+snippet reaper.JS_LICE_SetFontFXColor
+	reaper.JS_LICE_SetFontFXColor(${1:LICEFont}, ${2:color})
+snippet reaper.JS_LICE_WriteJPG
+	reaper.JS_LICE_WriteJPG(${1:filename}, ${2:bitmap}, ${3:quality}, ${4:forceBaseline})
+snippet reaper.JS_LICE_WritePNG
+	reaper.JS_LICE_WritePNG(${1:filename}, ${2:bitmap}, ${3:wantAlpha})
+snippet reaper.JS_ListView_EnsureVisible
+	reaper.JS_ListView_EnsureVisible(${1:listviewHWND}, ${2:index}, ${3:partialOK})
+snippet reaper.JS_ListView_EnumSelItems
+	reaper.JS_ListView_EnumSelItems(${1:listviewHWND}, ${2:index})
+snippet reaper.JS_ListView_GetFocusedItem
+	reaper.JS_ListView_GetFocusedItem(${1:listviewHWND})
+snippet reaper.JS_ListView_GetItem
+	reaper.JS_ListView_GetItem(${1:listviewHWND}, ${2:index}, ${3:subItem})
+snippet reaper.JS_ListView_GetItemCount
+	reaper.JS_ListView_GetItemCount(${1:listviewHWND})
+snippet reaper.JS_ListView_GetItemRect
+	reaper.JS_ListView_GetItemRect(${1:listviewHWND}, ${2:index})
+snippet reaper.JS_ListView_GetItemState
+	reaper.JS_ListView_GetItemState(${1:listviewHWND}, ${2:index})
+snippet reaper.JS_ListView_GetItemText
+	reaper.JS_ListView_GetItemText(${1:listviewHWND}, ${2:index}, ${3:subItem})
+snippet reaper.JS_ListView_GetSelectedCount
+	reaper.JS_ListView_GetSelectedCount(${1:listviewHWND})
+snippet reaper.JS_ListView_GetTopIndex
+	reaper.JS_ListView_GetTopIndex(${1:listviewHWND})
+snippet reaper.JS_ListView_HitTest
+	reaper.JS_ListView_HitTest(${1:listviewHWND}, ${2:clientX}, ${3:clientY})
+snippet reaper.JS_ListView_ListAllSelItems
+	reaper.JS_ListView_ListAllSelItems(${1:listviewHWND})
+snippet reaper.JS_ListView_SetItemState
+	reaper.JS_ListView_SetItemState(${1:listviewHWND}, ${2:index}, ${3:state}, ${4:mask})
+snippet reaper.JS_ListView_SetItemText
+	reaper.JS_ListView_SetItemText(${1:listviewHWND}, ${2:index}, ${3:subItem}, ${4:text})
+snippet reaper.JS_Localize
+	reaper.JS_Localize(${1:USEnglish}, ${2:LangPackSection})
+snippet reaper.JS_Mem_Alloc
+	reaper.JS_Mem_Alloc(${1:sizeBytes})
+snippet reaper.JS_Mem_Free
+	reaper.JS_Mem_Free(${1:mallocPointer})
+snippet reaper.JS_Mem_FromString
+	reaper.JS_Mem_FromString(${1:mallocPointer}, ${2:offset}, ${3:packedString}, ${4:stringLength})
+snippet reaper.JS_MIDIEditor_ArrayAll
+	reaper.JS_MIDIEditor_ArrayAll(${1:reaperarray})
+snippet reaper.JS_MIDIEditor_ListAll
+	reaper.JS_MIDIEditor_ListAll()
+snippet reaper.JS_Mouse_GetCursor
+	reaper.JS_Mouse_GetCursor()
+snippet reaper.JS_Mouse_GetState
+	reaper.JS_Mouse_GetState(${1:flags})
+snippet reaper.JS_Mouse_LoadCursor
+	reaper.JS_Mouse_LoadCursor(${1:cursorNumber})
+snippet reaper.JS_Mouse_LoadCursorFromFile
+	reaper.JS_Mouse_LoadCursorFromFile(${1:pathAndFileName}, ${2:forceNewLoad})
+snippet reaper.JS_Mouse_SetCursor
+	reaper.JS_Mouse_SetCursor(${1:cursorHandle})
+snippet reaper.JS_Mouse_SetPosition
+	reaper.JS_Mouse_SetPosition(${1:x}, ${2:y})
+snippet reaper.JS_ReaScriptAPI_Version
+	reaper.JS_ReaScriptAPI_Version()
+snippet reaper.JS_String
+	reaper.JS_String(${1:pointer}, ${2:offset}, ${3:lengthChars})
+snippet reaper.JS_VKeys_GetDown
+	reaper.JS_VKeys_GetDown(${1:cutoffTime})
+snippet reaper.JS_VKeys_GetState
+	reaper.JS_VKeys_GetState(${1:cutoffTime})
+snippet reaper.JS_VKeys_GetUp
+	reaper.JS_VKeys_GetUp(${1:cutoffTime})
+snippet reaper.JS_VKeys_Intercept
+	reaper.JS_VKeys_Intercept(${1:keyCode}, ${2:intercept})
+snippet reaper.JS_Window_AddressFromHandle
+	reaper.JS_Window_AddressFromHandle(${1:handle})
+snippet reaper.JS_Window_ArrayAllChild
+	reaper.JS_Window_ArrayAllChild(${1:parentHWND}, ${2:reaperarray})
+snippet reaper.JS_Window_ArrayAllTop
+	reaper.JS_Window_ArrayAllTop(${1:reaperarray})
+snippet reaper.JS_Window_ArrayFind
+	reaper.JS_Window_ArrayFind(${1:title}, ${2:exact}, ${3:reaperarray})
+snippet reaper.JS_Window_AttachResizeGrip
+	reaper.JS_Window_AttachResizeGrip(${1:windowHWND})
+snippet reaper.JS_Window_AttachTopmostPin
+	reaper.JS_Window_AttachTopmostPin(${1:windowHWND})
+snippet reaper.JS_Window_ClientToScreen
+	reaper.JS_Window_ClientToScreen(${1:windowHWND}, ${2:x}, ${3:y})
+snippet reaper.JS_Window_Create
+	reaper.JS_Window_Create(${1:title}, ${2:className}, ${3:x}, ${4:y}, ${5:w}, ${6:h}, ${7:style}, ${8:ownerHWND})
+snippet reaper.JS_Window_Destroy
+	reaper.JS_Window_Destroy(${1:windowHWND})
+snippet reaper.JS_Window_Enable
+	reaper.JS_Window_Enable(${1:windowHWND}, ${2:enable})
+snippet reaper.JS_Window_EnableMetal
+	reaper.JS_Window_EnableMetal(${1:windowHWND})
+snippet reaper.JS_Window_Find
+	reaper.JS_Window_Find(${1:title}, ${2:exact})
+snippet reaper.JS_Window_FindChild
+	reaper.JS_Window_FindChild(${1:parentHWND}, ${2:title}, ${3:exact})
+snippet reaper.JS_Window_FindChildByID
+	reaper.JS_Window_FindChildByID(${1:parentHWND}, ${2:ID})
+snippet reaper.JS_Window_FindEx
+	reaper.JS_Window_FindEx(${1:parentHWND}, ${2:childHWND}, ${3:className}, ${4:title})
+snippet reaper.JS_Window_FindTop
+	reaper.JS_Window_FindTop(${1:title}, ${2:exact})
+snippet reaper.JS_Window_FromPoint
+	reaper.JS_Window_FromPoint(${1:x}, ${2:y})
+snippet reaper.JS_Window_GetClassName
+	reaper.JS_Window_GetClassName(${1:windowHWND})
+snippet reaper.JS_Window_GetClientRect
+	reaper.JS_Window_GetClientRect(${1:windowHWND})
+snippet reaper.JS_Window_GetClientSize
+	reaper.JS_Window_GetClientSize(${1:windowHWND})
+snippet reaper.JS_Window_GetFocus
+	reaper.JS_Window_GetFocus()
+snippet reaper.JS_Window_GetForeground
+	reaper.JS_Window_GetForeground()
+snippet reaper.JS_Window_GetLong
+	reaper.JS_Window_GetLong(${1:windowHWND}, ${2:info})
+snippet reaper.JS_Window_GetLongPtr
+	reaper.JS_Window_GetLongPtr(${1:windowHWND}, ${2:info})
+snippet reaper.JS_Window_GetParent
+	reaper.JS_Window_GetParent(${1:windowHWND})
+snippet reaper.JS_Window_GetRect
+	reaper.JS_Window_GetRect(${1:windowHWND})
+snippet reaper.JS_Window_GetRelated
+	reaper.JS_Window_GetRelated(${1:windowHWND}, ${2:relation})
+snippet reaper.JS_Window_GetScrollInfo
+	reaper.JS_Window_GetScrollInfo(${1:windowHWND}, ${2:scrollbar})
+snippet reaper.JS_Window_GetTitle
+	reaper.JS_Window_GetTitle(${1:windowHWND})
+snippet reaper.JS_Window_GetViewportFromRect
+	reaper.JS_Window_GetViewportFromRect(${1:x1}, ${2:y1}, ${3:x2}, ${4:y2}, ${5:wantWork})
+snippet reaper.JS_Window_HandleFromAddress
+	reaper.JS_Window_HandleFromAddress(${1:address})
+snippet reaper.JS_Window_InvalidateRect
+	reaper.JS_Window_InvalidateRect(${1:windowHWND}, ${2:left}, ${3:top}, ${4:right}, ${5:bottom}, ${6:eraseBackground})
+snippet reaper.JS_Window_IsChild
+	reaper.JS_Window_IsChild(${1:parentHWND}, ${2:childHWND})
+snippet reaper.JS_Window_IsVisible
+	reaper.JS_Window_IsVisible(${1:windowHWND})
+snippet reaper.JS_Window_IsWindow
+	reaper.JS_Window_IsWindow(${1:windowHWND})
+snippet reaper.JS_Window_ListAllChild
+	reaper.JS_Window_ListAllChild(${1:parentHWND})
+snippet reaper.JS_Window_ListAllTop
+	reaper.JS_Window_ListAllTop()
+snippet reaper.JS_Window_ListFind
+	reaper.JS_Window_ListFind(${1:title}, ${2:exact})
+snippet reaper.JS_Window_MonitorFromRect
+	reaper.JS_Window_MonitorFromRect(${1:x1}, ${2:y1}, ${3:x2}, ${4:y2}, ${5:wantWork})
+snippet reaper.JS_Window_Move
+	reaper.JS_Window_Move(${1:windowHWND}, ${2:left}, ${3:top})
+snippet reaper.JS_Window_OnCommand
+	reaper.JS_Window_OnCommand(${1:windowHWND}, ${2:commandID})
+snippet reaper.JS_Window_Resize
+	reaper.JS_Window_Resize(${1:windowHWND}, ${2:width}, ${3:height})
+snippet reaper.JS_Window_ScreenToClient
+	reaper.JS_Window_ScreenToClient(${1:windowHWND}, ${2:x}, ${3:y})
+snippet reaper.JS_Window_SetFocus
+	reaper.JS_Window_SetFocus(${1:windowHWND})
+snippet reaper.JS_Window_SetForeground
+	reaper.JS_Window_SetForeground(${1:windowHWND})
+snippet reaper.JS_Window_SetLong
+	reaper.JS_Window_SetLong(${1:windowHWND}, ${2:info}, ${3:value})
+snippet reaper.JS_Window_SetOpacity
+	reaper.JS_Window_SetOpacity(${1:windowHWND}, ${2:mode}, ${3:value})
+snippet reaper.JS_Window_SetParent
+	reaper.JS_Window_SetParent(${1:childHWND}, ${2:parentHWND})
+snippet reaper.JS_Window_SetPosition
+	reaper.JS_Window_SetPosition(${1:windowHWND}, ${2:left}, ${3:top}, ${4:width}, ${5:height}, ${6:ZOrder}, ${7:flags})
+snippet reaper.JS_Window_SetScrollPos
+	reaper.JS_Window_SetScrollPos(${1:windowHWND}, ${2:scrollbar}, ${3:position})
+snippet reaper.JS_Window_SetStyle
+	reaper.JS_Window_SetStyle(${1:windowHWND}, ${2:style})
+snippet reaper.JS_Window_SetTitle
+	reaper.JS_Window_SetTitle(${1:windowHWND}, ${2:title})
+snippet reaper.JS_Window_SetZOrder
+	reaper.JS_Window_SetZOrder(${1:windowHWND}, ${2:ZOrder}, ${3:insertAfterHWND})
+snippet reaper.JS_Window_Show
+	reaper.JS_Window_Show(${1:windowHWND}, ${2:state})
+snippet reaper.JS_Window_Update
+	reaper.JS_Window_Update(${1:windowHWND})
+snippet reaper.JS_WindowMessage_Intercept
+	reaper.JS_WindowMessage_Intercept(${1:windowHWND}, ${2:message}, ${3:passThrough})
+snippet reaper.JS_WindowMessage_InterceptList
+	reaper.JS_WindowMessage_InterceptList(${1:windowHWND}, ${2:messages})
+snippet reaper.JS_WindowMessage_ListIntercepts
+	reaper.JS_WindowMessage_ListIntercepts(${1:windowHWND})
+snippet reaper.JS_WindowMessage_PassThrough
+	reaper.JS_WindowMessage_PassThrough(${1:windowHWND}, ${2:message}, ${3:passThrough})
+snippet reaper.JS_WindowMessage_Peek
+	reaper.JS_WindowMessage_Peek(${1:windowHWND}, ${2:message})
+snippet reaper.JS_WindowMessage_Post
+	reaper.JS_WindowMessage_Post(${1:windowHWND}, ${2:message}, ${3:wParam}, ${4:wParamHighWord}, ${5:lParam}, ${6:lParamHighWord})
+snippet reaper.JS_WindowMessage_Release
+	reaper.JS_WindowMessage_Release(${1:windowHWND}, ${2:messages})
+snippet reaper.JS_WindowMessage_ReleaseAll
+	reaper.JS_WindowMessage_ReleaseAll()
+snippet reaper.JS_WindowMessage_ReleaseWindow
+	reaper.JS_WindowMessage_ReleaseWindow(${1:windowHWND})
+snippet reaper.JS_WindowMessage_Send
+	reaper.JS_WindowMessage_Send(${1:windowHWND}, ${2:message}, ${3:wParam}, ${4:wParamHighWord}, ${5:lParam}, ${6:lParamHighWord})
+snippet reaper.JS_Zip_Close
+	reaper.JS_Zip_Close(${1:zipFile}, ${2:zipHandle})
+snippet reaper.JS_Zip_CountEntries
+	reaper.JS_Zip_CountEntries(${1:zipHandle})
+snippet reaper.JS_Zip_DeleteEntries
+	reaper.JS_Zip_DeleteEntries(${1:zipHandle}, ${2:entryNames}, ${3:entryNamesStrLen})
+snippet reaper.JS_Zip_Entry_Close
+	reaper.JS_Zip_Entry_Close(${1:zipHandle})
+snippet reaper.JS_Zip_Entry_CompressFile
+	reaper.JS_Zip_Entry_CompressFile(${1:zipHandle}, ${2:inputFile})
+snippet reaper.JS_Zip_Entry_CompressMemory
+	reaper.JS_Zip_Entry_CompressMemory(${1:zipHandle}, ${2:buf}, ${3:buf_size})
+snippet reaper.JS_Zip_Entry_ExtractToFile
+	reaper.JS_Zip_Entry_ExtractToFile(${1:zipHandle}, ${2:outputFile})
+snippet reaper.JS_Zip_Entry_ExtractToMemory
+	reaper.JS_Zip_Entry_ExtractToMemory(${1:zipHandle})
+snippet reaper.JS_Zip_Entry_Info
+	reaper.JS_Zip_Entry_Info(${1:zipHandle})
+snippet reaper.JS_Zip_Entry_OpenByIndex
+	reaper.JS_Zip_Entry_OpenByIndex(${1:zipHandle}, ${2:index})
+snippet reaper.JS_Zip_Entry_OpenByName
+	reaper.JS_Zip_Entry_OpenByName(${1:zipHandle}, ${2:entryName})
+snippet reaper.JS_Zip_ErrorString
+	reaper.JS_Zip_ErrorString(${1:errorNum})
+snippet reaper.JS_Zip_Extract
+	reaper.JS_Zip_Extract(${1:zipFile}, ${2:outputFolder})
+snippet reaper.JS_Zip_ListAllEntries
+	reaper.JS_Zip_ListAllEntries(${1:zipHandle})
+snippet reaper.JS_Zip_Open
+	reaper.JS_Zip_Open(${1:zipFile}, ${2:mode}, ${3:compressionLevel})
+snippet reaper.LICE_ClipLine
+	reaper.LICE_ClipLine(${1:pX1}, ${2:pY1}, ${3:pX2}, ${4:pY2}, ${5:xLo}, ${6:yLo}, ${7:xHi}, ${8:yHi})
+snippet gfx.line
+	gfx.line(${1:x}, ${2:y}, ${3:x2}, ${4:y2}, ${5:aa})
+snippet gfx.lineto
+	gfx.lineto(${1:x}, ${2:y}, ${3:aa})
+snippet gfx.loadimg
+	gfx.loadimg(${1:image}, ${2:filename})
+snippet reaper.LocalizeString
+	reaper.LocalizeString(${1:src_string}, ${2:section}, ${3:flags})
+snippet reaper.Loop_OnArrow
+	reaper.Loop_OnArrow(${1:project}, ${2:direction})
+snippet reaper.Main_OnCommand
+	reaper.Main_OnCommand(${1:command}, ${2:flag})
+snippet reaper.Main_OnCommandEx
+	reaper.Main_OnCommandEx(${1:command}, ${2:flag}, ${3:proj})
+snippet reaper.Main_openProject
+	reaper.Main_openProject(${1:name})
+snippet reaper.Main_SaveProject
+	reaper.Main_SaveProject(${1:proj}, ${2:forceSaveAsIn})
+snippet reaper.Main_SaveProjectEx
+	reaper.Main_SaveProjectEx(${1:proj}, ${2:filename}, ${3:options})
+snippet reaper.Main_UpdateLoopInfo
+	reaper.Main_UpdateLoopInfo(${1:ignoremask})
+snippet reaper.MarkProjectDirty
+	reaper.MarkProjectDirty(${1:proj})
+snippet reaper.MarkTrackItemsDirty
+	reaper.MarkTrackItemsDirty(${1:track}, ${2:item})
+snippet reaper.Master_GetPlayRate
+	reaper.Master_GetPlayRate(${1:project})
+snippet reaper.Master_GetPlayRateAtTime
+	reaper.Master_GetPlayRateAtTime(${1:time_s}, ${2:proj})
+snippet reaper.Master_GetTempo
+	reaper.Master_GetTempo()
+snippet reaper.Master_NormalizePlayRate
+	reaper.Master_NormalizePlayRate(${1:playrate}, ${2:isnormalized})
+snippet reaper.Master_NormalizeTempo
+	reaper.Master_NormalizeTempo(${1:bpm}, ${2:isnormalized})
+snippet reaper.MB
+	reaper.MB(${1:msg}, ${2:title}, ${3:type})
+snippet gfx.measurechar
+	gfx.measurechar(${1:char})
+snippet gfx.measurestr
+	gfx.measurestr(${1:str})
+snippet reaper.MediaItemDescendsFromTrack
+	reaper.MediaItemDescendsFromTrack(${1:item}, ${2:track})
+snippet reaper.MIDI_CountEvts
+	reaper.MIDI_CountEvts(${1:take})
+snippet reaper.MIDI_DeleteCC
+	reaper.MIDI_DeleteCC(${1:take}, ${2:ccidx})
+snippet reaper.MIDI_DeleteEvt
+	reaper.MIDI_DeleteEvt(${1:take}, ${2:evtidx})
+snippet reaper.MIDI_DeleteNote
+	reaper.MIDI_DeleteNote(${1:take}, ${2:noteidx})
+snippet reaper.MIDI_DeleteTextSysexEvt
+	reaper.MIDI_DeleteTextSysexEvt(${1:take}, ${2:textsyxevtidx})
+snippet reaper.MIDI_DisableSort
+	reaper.MIDI_DisableSort(${1:take})
+snippet reaper.MIDI_EnumSelCC
+	reaper.MIDI_EnumSelCC(${1:take}, ${2:ccidx})
+snippet reaper.MIDI_EnumSelEvts
+	reaper.MIDI_EnumSelEvts(${1:take}, ${2:evtidx})
+snippet reaper.MIDI_EnumSelNotes
+	reaper.MIDI_EnumSelNotes(${1:take}, ${2:noteidx})
+snippet reaper.MIDI_EnumSelTextSysexEvts
+	reaper.MIDI_EnumSelTextSysexEvts(${1:take}, ${2:textsyxidx})
+snippet reaper.MIDI_GetAllEvts
+	reaper.MIDI_GetAllEvts(${1:take})
+snippet reaper.MIDI_GetCC
+	reaper.MIDI_GetCC(${1:take}, ${2:ccidx})
+snippet reaper.MIDI_GetCCShape
+	reaper.MIDI_GetCCShape(${1:take}, ${2:ccidx})
+snippet reaper.MIDI_GetEvt
+	reaper.MIDI_GetEvt(${1:take}, ${2:evtidx})
+snippet reaper.MIDI_GetGrid
+	reaper.MIDI_GetGrid(${1:take})
+snippet reaper.MIDI_GetHash
+	reaper.MIDI_GetHash(${1:take}, ${2:notesonly})
+snippet reaper.MIDI_GetNote
+	reaper.MIDI_GetNote(${1:take}, ${2:noteidx})
+snippet reaper.MIDI_GetPPQPos_EndOfMeasure
+	reaper.MIDI_GetPPQPos_EndOfMeasure(${1:take}, ${2:ppqpos})
+snippet reaper.MIDI_GetPPQPos_StartOfMeasure
+	reaper.MIDI_GetPPQPos_StartOfMeasure(${1:take}, ${2:ppqpos})
+snippet reaper.MIDI_GetPPQPosFromProjQN
+	reaper.MIDI_GetPPQPosFromProjQN(${1:take}, ${2:projqn})
+snippet reaper.MIDI_GetPPQPosFromProjTime
+	reaper.MIDI_GetPPQPosFromProjTime(${1:take}, ${2:projtime})
+snippet reaper.MIDI_GetProjQNFromPPQPos
+	reaper.MIDI_GetProjQNFromPPQPos(${1:take}, ${2:ppqpos})
+snippet reaper.MIDI_GetProjTimeFromPPQPos
+	reaper.MIDI_GetProjTimeFromPPQPos(${1:take}, ${2:ppqpos})
+snippet reaper.MIDI_GetRecentInputEvent
+	reaper.MIDI_GetRecentInputEvent(${1:idx})
+snippet reaper.MIDI_GetScale
+	reaper.MIDI_GetScale(${1:take})
+snippet reaper.MIDI_GetTextSysexEvt
+	reaper.MIDI_GetTextSysexEvt(${1:take}, ${2:textsyxevtidx}, ${3:selected}, ${4:muted}, ${5:ppqpos}, ${6:type}, ${7:msg})
+snippet reaper.MIDI_GetTrackHash
+	reaper.MIDI_GetTrackHash(${1:track}, ${2:notesonly})
+snippet reaper.midi_init
+	reaper.midi_init(${1:force_reinit_input}, ${2:force_reinit_output})
+snippet reaper.MIDI_InsertCC
+	reaper.MIDI_InsertCC(${1:take}, ${2:selected}, ${3:muted}, ${4:ppqpos}, ${5:chanmsg}, ${6:chan}, ${7:msg2}, ${8:msg3})
+snippet reaper.MIDI_InsertEvt
+	reaper.MIDI_InsertEvt(${1:take}, ${2:selected}, ${3:muted}, ${4:ppqpos}, ${5:bytestr})
+snippet reaper.MIDI_InsertNote
+	reaper.MIDI_InsertNote(${1:take}, ${2:selected}, ${3:muted}, ${4:startppqpos}, ${5:endppqpos}, ${6:chan}, ${7:pitch}, ${8:vel}, ${9:noSortIn})
+snippet reaper.MIDI_InsertTextSysexEvt
+	reaper.MIDI_InsertTextSysexEvt(${1:take}, ${2:selected}, ${3:muted}, ${4:ppqpos}, ${5:type}, ${6:bytestr})
+snippet reaper.midi_reinit
+	reaper.midi_reinit()
+snippet reaper.MIDI_SelectAll
+	reaper.MIDI_SelectAll(${1:take}, ${2:select})
+snippet reaper.MIDI_SetAllEvts
+	reaper.MIDI_SetAllEvts(${1:take}, ${2:buf})
+snippet reaper.MIDI_SetCC
+	reaper.MIDI_SetCC(${1:take}, ${2:ccidx}, ${3:selectedIn}, ${4:mutedIn}, ${5:ppqposIn}, ${6:chanmsgIn}, ${7:chanIn}, ${8:msg2In}, ${9:msg3In}, ${10:noSortIn})
+snippet reaper.MIDI_SetCCShape
+	reaper.MIDI_SetCCShape(${1:take}, ${2:ccidx}, ${3:shape}, ${4:beztension}, ${5:noSortIn})
+snippet reaper.MIDI_SetEvt
+	reaper.MIDI_SetEvt(${1:take}, ${2:evtidx}, ${3:selectedIn}, ${4:mutedIn}, ${5:ppqposIn}, ${6:msg}, ${7:noSortIn})
+snippet reaper.MIDI_SetItemExtents
+	reaper.MIDI_SetItemExtents(${1:item}, ${2:startQN}, ${3:endQN})
+snippet reaper.MIDI_SetNote
+	reaper.MIDI_SetNote(${1:take}, ${2:noteidx}, ${3:selectedIn}, ${4:mutedIn}, ${5:startppqposIn}, ${6:endppqposIn}, ${7:chanIn}, ${8:pitchIn}, ${9:velIn}, ${10:noSortIn})
+snippet reaper.MIDI_SetTextSysexEvt
+	reaper.MIDI_SetTextSysexEvt(${1:take}, ${2:textsyxevtidx}, ${3:selectedIn}, ${4:mutedIn}, ${5:ppqposIn}, ${6:typeIn}, ${7:msg}, ${8:noSortIn})
+snippet reaper.MIDI_Sort
+	reaper.MIDI_Sort(${1:take})
+snippet reaper.MIDIEditor_EnumTakes
+	reaper.MIDIEditor_EnumTakes(${1:midieditor}, ${2:takeindex}, ${3:editable_only})
+snippet reaper.MIDIEditor_GetActive
+	reaper.MIDIEditor_GetActive()
+snippet reaper.MIDIEditor_GetMode
+	reaper.MIDIEditor_GetMode(${1:midieditor})
+snippet reaper.MIDIEditor_GetSetting_int
+	reaper.MIDIEditor_GetSetting_int(${1:midieditor}, ${2:setting_desc})
+snippet reaper.MIDIEditor_GetSetting_str
+	reaper.MIDIEditor_GetSetting_str(${1:midieditor}, ${2:setting_desc})
+snippet reaper.MIDIEditor_GetTake
+	reaper.MIDIEditor_GetTake(${1:midieditor})
+snippet reaper.MIDIEditor_LastFocused_OnCommand
+	reaper.MIDIEditor_LastFocused_OnCommand(${1:command_id}, ${2:islistviewcommand})
+snippet reaper.MIDIEditor_OnCommand
+	reaper.MIDIEditor_OnCommand(${1:midieditor}, ${2:command_id})
+snippet reaper.MIDIEditor_SetSetting_int
+	reaper.MIDIEditor_SetSetting_int(${1:midieditor}, ${2:setting_desc}, ${3:setting})
+snippet reaper.mkpanstr
+	reaper.mkpanstr(${1:strNeed64}, ${2:pan})
+snippet reaper.mkvolpanstr
+	reaper.mkvolpanstr(${1:strNeed64}, ${2:vol}, ${3:pan})
+snippet reaper.mkvolstr
+	reaper.mkvolstr(${1:strNeed64}, ${2:vol})
+snippet reaper.MoveEditCursor
+	reaper.MoveEditCursor(${1:adjamt}, ${2:dosel})
+snippet reaper.MoveMediaItemToTrack
+	reaper.MoveMediaItemToTrack(${1:item}, ${2:desttr})
+snippet gfx.muladdrect
+	gfx.muladdrect(${1:x}, ${2:y}, ${3:w}, ${4:h}, ${5:mul_r}, ${6:mul_g}, ${7:mul_b}, ${8:mul_a}, ${9:add_r}, ${10:add_g}, ${11:add_b}, ${12:add_a})
+snippet multiply
+	multiply(${1:src}, ${2:srcoffs}, ${3:size}, ${4:destoffs})
+snippet reaper.MuteAllTracks
+	reaper.MuteAllTracks(${1:mute})
+snippet reaper.my_getViewport
+	reaper.my_getViewport(${1:integerr.left}, ${2:integerr.top}, ${3:integerr.right}, ${4:integerr.bot}, ${5:sr.left}, ${6:sr.top}, ${7:sr.right}, ${8:sr.bot}, ${9:wantWorkArea})
+snippet reaper.NamedCommandLookup
+	reaper.NamedCommandLookup(${1:command_name})
+snippet reaper.new_array
+	reaper.new_array(${1:table|arraysize})
+snippet reaper.NF_AnalyzeMediaItemPeakAndRMS
+	reaper.NF_AnalyzeMediaItemPeakAndRMS(${1:item}, ${2:windowSize}, ${3:reaper.array_peaks}, ${4:reaper.array_peakpositions}, ${5:reaper.array_RMSs}, ${6:reaper.array_RMSpositions})
+snippet reaper.NF_AnalyzeTakeLoudness
+	reaper.NF_AnalyzeTakeLoudness(${1:take}, ${2:analyzeTruePeak})
+snippet reaper.NF_AnalyzeTakeLoudness2
+	reaper.NF_AnalyzeTakeLoudness2(${1:take}, ${2:analyzeTruePeak})
+snippet reaper.NF_AnalyzeTakeLoudness_IntegratedOnly
+	reaper.NF_AnalyzeTakeLoudness_IntegratedOnly(${1:take})
+snippet reaper.NF_ClearGlobalStartupAction
+	reaper.NF_ClearGlobalStartupAction()
+snippet reaper.NF_ClearProjectStartupAction
+	reaper.NF_ClearProjectStartupAction()
+snippet reaper.NF_ClearProjectTrackSelectionAction
+	reaper.NF_ClearProjectTrackSelectionAction()
+snippet reaper.NF_GetGlobalStartupAction
+	reaper.NF_GetGlobalStartupAction()
+snippet reaper.NF_GetMediaItemAverageRMS
+	reaper.NF_GetMediaItemAverageRMS(${1:item})
+snippet reaper.NF_GetMediaItemMaxPeak
+	reaper.NF_GetMediaItemMaxPeak(${1:item})
+snippet reaper.NF_GetMediaItemMaxPeakAndMaxPeakPos
+	reaper.NF_GetMediaItemMaxPeakAndMaxPeakPos(${1:item})
+snippet reaper.NF_GetMediaItemPeakRMS_NonWindowed
+	reaper.NF_GetMediaItemPeakRMS_NonWindowed(${1:item})
+snippet reaper.NF_GetMediaItemPeakRMS_Windowed
+	reaper.NF_GetMediaItemPeakRMS_Windowed(${1:item})
+snippet reaper.NF_GetProjectStartupAction
+	reaper.NF_GetProjectStartupAction()
+snippet reaper.NF_GetProjectTrackSelectionAction
+	reaper.NF_GetProjectTrackSelectionAction()
+snippet reaper.NF_GetSWS_RMSoptions
+	reaper.NF_GetSWS_RMSoptions()
+snippet reaper.NF_GetSWSMarkerRegionSub
+	reaper.NF_GetSWSMarkerRegionSub(${1:markerRegionIdx})
+snippet reaper.NF_GetSWSTrackNotes
+	reaper.NF_GetSWSTrackNotes(${1:track})
+snippet reaper.NF_ReadAudioFileBitrate
+	reaper.NF_ReadAudioFileBitrate(${1:fn})
+snippet reaper.NF_SetGlobalStartupAction
+	reaper.NF_SetGlobalStartupAction(${1:str})
+snippet reaper.NF_SetProjectStartupAction
+	reaper.NF_SetProjectStartupAction(${1:str})
+snippet reaper.NF_SetProjectTrackSelectionAction
+	reaper.NF_SetProjectTrackSelectionAction(${1:str})
+snippet reaper.NF_SetSWS_RMSoptions
+	reaper.NF_SetSWS_RMSoptions(${1:targetLevel}, ${2:windowSize})
+snippet reaper.NF_SetSWSMarkerRegionSub
+	reaper.NF_SetSWSMarkerRegionSub(${1:markerRegionSub}, ${2:markerRegionIdx})
+snippet reaper.NF_SetSWSTrackNotes
+	reaper.NF_SetSWSTrackNotes(${1:track}, ${2:str})
+snippet reaper.NF_TakeFX_GetFXModuleName
+	reaper.NF_TakeFX_GetFXModuleName(${1:item}, ${2:fx})
+snippet reaper.NF_UpdateSWSMarkerRegionSubWindow
+	reaper.NF_UpdateSWSMarkerRegionSubWindow()
+snippet reaper.NF_Win32_GetSystemMetrics
+	reaper.NF_Win32_GetSystemMetrics(${1:nIndex})
+snippet reaper.OnPauseButton
+	reaper.OnPauseButton()
+snippet reaper.OnPauseButtonEx
+	reaper.OnPauseButtonEx(${1:proj})
+snippet reaper.OnPlayButton
+	reaper.OnPlayButton()
+snippet reaper.OnPlayButtonEx
+	reaper.OnPlayButtonEx(${1:proj})
+snippet reaper.OnStopButton
+	reaper.OnStopButton()
+snippet reaper.OnStopButtonEx
+	reaper.OnStopButtonEx(${1:proj})
+snippet reaper.OpenColorThemeFile
+	reaper.OpenColorThemeFile(${1:fn})
+snippet reaper.OpenMediaExplorer
+	reaper.OpenMediaExplorer(${1:mediafn}, ${2:play})
+snippet reaper.OscLocalMessageToHost
+	reaper.OscLocalMessageToHost(${1:message}, ${2:valueIn})
+snippet reaper.parse_timestr
+	reaper.parse_timestr(${1:buf})
+snippet reaper.parse_timestr_len
+	reaper.parse_timestr_len(${1:buf}, ${2:offset}, ${3:modeoverride})
+snippet reaper.parse_timestr_pos
+	reaper.parse_timestr_pos(${1:buf}, ${2:modeoverride})
+snippet reaper.parsepanstr
+	reaper.parsepanstr(${1:str})
+snippet reaper.PCM_Sink_Enum
+	reaper.PCM_Sink_Enum(${1:idx})
+snippet reaper.PCM_Sink_GetExtension
+	reaper.PCM_Sink_GetExtension(${1:data})
+snippet reaper.PCM_Sink_ShowConfig
+	reaper.PCM_Sink_ShowConfig(${1:cfg}, ${2:hwndParent})
+snippet reaper.PCM_Source_BuildPeaks
+	reaper.PCM_Source_BuildPeaks(${1:src}, ${2:mode})
+snippet reaper.PCM_Source_CreateFromFile
+	reaper.PCM_Source_CreateFromFile(${1:filename})
+snippet reaper.PCM_Source_CreateFromFileEx
+	reaper.PCM_Source_CreateFromFileEx(${1:filename}, ${2:forcenoMidiImp})
+snippet reaper.PCM_Source_CreateFromType
+	reaper.PCM_Source_CreateFromType(${1:sourcetype})
+snippet reaper.PCM_Source_Destroy
+	reaper.PCM_Source_Destroy(${1:src})
+snippet reaper.PCM_Source_GetPeaks
+	reaper.PCM_Source_GetPeaks(${1:src}, ${2:peakrate}, ${3:starttime}, ${4:numchannels}, ${5:numsamplesperchannel}, ${6:want_extra_type}, ${7:buf})
+snippet reaper.PCM_Source_GetSectionInfo
+	reaper.PCM_Source_GetSectionInfo(${1:src})
+snippet reaper.PluginWantsAlwaysRunFx
+	reaper.PluginWantsAlwaysRunFx(${1:amt})
+snippet reaper.PreventUIRefresh
+	reaper.PreventUIRefresh(${1:prevent_count})
+snippet gfx.printf
+	gfx.printf(${1:format})
+snippet reaper.PromptForAction
+	reaper.PromptForAction(${1:session_mode}, ${2:init_id}, ${3:section_id})
+snippet gfx.quit
+	gfx.quit()
+snippet reaper.ReaPack_AboutInstalledPackage
+	reaper.ReaPack_AboutInstalledPackage(${1:entry})
+snippet reaper.ReaPack_AboutRepository
+	reaper.ReaPack_AboutRepository(${1:repoName})
+snippet reaper.ReaPack_AddSetRepository
+	reaper.ReaPack_AddSetRepository(${1:name}, ${2:url}, ${3:enable}, ${4:autoInstall})
+snippet reaper.ReaPack_BrowsePackages
+	reaper.ReaPack_BrowsePackages(${1:filter})
+snippet reaper.ReaPack_CompareVersions
+	reaper.ReaPack_CompareVersions(${1:ver1}, ${2:ver2})
+snippet reaper.ReaPack_EnumOwnedFiles
+	reaper.ReaPack_EnumOwnedFiles(${1:entry}, ${2:index})
+snippet reaper.ReaPack_FreeEntry
+	reaper.ReaPack_FreeEntry(${1:entry})
+snippet reaper.ReaPack_GetEntryInfo
+	reaper.ReaPack_GetEntryInfo(${1:entry})
+snippet reaper.ReaPack_GetOwner
+	reaper.ReaPack_GetOwner(${1:fn})
+snippet reaper.ReaPack_GetRepositoryInfo
+	reaper.ReaPack_GetRepositoryInfo(${1:name})
+snippet reaper.ReaPack_ProcessQueue
+	reaper.ReaPack_ProcessQueue(${1:refreshUI})
+snippet reaper.ReaScriptError
+	reaper.ReaScriptError(${1:errmsg})
+snippet gfx.rect
+	gfx.rect(${1:x}, ${2:y}, ${3:w}, ${4:h}, ${5:filled})
+snippet gfx.rectto
+	gfx.rectto(${1:x}, ${2:y})
+snippet reaper.RecursiveCreateDirectory
+	reaper.RecursiveCreateDirectory(${1:path}, ${2:ignored})
+snippet reaper.reduce_open_files
+	reaper.reduce_open_files(${1:flags})
+snippet reaper.RefreshToolbar
+	reaper.RefreshToolbar(${1:command_id})
+snippet reaper.RefreshToolbar2
+	reaper.RefreshToolbar2(${1:section_id}, ${2:command_id})
+snippet reaper.relative_fn
+	reaper.relative_fn(${1:in}, ${2:out})
+snippet reaper.RemoveTrackSend
+	reaper.RemoveTrackSend(${1:tr}, ${2:category}, ${3:sendidx})
+snippet reaper.RenderFileSection
+	reaper.RenderFileSection(${1:source_filename}, ${2:target_filename}, ${3:start_percent}, ${4:end_percent}, ${5:playrate})
+snippet reaper.ReorderSelectedTracks
+	reaper.ReorderSelectedTracks(${1:beforeTrackIdx}, ${2:makePrevFolder})
+snippet reaper.Resample_EnumModes
+	reaper.Resample_EnumModes(${1:mode})
+snippet resize
+	resize(${1:size})
+snippet reaper.resolve_fn
+	reaper.resolve_fn(${1:in}, ${2:out})
+snippet reaper.resolve_fn2
+	reaper.resolve_fn2(${1:in}, ${2:out}, ${3:checkSubDir})
+snippet reaper.ReverseNamedCommandLookup
+	reaper.ReverseNamedCommandLookup(${1:command_id})
+snippet gfx.roundrect
+	gfx.roundrect(${1:x}, ${2:y}, ${3:w}, ${4:h}, ${5:radius}, ${6:antialias})
+snippet reaper.runloop
+	reaper.runloop(${1:function})
+snippet reaper.ScaleFromEnvelopeMode
+	reaper.ScaleFromEnvelopeMode(${1:scaling_mode}, ${2:val})
+snippet reaper.ScaleToEnvelopeMode
+	reaper.ScaleToEnvelopeMode(${1:scaling_mode}, ${2:val})
+snippet gfx.screentoclient
+	gfx.screentoclient(${1:x}, ${2:y})
+snippet reaper.SelectAllMediaItems
+	reaper.SelectAllMediaItems(${1:proj}, ${2:selected})
+snippet reaper.SelectProjectInstance
+	reaper.SelectProjectInstance(${1:proj})
+snippet gfx.set
+	gfx.set(${1:r}, ${2:g}, ${3:b}, ${4:a}, ${5:mode}, ${6:dest}, ${7:a2})
+snippet reaper.SetActiveTake
+	reaper.SetActiveTake(${1:take})
+snippet reaper.SetAutomationMode
+	reaper.SetAutomationMode(${1:mode}, ${2:onlySel})
+snippet reaper.SetCurrentBPM
+	reaper.SetCurrentBPM(${1:__proj}, ${2:bpm}, ${3:wantUndo})
+snippet gfx.setcursor
+	gfx.setcursor(${1:resource_id}, ${2:custom_cursor_name})
+snippet reaper.SetCursorContext
+	reaper.SetCursorContext(${1:mode}, ${2:envIn})
+snippet reaper.SetEditCurPos
+	reaper.SetEditCurPos(${1:time}, ${2:moveview}, ${3:seekplay})
+snippet reaper.SetEditCurPos2
+	reaper.SetEditCurPos2(${1:proj}, ${2:time}, ${3:moveview}, ${4:seekplay})
+snippet reaper.SetEnvelopePoint
+	reaper.SetEnvelopePoint(${1:envelope}, ${2:ptidx}, ${3:timeIn}, ${4:valueIn}, ${5:shapeIn}, ${6:tensionIn}, ${7:selectedIn}, ${8:noSortIn})
+snippet reaper.SetEnvelopePointEx
+	reaper.SetEnvelopePointEx(${1:envelope}, ${2:autoitem_idx}, ${3:ptidx}, ${4:timeIn}, ${5:valueIn}, ${6:shapeIn}, ${7:tensionIn}, ${8:selectedIn}, ${9:noSortIn})
+snippet reaper.SetEnvelopeStateChunk
+	reaper.SetEnvelopeStateChunk(${1:env}, ${2:str}, ${3:isundo})
+snippet reaper.SetExtState
+	reaper.SetExtState(${1:section}, ${2:key}, ${3:value}, ${4:persist})
+snippet gfx.setfont
+	gfx.setfont(${1:idx}, ${2:fontface}, ${3:sz}, ${4:flags})
+snippet reaper.SetGlobalAutomationOverride
+	reaper.SetGlobalAutomationOverride(${1:mode})
+snippet gfx.setimgdim
+	gfx.setimgdim(${1:image}, ${2:w}, ${3:h})
+snippet reaper.SetItemStateChunk
+	reaper.SetItemStateChunk(${1:item}, ${2:str}, ${3:isundo})
+snippet reaper.SetMasterTrackVisibility
+	reaper.SetMasterTrackVisibility(${1:flag})
+snippet reaper.SetMediaItemInfo_Value
+	reaper.SetMediaItemInfo_Value(${1:item}, ${2:parmname}, ${3:newvalue})
+snippet reaper.SetMediaItemLength
+	reaper.SetMediaItemLength(${1:item}, ${2:length}, ${3:refreshUI})
+snippet reaper.SetMediaItemPosition
+	reaper.SetMediaItemPosition(${1:item}, ${2:position}, ${3:refreshUI})
+snippet reaper.SetMediaItemSelected
+	reaper.SetMediaItemSelected(${1:item}, ${2:selected})
+snippet reaper.SetMediaItemTake_Source
+	reaper.SetMediaItemTake_Source(${1:take}, ${2:source})
+snippet reaper.SetMediaItemTakeInfo_Value
+	reaper.SetMediaItemTakeInfo_Value(${1:take}, ${2:parmname}, ${3:newvalue})
+snippet reaper.SetMediaTrackInfo_Value
+	reaper.SetMediaTrackInfo_Value(${1:tr}, ${2:parmname}, ${3:newvalue})
+snippet reaper.SetMIDIEditorGrid
+	reaper.SetMIDIEditorGrid(${1:project}, ${2:division})
+snippet reaper.SetMixerScroll
+	reaper.SetMixerScroll(${1:leftmosttrack})
+snippet reaper.SetMouseModifier
+	reaper.SetMouseModifier(${1:context}, ${2:modifier_flag}, ${3:action})
+snippet reaper.SetOnlyTrackSelected
+	reaper.SetOnlyTrackSelected(${1:track})
+snippet gfx.setpixel
+	gfx.setpixel(${1:r}, ${2:g}, ${3:b})
+snippet reaper.SetProjectGrid
+	reaper.SetProjectGrid(${1:project}, ${2:division})
+snippet reaper.SetProjectMarker
+	reaper.SetProjectMarker(${1:markrgnindexnumber}, ${2:isrgn}, ${3:pos}, ${4:rgnend}, ${5:name})
+snippet reaper.SetProjectMarker2
+	reaper.SetProjectMarker2(${1:proj}, ${2:markrgnindexnumber}, ${3:isrgn}, ${4:pos}, ${5:rgnend}, ${6:name})
+snippet reaper.SetProjectMarker3
+	reaper.SetProjectMarker3(${1:proj}, ${2:markrgnindexnumber}, ${3:isrgn}, ${4:pos}, ${5:rgnend}, ${6:name}, ${7:color})
+snippet reaper.SetProjectMarker4
+	reaper.SetProjectMarker4(${1:proj}, ${2:markrgnindexnumber}, ${3:isrgn}, ${4:pos}, ${5:rgnend}, ${6:name}, ${7:color}, ${8:flags})
+snippet reaper.SetProjectMarkerByIndex
+	reaper.SetProjectMarkerByIndex(${1:proj}, ${2:markrgnidx}, ${3:isrgn}, ${4:pos}, ${5:rgnend}, ${6:IDnumber}, ${7:name}, ${8:color})
+snippet reaper.SetProjectMarkerByIndex2
+	reaper.SetProjectMarkerByIndex2(${1:proj}, ${2:markrgnidx}, ${3:isrgn}, ${4:pos}, ${5:rgnend}, ${6:IDnumber}, ${7:name}, ${8:color}, ${9:flags})
+snippet reaper.SetProjExtState
+	reaper.SetProjExtState(${1:proj}, ${2:extname}, ${3:key}, ${4:value})
+snippet reaper.SetRegionRenderMatrix
+	reaper.SetRegionRenderMatrix(${1:proj}, ${2:regionindex}, ${3:track}, ${4:addorremove})
+snippet reaper.SetTakeMarker
+	reaper.SetTakeMarker(${1:take}, ${2:idx}, ${3:nameIn}, ${4:srcposIn}, ${5:colorIn})
+snippet reaper.SetTakeStretchMarker
+	reaper.SetTakeStretchMarker(${1:take}, ${2:idx}, ${3:pos}, ${4:srcposIn})
+snippet reaper.SetTakeStretchMarkerSlope
+	reaper.SetTakeStretchMarkerSlope(${1:take}, ${2:idx}, ${3:slope})
+snippet reaper.SetTempoTimeSigMarker
+	reaper.SetTempoTimeSigMarker(${1:proj}, ${2:ptidx}, ${3:timepos}, ${4:measurepos}, ${5:beatpos}, ${6:bpm}, ${7:timesig_num}, ${8:timesig_denom}, ${9:lineartempo})
+snippet reaper.SetThemeColor
+	reaper.SetThemeColor(${1:ini_key}, ${2:color}, ${3:flags})
+snippet reaper.SetToggleCommandState
+	reaper.SetToggleCommandState(${1:section_id}, ${2:command_id}, ${3:state})
+snippet reaper.SetTrackAutomationMode
+	reaper.SetTrackAutomationMode(${1:tr}, ${2:mode})
+snippet reaper.SetTrackColor
+	reaper.SetTrackColor(${1:track}, ${2:color})
+snippet reaper.SetTrackMIDILyrics
+	reaper.SetTrackMIDILyrics(${1:track}, ${2:flag}, ${3:str})
+snippet reaper.SetTrackMIDINoteName
+	reaper.SetTrackMIDINoteName(${1:track}, ${2:pitch}, ${3:chan}, ${4:name})
+snippet reaper.SetTrackMIDINoteNameEx
+	reaper.SetTrackMIDINoteNameEx(${1:proj}, ${2:track}, ${3:pitch}, ${4:chan}, ${5:name})
+snippet reaper.SetTrackSelected
+	reaper.SetTrackSelected(${1:track}, ${2:selected})
+snippet reaper.SetTrackSendInfo_Value
+	reaper.SetTrackSendInfo_Value(${1:tr}, ${2:category}, ${3:sendidx}, ${4:parmname}, ${5:newvalue})
+snippet reaper.SetTrackSendUIPan
+	reaper.SetTrackSendUIPan(${1:track}, ${2:send_idx}, ${3:pan}, ${4:isend})
+snippet reaper.SetTrackSendUIVol
+	reaper.SetTrackSendUIVol(${1:track}, ${2:send_idx}, ${3:vol}, ${4:isend})
+snippet reaper.SetTrackStateChunk
+	reaper.SetTrackStateChunk(${1:track}, ${2:str}, ${3:isundo})
+snippet reaper.ShowActionList
+	reaper.ShowActionList(${1:caller}, ${2:callerWnd})
+snippet reaper.ShowConsoleMsg
+	reaper.ShowConsoleMsg(${1:msg})
+snippet gfx.showmenu
+	gfx.showmenu(${1:str})
+snippet reaper.ShowMessageBox
+	reaper.ShowMessageBox(${1:msg}, ${2:title}, ${3:type})
+snippet reaper.ShowPopupMenu
+	reaper.ShowPopupMenu(${1:name}, ${2:x}, ${3:y}, ${4:hwndParent}, ${5:ctx}, ${6:ctx2}, ${7:ctx3})
+snippet reaper.SLIDER2DB
+	reaper.SLIDER2DB(${1:y})
+snippet reaper.SN_FocusMIDIEditor
+	reaper.SN_FocusMIDIEditor()
+snippet reaper.SnapToGrid
+	reaper.SnapToGrid(${1:project}, ${2:time_pos})
+snippet reaper.SNM_AddReceive
+	reaper.SNM_AddReceive(${1:src}, ${2:dest}, ${3:type})
+snippet reaper.SNM_AddTCPFXParm
+	reaper.SNM_AddTCPFXParm(${1:tr}, ${2:fxId}, ${3:prmId})
+snippet reaper.SNM_CreateFastString
+	reaper.SNM_CreateFastString(${1:str})
+snippet reaper.SNM_DeleteFastString
+	reaper.SNM_DeleteFastString(${1:str})
+snippet reaper.SNM_GetDoubleConfigVar
+	reaper.SNM_GetDoubleConfigVar(${1:varname}, ${2:errvalue})
+snippet reaper.SNM_GetFastString
+	reaper.SNM_GetFastString(${1:str})
+snippet reaper.SNM_GetFastStringLength
+	reaper.SNM_GetFastStringLength(${1:str})
+snippet reaper.SNM_GetIntConfigVar
+	reaper.SNM_GetIntConfigVar(${1:varname}, ${2:errvalue})
+snippet reaper.SNM_GetLongConfigVar
+	reaper.SNM_GetLongConfigVar(${1:varname})
+snippet reaper.SNM_GetMediaItemTakeByGUID
+	reaper.SNM_GetMediaItemTakeByGUID(${1:project}, ${2:guid})
+snippet reaper.SNM_GetProjectMarkerName
+	reaper.SNM_GetProjectMarkerName(${1:proj}, ${2:num}, ${3:name})
+snippet reaper.SNM_GetSetObjectState
+	reaper.SNM_GetSetObjectState(${1:state}, ${2:setnewvalue}, ${3:wantminimalstate})
+snippet reaper.SNM_GetSetSourceState
+	reaper.SNM_GetSetSourceState(${1:item}, ${2:state}, ${3:setnewvalue})
+snippet reaper.SNM_GetSetSourceState2
+	reaper.SNM_GetSetSourceState2(${1:state}, ${2:setnewvalue})
+snippet reaper.SNM_GetSourceType
+	reaper.SNM_GetSourceType(${1:type})
+snippet reaper.SNM_MoveOrRemoveTrackFX
+	reaper.SNM_MoveOrRemoveTrackFX(${1:tr}, ${2:fxId}, ${3:what})
+snippet reaper.SNM_ReadMediaFileTag
+	reaper.SNM_ReadMediaFileTag(${1:fn}, ${2:tag})
+snippet reaper.SNM_RemoveReceive
+	reaper.SNM_RemoveReceive(${1:tr}, ${2:rcvidx})
+snippet reaper.SNM_RemoveReceivesFrom
+	reaper.SNM_RemoveReceivesFrom(${1:tr}, ${2:srctr})
+snippet reaper.SNM_SelectResourceBookmark
+	reaper.SNM_SelectResourceBookmark(${1:name})
+snippet reaper.SNM_SetDoubleConfigVar
+	reaper.SNM_SetDoubleConfigVar(${1:varname}, ${2:newvalue})
+snippet reaper.SNM_SetFastString
+	reaper.SNM_SetFastString(${1:str}, ${2:newstr})
+snippet reaper.SNM_SetIntConfigVar
+	reaper.SNM_SetIntConfigVar(${1:varname}, ${2:newvalue})
+snippet reaper.SNM_SetLongConfigVar
+	reaper.SNM_SetLongConfigVar(${1:varname}, ${2:newHighValue}, ${3:newLowValue})
+snippet reaper.SNM_SetProjectMarker
+	reaper.SNM_SetProjectMarker(${1:proj}, ${2:num}, ${3:isrgn}, ${4:pos}, ${5:rgnend}, ${6:name}, ${7:color})
+snippet reaper.SNM_SetStringConfigVar
+	reaper.SNM_SetStringConfigVar(${1:varname}, ${2:newvalue})
+snippet reaper.SNM_TagMediaFile
+	reaper.SNM_TagMediaFile(${1:fn}, ${2:tag}, ${3:tagval})
+snippet reaper.SNM_TieResourceSlotActions
+	reaper.SNM_TieResourceSlotActions(${1:bookmarkId})
+snippet reaper.SoloAllTracks
+	reaper.SoloAllTracks(${1:solo})
+snippet reaper.Splash_GetWnd
+	reaper.Splash_GetWnd()
+snippet reaper.SplitMediaItem
+	reaper.SplitMediaItem(${1:item}, ${2:position})
+snippet reaper.stringToGuid
+	reaper.stringToGuid(${1:str}, ${2:gGUID})
+snippet reaper.StuffMIDIMessage
+	reaper.StuffMIDIMessage(${1:mode}, ${2:msg1}, ${3:msg2}, ${4:msg3})
+snippet table
+	table(${1:offset}, ${2:size})
+snippet reaper.TakeFX_AddByName
+	reaper.TakeFX_AddByName(${1:take}, ${2:fxname}, ${3:instantiate})
+snippet reaper.TakeFX_CopyToTake
+	reaper.TakeFX_CopyToTake(${1:src_take}, ${2:src_fx}, ${3:dest_take}, ${4:dest_fx}, ${5:is_move})
+snippet reaper.TakeFX_CopyToTrack
+	reaper.TakeFX_CopyToTrack(${1:src_take}, ${2:src_fx}, ${3:dest_track}, ${4:dest_fx}, ${5:is_move})
+snippet reaper.TakeFX_Delete
+	reaper.TakeFX_Delete(${1:take}, ${2:fx})
+snippet reaper.TakeFX_EndParamEdit
+	reaper.TakeFX_EndParamEdit(${1:take}, ${2:fx}, ${3:param})
+snippet reaper.TakeFX_FormatParamValue
+	reaper.TakeFX_FormatParamValue(${1:take}, ${2:fx}, ${3:param}, ${4:val})
+snippet reaper.TakeFX_FormatParamValueNormalized
+	reaper.TakeFX_FormatParamValueNormalized(${1:take}, ${2:fx}, ${3:param}, ${4:value}, ${5:buf})
+snippet reaper.TakeFX_GetChainVisible
+	reaper.TakeFX_GetChainVisible(${1:take})
+snippet reaper.TakeFX_GetCount
+	reaper.TakeFX_GetCount(${1:take})
+snippet reaper.TakeFX_GetEnabled
+	reaper.TakeFX_GetEnabled(${1:take}, ${2:fx})
+snippet reaper.TakeFX_GetEnvelope
+	reaper.TakeFX_GetEnvelope(${1:take}, ${2:fxindex}, ${3:parameterindex}, ${4:create})
+snippet reaper.TakeFX_GetFloatingWindow
+	reaper.TakeFX_GetFloatingWindow(${1:take}, ${2:index})
+snippet reaper.TakeFX_GetFormattedParamValue
+	reaper.TakeFX_GetFormattedParamValue(${1:take}, ${2:fx}, ${3:param})
+snippet reaper.TakeFX_GetFXGUID
+	reaper.TakeFX_GetFXGUID(${1:take}, ${2:fx})
+snippet reaper.TakeFX_GetFXName
+	reaper.TakeFX_GetFXName(${1:take}, ${2:fx})
+snippet reaper.TakeFX_GetIOSize
+	reaper.TakeFX_GetIOSize(${1:take}, ${2:fx})
+snippet reaper.TakeFX_GetNamedConfigParm
+	reaper.TakeFX_GetNamedConfigParm(${1:take}, ${2:fx}, ${3:parmname})
+snippet reaper.TakeFX_GetNumParams
+	reaper.TakeFX_GetNumParams(${1:take}, ${2:fx})
+snippet reaper.TakeFX_GetOffline
+	reaper.TakeFX_GetOffline(${1:take}, ${2:fx})
+snippet reaper.TakeFX_GetOpen
+	reaper.TakeFX_GetOpen(${1:take}, ${2:fx})
+snippet reaper.TakeFX_GetParam
+	reaper.TakeFX_GetParam(${1:take}, ${2:fx}, ${3:param})
+snippet reaper.TakeFX_GetParameterStepSizes
+	reaper.TakeFX_GetParameterStepSizes(${1:take}, ${2:fx}, ${3:param})
+snippet reaper.TakeFX_GetParamEx
+	reaper.TakeFX_GetParamEx(${1:take}, ${2:fx}, ${3:param})
+snippet reaper.TakeFX_GetParamFromIdent
+	reaper.TakeFX_GetParamFromIdent(${1:take}, ${2:fx}, ${3:ident_str})
+snippet reaper.TakeFX_GetParamIdent
+	reaper.TakeFX_GetParamIdent(${1:take}, ${2:fx}, ${3:param})
+snippet reaper.TakeFX_GetParamName
+	reaper.TakeFX_GetParamName(${1:take}, ${2:fx}, ${3:param})
+snippet reaper.TakeFX_GetParamNormalized
+	reaper.TakeFX_GetParamNormalized(${1:take}, ${2:fx}, ${3:param})
+snippet reaper.TakeFX_GetPinMappings
+	reaper.TakeFX_GetPinMappings(${1:take}, ${2:fx}, ${3:isoutput}, ${4:pin})
+snippet reaper.TakeFX_GetPreset
+	reaper.TakeFX_GetPreset(${1:take}, ${2:fx})
+snippet reaper.TakeFX_GetPresetIndex
+	reaper.TakeFX_GetPresetIndex(${1:take}, ${2:fx})
+snippet reaper.TakeFX_GetUserPresetFilename
+	reaper.TakeFX_GetUserPresetFilename(${1:take}, ${2:fx})
+snippet reaper.TakeFX_NavigatePresets
+	reaper.TakeFX_NavigatePresets(${1:take}, ${2:fx}, ${3:presetmove})
+snippet reaper.TakeFX_SetEnabled
+	reaper.TakeFX_SetEnabled(${1:take}, ${2:fx}, ${3:enabled})
+snippet reaper.TakeFX_SetNamedConfigParm
+	reaper.TakeFX_SetNamedConfigParm(${1:take}, ${2:fx}, ${3:parmname}, ${4:value})
+snippet reaper.TakeFX_SetOffline
+	reaper.TakeFX_SetOffline(${1:take}, ${2:fx}, ${3:offline})
+snippet reaper.TakeFX_SetOpen
+	reaper.TakeFX_SetOpen(${1:take}, ${2:fx}, ${3:open})
+snippet reaper.TakeFX_SetParam
+	reaper.TakeFX_SetParam(${1:take}, ${2:fx}, ${3:param}, ${4:val})
+snippet reaper.TakeFX_SetParamNormalized
+	reaper.TakeFX_SetParamNormalized(${1:take}, ${2:fx}, ${3:param}, ${4:value})
+snippet reaper.TakeFX_SetPinMappings
+	reaper.TakeFX_SetPinMappings(${1:take}, ${2:fx}, ${3:isoutput}, ${4:pin}, ${5:low32bits}, ${6:hi32bits})
+snippet reaper.TakeFX_SetPreset
+	reaper.TakeFX_SetPreset(${1:take}, ${2:fx}, ${3:presetname})
+snippet reaper.TakeFX_SetPresetByIndex
+	reaper.TakeFX_SetPresetByIndex(${1:take}, ${2:fx}, ${3:idx})
+snippet reaper.TakeFX_Show
+	reaper.TakeFX_Show(${1:take}, ${2:index}, ${3:showFlag})
+snippet reaper.TakeIsMIDI
+	reaper.TakeIsMIDI(${1:take})
+snippet reaper.ThemeLayout_GetLayout
+	reaper.ThemeLayout_GetLayout(${1:section}, ${2:idx})
+snippet reaper.ThemeLayout_GetParameter
+	reaper.ThemeLayout_GetParameter(${1:wp})
+snippet reaper.ThemeLayout_RefreshAll
+	reaper.ThemeLayout_RefreshAll()
+snippet reaper.ThemeLayout_SetLayout
+	reaper.ThemeLayout_SetLayout(${1:section}, ${2:layout})
+snippet reaper.ThemeLayout_SetParameter
+	reaper.ThemeLayout_SetParameter(${1:wp}, ${2:value}, ${3:persist})
+snippet reaper.time_precise
+	reaper.time_precise()
+snippet reaper.TimeMap2_beatsToTime
+	reaper.TimeMap2_beatsToTime(${1:proj}, ${2:tpos}, ${3:measuresIn})
+snippet reaper.TimeMap2_GetDividedBpmAtTime
+	reaper.TimeMap2_GetDividedBpmAtTime(${1:proj}, ${2:time})
+snippet reaper.TimeMap2_GetNextChangeTime
+	reaper.TimeMap2_GetNextChangeTime(${1:proj}, ${2:time})
+snippet reaper.TimeMap2_QNToTime
+	reaper.TimeMap2_QNToTime(${1:proj}, ${2:qn})
+snippet reaper.TimeMap2_timeToBeats
+	reaper.TimeMap2_timeToBeats(${1:proj}, ${2:tpos})
+snippet reaper.TimeMap2_timeToQN
+	reaper.TimeMap2_timeToQN(${1:proj}, ${2:tpos})
+snippet reaper.TimeMap_curFrameRate
+	reaper.TimeMap_curFrameRate(${1:proj})
+snippet reaper.TimeMap_GetDividedBpmAtTime
+	reaper.TimeMap_GetDividedBpmAtTime(${1:time})
+snippet reaper.TimeMap_GetMeasureInfo
+	reaper.TimeMap_GetMeasureInfo(${1:proj}, ${2:measure})
+snippet reaper.TimeMap_GetMetronomePattern
+	reaper.TimeMap_GetMetronomePattern(${1:proj}, ${2:time}, ${3:pattern})
+snippet reaper.TimeMap_GetTimeSigAtTime
+	reaper.TimeMap_GetTimeSigAtTime(${1:proj}, ${2:time})
+snippet reaper.TimeMap_QNToMeasures
+	reaper.TimeMap_QNToMeasures(${1:proj}, ${2:qn})
+snippet reaper.TimeMap_QNToTime
+	reaper.TimeMap_QNToTime(${1:qn})
+snippet reaper.TimeMap_QNToTime_abs
+	reaper.TimeMap_QNToTime_abs(${1:proj}, ${2:qn})
+snippet reaper.TimeMap_timeToQN
+	reaper.TimeMap_timeToQN(${1:tpos})
+snippet reaper.TimeMap_timeToQN_abs
+	reaper.TimeMap_timeToQN_abs(${1:proj}, ${2:tpos})
+snippet reaper.ToggleTrackSendUIMute
+	reaper.ToggleTrackSendUIMute(${1:track}, ${2:send_idx})
+snippet reaper.Track_GetPeakHoldDB
+	reaper.Track_GetPeakHoldDB(${1:track}, ${2:channel}, ${3:clear})
+snippet reaper.Track_GetPeakInfo
+	reaper.Track_GetPeakInfo(${1:track}, ${2:channel})
+snippet reaper.TrackCtl_SetToolTip
+	reaper.TrackCtl_SetToolTip(${1:fmt}, ${2:xpos}, ${3:ypos}, ${4:topmost})
+snippet reaper.TrackFX_AddByName
+	reaper.TrackFX_AddByName(${1:track}, ${2:fxname}, ${3:recFX}, ${4:instantiate})
+snippet reaper.TrackFX_CopyToTake
+	reaper.TrackFX_CopyToTake(${1:src_track}, ${2:src_fx}, ${3:dest_take}, ${4:dest_fx}, ${5:is_move})
+snippet reaper.TrackFX_CopyToTrack
+	reaper.TrackFX_CopyToTrack(${1:src_track}, ${2:src_fx}, ${3:dest_track}, ${4:dest_fx}, ${5:is_move})
+snippet reaper.TrackFX_Delete
+	reaper.TrackFX_Delete(${1:track}, ${2:fx})
+snippet reaper.TrackFX_EndParamEdit
+	reaper.TrackFX_EndParamEdit(${1:track}, ${2:fx}, ${3:param})
+snippet reaper.TrackFX_FormatParamValue
+	reaper.TrackFX_FormatParamValue(${1:track}, ${2:fx}, ${3:param}, ${4:val})
+snippet reaper.TrackFX_FormatParamValueNormalized
+	reaper.TrackFX_FormatParamValueNormalized(${1:track}, ${2:fx}, ${3:param}, ${4:value}, ${5:buf})
+snippet reaper.TrackFX_GetByName
+	reaper.TrackFX_GetByName(${1:track}, ${2:fxname}, ${3:instantiate})
+snippet reaper.TrackFX_GetChainVisible
+	reaper.TrackFX_GetChainVisible(${1:track})
+snippet reaper.TrackFX_GetCount
+	reaper.TrackFX_GetCount(${1:track})
+snippet reaper.TrackFX_GetEnabled
+	reaper.TrackFX_GetEnabled(${1:track}, ${2:fx})
+snippet reaper.TrackFX_GetEQ
+	reaper.TrackFX_GetEQ(${1:track}, ${2:instantiate})
+snippet reaper.TrackFX_GetEQBandEnabled
+	reaper.TrackFX_GetEQBandEnabled(${1:track}, ${2:fxidx}, ${3:bandtype}, ${4:bandidx})
+snippet reaper.TrackFX_GetEQParam
+	reaper.TrackFX_GetEQParam(${1:track}, ${2:fxidx}, ${3:paramidx})
+snippet reaper.TrackFX_GetFloatingWindow
+	reaper.TrackFX_GetFloatingWindow(${1:track}, ${2:index})
+snippet reaper.TrackFX_GetFormattedParamValue
+	reaper.TrackFX_GetFormattedParamValue(${1:track}, ${2:fx}, ${3:param})
+snippet reaper.TrackFX_GetFXGUID
+	reaper.TrackFX_GetFXGUID(${1:track}, ${2:fx})
+snippet reaper.TrackFX_GetFXName
+	reaper.TrackFX_GetFXName(${1:track}, ${2:fx})
+snippet reaper.TrackFX_GetInstrument
+	reaper.TrackFX_GetInstrument(${1:track})
+snippet reaper.TrackFX_GetIOSize
+	reaper.TrackFX_GetIOSize(${1:track}, ${2:fx})
+snippet reaper.TrackFX_GetNamedConfigParm
+	reaper.TrackFX_GetNamedConfigParm(${1:track}, ${2:fx}, ${3:parmname})
+snippet reaper.TrackFX_GetNumParams
+	reaper.TrackFX_GetNumParams(${1:track}, ${2:fx})
+snippet reaper.TrackFX_GetOffline
+	reaper.TrackFX_GetOffline(${1:track}, ${2:fx})
+snippet reaper.TrackFX_GetOpen
+	reaper.TrackFX_GetOpen(${1:track}, ${2:fx})
+snippet reaper.TrackFX_GetParam
+	reaper.TrackFX_GetParam(${1:track}, ${2:fx}, ${3:param})
+snippet reaper.TrackFX_GetParameterStepSizes
+	reaper.TrackFX_GetParameterStepSizes(${1:track}, ${2:fx}, ${3:param})
+snippet reaper.TrackFX_GetParamEx
+	reaper.TrackFX_GetParamEx(${1:track}, ${2:fx}, ${3:param})
+snippet reaper.TrackFX_GetParamFromIdent
+	reaper.TrackFX_GetParamFromIdent(${1:track}, ${2:fx}, ${3:ident_str})
+snippet reaper.TrackFX_GetParamIdent
+	reaper.TrackFX_GetParamIdent(${1:track}, ${2:fx}, ${3:param})
+snippet reaper.TrackFX_GetParamName
+	reaper.TrackFX_GetParamName(${1:track}, ${2:fx}, ${3:param})
+snippet reaper.TrackFX_GetParamNormalized
+	reaper.TrackFX_GetParamNormalized(${1:track}, ${2:fx}, ${3:param})
+snippet reaper.TrackFX_GetPinMappings
+	reaper.TrackFX_GetPinMappings(${1:tr}, ${2:fx}, ${3:isoutput}, ${4:pin})
+snippet reaper.TrackFX_GetPreset
+	reaper.TrackFX_GetPreset(${1:track}, ${2:fx})
+snippet reaper.TrackFX_GetPresetIndex
+	reaper.TrackFX_GetPresetIndex(${1:track}, ${2:fx})
+snippet reaper.TrackFX_GetRecChainVisible
+	reaper.TrackFX_GetRecChainVisible(${1:track})
+snippet reaper.TrackFX_GetRecCount
+	reaper.TrackFX_GetRecCount(${1:track})
+snippet reaper.TrackFX_GetUserPresetFilename
+	reaper.TrackFX_GetUserPresetFilename(${1:track}, ${2:fx})
+snippet reaper.TrackFX_NavigatePresets
+	reaper.TrackFX_NavigatePresets(${1:track}, ${2:fx}, ${3:presetmove})
+snippet reaper.TrackFX_SetEnabled
+	reaper.TrackFX_SetEnabled(${1:track}, ${2:fx}, ${3:enabled})
+snippet reaper.TrackFX_SetEQBandEnabled
+	reaper.TrackFX_SetEQBandEnabled(${1:track}, ${2:fxidx}, ${3:bandtype}, ${4:bandidx}, ${5:enable})
+snippet reaper.TrackFX_SetEQParam
+	reaper.TrackFX_SetEQParam(${1:track}, ${2:fxidx}, ${3:bandtype}, ${4:bandidx}, ${5:paramtype}, ${6:val}, ${7:isnorm})
+snippet reaper.TrackFX_SetNamedConfigParm
+	reaper.TrackFX_SetNamedConfigParm(${1:track}, ${2:fx}, ${3:parmname}, ${4:value})
+snippet reaper.TrackFX_SetOffline
+	reaper.TrackFX_SetOffline(${1:track}, ${2:fx}, ${3:offline})
+snippet reaper.TrackFX_SetOpen
+	reaper.TrackFX_SetOpen(${1:track}, ${2:fx}, ${3:open})
+snippet reaper.TrackFX_SetParam
+	reaper.TrackFX_SetParam(${1:track}, ${2:fx}, ${3:param}, ${4:val})
+snippet reaper.TrackFX_SetParamNormalized
+	reaper.TrackFX_SetParamNormalized(${1:track}, ${2:fx}, ${3:param}, ${4:value})
+snippet reaper.TrackFX_SetPinMappings
+	reaper.TrackFX_SetPinMappings(${1:tr}, ${2:fx}, ${3:isoutput}, ${4:pin}, ${5:low32bits}, ${6:hi32bits})
+snippet reaper.TrackFX_SetPreset
+	reaper.TrackFX_SetPreset(${1:track}, ${2:fx}, ${3:presetname})
+snippet reaper.TrackFX_SetPresetByIndex
+	reaper.TrackFX_SetPresetByIndex(${1:track}, ${2:fx}, ${3:idx})
+snippet reaper.TrackFX_Show
+	reaper.TrackFX_Show(${1:track}, ${2:index}, ${3:showFlag})
+snippet reaper.TrackList_AdjustWindows
+	reaper.TrackList_AdjustWindows(${1:isMinor})
+snippet reaper.TrackList_UpdateAllExternalSurfaces
+	reaper.TrackList_UpdateAllExternalSurfaces()
+snippet gfx.transformblit
+	gfx.transformblit(${1:srcimg}, ${2:destx}, ${3:desty}, ${4:destw}, ${5:desth}, ${6:div_w}, ${7:div_h}, ${8:table})
+snippet gfx.triangle
+	gfx.triangle(${1:x1}, ${2:y1}, ${3:x2}, ${4:y2}, ${5:x3}, ${6:y3x4}, ${7:y4...})
+snippet reaper.ULT_GetMediaItemNote
+	reaper.ULT_GetMediaItemNote(${1:item})
+snippet reaper.ULT_SetMediaItemNote
+	reaper.ULT_SetMediaItemNote(${1:item}, ${2:note})
+snippet reaper.Undo_BeginBlock
+	reaper.Undo_BeginBlock()
+snippet reaper.Undo_BeginBlock2
+	reaper.Undo_BeginBlock2(${1:proj})
+snippet reaper.Undo_CanRedo2
+	reaper.Undo_CanRedo2(${1:proj})
+snippet reaper.Undo_CanUndo2
+	reaper.Undo_CanUndo2(${1:proj})
+snippet reaper.Undo_DoRedo2
+	reaper.Undo_DoRedo2(${1:proj})
+snippet reaper.Undo_DoUndo2
+	reaper.Undo_DoUndo2(${1:proj})
+snippet reaper.Undo_EndBlock
+	reaper.Undo_EndBlock(${1:descchange}, ${2:extraflags})
+snippet reaper.Undo_EndBlock2
+	reaper.Undo_EndBlock2(${1:proj}, ${2:descchange}, ${3:extraflags})
+snippet reaper.Undo_OnStateChange
+	reaper.Undo_OnStateChange(${1:descchange})
+snippet reaper.Undo_OnStateChange2
+	reaper.Undo_OnStateChange2(${1:proj}, ${2:descchange})
+snippet reaper.Undo_OnStateChange_Item
+	reaper.Undo_OnStateChange_Item(${1:proj}, ${2:name}, ${3:item})
+snippet reaper.Undo_OnStateChangeEx
+	reaper.Undo_OnStateChangeEx(${1:descchange}, ${2:whichStates}, ${3:trackparm})
+snippet reaper.Undo_OnStateChangeEx2
+	reaper.Undo_OnStateChangeEx2(${1:proj}, ${2:descchange}, ${3:whichStates}, ${4:trackparm})
+snippet gfx.update
+	gfx.update()
+snippet reaper.UpdateArrange
+	reaper.UpdateArrange()
+snippet reaper.UpdateItemInProject
+	reaper.UpdateItemInProject(${1:item})
+snippet reaper.UpdateTimeline
+	reaper.UpdateTimeline()
+snippet reaper.ValidatePtr
+	reaper.ValidatePtr(${1:pointer}, ${2:ctypename})
+snippet reaper.ValidatePtr2
+	reaper.ValidatePtr2(${1:proj}, ${2:pointer}, ${3:ctypename})
+snippet reaper.ViewPrefs
+	reaper.ViewPrefs(${1:page}, ${2:pageByName})
+snippet reaper.Xen_AudioWriter_Create
+	reaper.Xen_AudioWriter_Create(${1:filename}, ${2:numchans}, ${3:samplerate})
+snippet reaper.Xen_AudioWriter_Destroy
+	reaper.Xen_AudioWriter_Destroy(${1:writer})
+snippet reaper.Xen_AudioWriter_Write
+	reaper.Xen_AudioWriter_Write(${1:writer}, ${2:numframes}, ${3:data}, ${4:offset})
+snippet reaper.Xen_GetMediaSourceSamples
+	reaper.Xen_GetMediaSourceSamples(${1:src}, ${2:destbuf}, ${3:destbufoffset}, ${4:numframes}, ${5:numchans}, ${6:samplerate}, ${7:sourceposition})
+snippet reaper.Xen_StartSourcePreview
+	reaper.Xen_StartSourcePreview(${1:source}, ${2:gain}, ${3:loop}, ${4:outputchanindexIn})
+snippet reaper.Xen_StopSourcePreview
+	reaper.Xen_StopSourcePreview(${1:preview_id})

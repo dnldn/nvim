@@ -6,3 +6,7 @@ register("lualine", {})
 
 --Implementing devicons for neat little emojis.
 register("nvim-web-devicons", {})
+
+--Implementing status bar for when LSP resources are loading.
+-- register("fidget", {})
+require"fidget".setup{}

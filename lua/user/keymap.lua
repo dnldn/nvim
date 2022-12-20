@@ -58,6 +58,10 @@ vim.keymap.set("n", "J", "miJ`i:delmarks i<CR>")
 --Replace all instances of string under word in buffer. Doesn't target substrings, but be careful with this one as it can target protected terms.
 vim.keymap.set("n", "<F7><F7>", [[:%s/\<<C-r><C-w>\>//gI<Left><Left><Left>]])
 
+--Open command line with clipboard or register to lua execute command.
+vim.keymap.set("n", "<leader>pc", ":<C-R>+")
+vim.keymap.set("n", "<leader>pr", ':lua <C-r>"')
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
 --Plugins:

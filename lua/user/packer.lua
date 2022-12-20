@@ -9,6 +9,7 @@ return require('packer').startup(function(use)
 	use 'folke/tokyonight.nvim'
 	use "nvim-lualine/lualine.nvim"
 	use 'nvim-tree/nvim-web-devicons'
+	use 'j-hui/fidget.nvim'
 
 	--Utility plugins.
 	use 'wbthomason/packer.nvim'

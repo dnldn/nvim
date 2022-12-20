@@ -1,3 +1,4 @@
+--FIXME: only lua is initializing properly on buffer startup - shell, java and others do not initialize properly.
 local lsp = require("lsp-zero")
 
 lsp.preset("recommended")
@@ -9,26 +10,28 @@ lsp.ensure_installed({
   'rust_analyzer',
 })
 
-	local util = require("lspconfig/util")
-	require("lspconfig").sumneko_lua.setup{
-		on_attach = custom_attach,
-		root_dir = function(fname) return util.find_git_ancestor(fname) or util.path.dirname(fname) end,
-		settings = {
-			Lua = {
+	--TODO: this may no loner be needed - disable it an see if any issues come up.
+	--local util = require("lspconfig/util")
+	--require("lspconfig").sumneko_lua.setup{
+	--	on_attach = custom_attach,
+	--	root_dir = function(fname) return util.find_git_ancestor(fname) or util.path.dirname(fname) end,
+	--	settings = {
+	--		Lua = {
 
-				--Tell the language server which version of Lua you're using, and set up lua path.
-				runtime = { version = 'LuaJIT', path = vim.split(package.path, ';'), },
+	--			--Tell the language server which version of Lua you're using, and set up lua path.
+	--			runtime = { version = 'LuaJIT', path = vim.split(package.path, ';'), },
 
-				-- Get the language server to recognize the `vim` global
-				diagnostics = { globals = {'vim'}, },
+	--			-- Get the language server to recognize the `vim` global
+	--			diagnostics = { globals = {'vim'}, },
 
-				-- Make the server aware of Neovim runtime files
-				workspace = { library = { [vim.fn.expand('$VIMRUNTIME/lua')] = true, [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true, },
+	--			-- Make the server aware of Neovim runtime files
+	--			workspace = { library = { [vim.fn.expand('$VIMRUNTIME/lua')] = true, [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true, },
 
-				},
-			},
-		},
-	}
+	--			},
+	--		},
+	--	},
+	--}
+
 --Used to define tab behavior in autocomplete keybinds.
 local luasnip = require('luasnip')
 local check_back_space = function() local col = vim.fn.col('.') - 1 if col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') then return true else return false end end
@@ -37,6 +40,11 @@ local check_back_space = function() local col = vim.fn.col('.') - 1 if col == 0 
 local cmp = require('cmp')
 vim.g.nvim_cmp_toggle = true
 cmp.setup { enabled = function() return vim.g.nvim_cmp_toggle end }
+
+
+--Attempting to initialize reaper snippets.
+require("luasnip.loaders.from_snipmate").lazy_load({paths = "./snippets/"})
+require("luasnip.loaders.from_vscode").lazy_load({ paths = { "./snippets" } })
 
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 local cmp_mappings = lsp.defaults.cmp_mappings({
@@ -61,6 +69,7 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
 	['<S-Tab>'] = cmp.mapping(function() luasnip.jump(-1) end, {'i', 's'}),
 	['<CR>'] = cmp.mapping.confirm({ select = true }),
 })
+
 lsp.set_preferences({
   sign_icons = { error = 'X',
     warn = 'W',
@@ -92,19 +101,15 @@ lsp.on_attach(function(client, bufnr)
 	vim.keymap.set("n", "<leader>ca", function() vim.lsp.buf.code_action() end, opts)
 
 	--Orphaned actions/ones I can't find a use for.
-
 		--Kept for reference - alt-j and alt-k handle diagnostic navigation only when diagnostics are toggled by alt-d. (lua/user/user_commands/display_diagnostics.lua)
-		-- vim.keymap.set("n", "<A-j>", function() vim.diagnostic.goto_next() end, opts)
-		-- vim.keymap.set("n", "<A-k>", function() vim.diagnostic.goto_prev() end, opts)
-
+			--vim.keymap.set("n", "<A-j>", function() vim.diagnostic.goto_next() end, opts)
+			--vim.keymap.set("n", "<A-k>", function() vim.diagnostic.goto_prev() end, opts)
 		-- Doesn't seem to do anything without arguments, but I would like a way to toggle aggressive highlighting on and off.
-		-- vim.keymap.set("n", "<leader>sd", function() vim.diagnostic.show() end, opts)
-
+			--vim.keymap.set("n", "<leader>sd", function() vim.diagnostic.show() end, opts)
 		--Lists references for character under cursor in quick fix menu. Not even really usign quick fix menu yet, so... ehh.
-		-- vim.keymap.set("n", "<leader>qr", function() vim.lsp.buf.references() end, opts)
-
+			--vim.keymap.set("n", "<leader>qr", function() vim.lsp.buf.references() end, opts)
 		--This seems to do a text search through the entire directory and all vim resources... struggling to think of a use case here when I have ripgrep and it's faster.
-		-- vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, opts)
+			--vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, opts)
 
 end)
 

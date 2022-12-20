@@ -117,23 +117,17 @@ end, {nargs = 0})
 
 ---------------------------------------------------------------------------------------------------
 
---Configuring marks. FIXME: set_next creates persistent marks, but delete_line and delete_buf do not remove persistent marks when session has been closed and reopened.
-			-- 12/18/2022 - this appears to be an issue with neovim itself, something to do with the shada file. Basically all local marks are persistent unless you purge it.
-			-- TODO: determine how to access shada file, and create a purging function that runs when delete_line and delete_buf are run to make changes persistent.
-			-- https://neovim.io/doc/user/starting.html#shada
-			-- Issuing the command line	wshada!	after deleting marks makes them persistent. Will have to migrate delete_line and delete_buf to user commands to make that work as intended.
+--Configuring marks.
 require'marks'.setup {
 	default_mappings = false,
 	mappings = {
 		set_next = "M",
-		-- delete_line = "<space>dl",
-		-- delete_buf = "<space>db",
 		prev = "<A-K>",
 		next = "<A-J>",
 	}
 }
 
---Pair of functions to translate mark letter to number 1-26 and back.
+--Translate numbers and characters back and forth: 1=a, z=26
 local function char_from_mark(num) return string.char(string.byte("a")+num-1) end
 local function mark_from_char(char) return string.byte(char)-string.byte("a")+1 end
 
