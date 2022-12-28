@@ -1,3 +1,5 @@
+--TODO: Disabled while testing out coc.nvim
+--[[
 --FIXME: only lua is initializing properly on buffer startup - shell, java and others do not initialize properly.
 local lsp = require("lsp-zero")
 
@@ -119,7 +121,7 @@ lsp.setup()
 vim.g.lsp_diagnostics_toggled = false
 
 --Global function to enable/disable LSP diagnostics (must be called after lsp.setup()).
-function DisplayDiagnostics()
+function DisplayDiagnosticsLsp()
 	if not vim.g.lsp_diagnostics_toggled then
 		vim.diagnostic.config({ virtual_text = true, underline = true, })
 		vim.g.lsp_diagnostics_toggled = true
@@ -128,3 +130,4 @@ function DisplayDiagnostics()
 		vim.g.lsp_diagnostics_toggled = false
 	end
 end
+]]

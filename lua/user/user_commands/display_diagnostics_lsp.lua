@@ -5,7 +5,7 @@ function ()
 	local m = {}
 
 	--Assign getter methods here. Compress to single line after unit testing.
-	function m._1() return "lua DisplayDiagnostics()", not vim.g.lsp_diagnostics_toggled end --Need to return "not" because value doesn't flip until function has been run.
+	function m._1() return "lua DisplayDiagnosticsLsp()", not vim.g.diagnostics_toggled end --Need to return "not" because value doesn't flip until function has been run.
 	function m._2(on)
 		if on then
 			vim.keymap.set("n", "<A-j>", function() vim.diagnostic.goto_next() end, {})

@@ -1,3 +1,6 @@
+--Silences "Undefined global variable 'vim'" error on all lua files. This is only here to trick the LSP server, so I'm tying it to an uncalled function to avoid any potential fringe errors.
+function __SILENCE_IS_GOLDEN() vim=vim end
+
 --Set space as leader key.
 vim.g.mapleader = " "
 

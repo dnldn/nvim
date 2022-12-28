@@ -11,15 +11,10 @@ return require('packer').startup(function(use)
 	use 'nvim-tree/nvim-web-devicons'
 	use 'j-hui/fidget.nvim'
 
-	--Utility plugins.
-	use 'wbthomason/packer.nvim'
-	use 'tpope/vim-fugitive'
-	use 'RishabhRD/popfix'
-	use 'RishabhRD/nvim-cheat.sh'
-
 	--Command/movement plugins.
 	use 'tpope/vim-surround'
 	use 'tpope/vim-commentary'
+	use 'tpope/vim-abolish'
 	use { 'phaazon/hop.nvim', branch = 'v2', config = function() require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' } end }
 
 	--Navigation plugins.
@@ -29,10 +24,33 @@ return require('packer').startup(function(use)
 	use { 'nvim-telescope/telescope.nvim', tag = '0.1.0', requires = { {'nvim-lua/plenary.nvim'} } }
 	use 'chentoast/marks.nvim'
 
+
 	--Reverting back to using lsp-zero instead of going a la carte. Too much configuration to manage the way I had it.
 	use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+	use {'neoclide/coc.nvim', branch = 'release'}
 
 
+	--Utility plugins.
+	use 'wbthomason/packer.nvim'
+	use 'tpope/vim-fugitive'
+	use 'RishabhRD/popfix'
+	use 'RishabhRD/nvim-cheat.sh'
+
+	--TODO: compress and remove redundant dependency after unit testing.
+	use({
+		"jackMort/ChatGPT.nvim",
+		config = function()
+		require("chatgpt").setup({ --[[ optional configuration ]]}) end,
+		requires = {
+			"MunifTanjim/nui.nvim",
+			-- "nvim-lua/plenary.nvim",
+			-- "nvim-telescope/telescope.nvim"
+		    }
+	})
+
+
+	--Disabling this to try out coc.
+	--[[
 	use {
 		'VonHeikemen/lsp-zero.nvim',
 		 requires = {
@@ -55,5 +73,6 @@ return require('packer').startup(function(use)
 		 	{'rafamadriz/friendly-snippets'},
 		 }
 	}
+	]]
 
 end)

@@ -60,8 +60,8 @@ local harpoon_setup, harpoon = pcall(require, "harpoon")
 if not harpoon_setup then return end
 
 --Registering global variables to determine which buffers in quick menu are being hotkeyed to.
-_HarpoonIndex = 1
-_HarpoonSceneTable = {1, 5, 9, 13, 17, 21, 25, 29, 33, 37, 41, 45, 49, 53, 57, 61}
+vim.g.harpoon_index = 1
+vim.g.harpoon_scene_table = {1, 5, 9, 13, 17, 21, 25, 29, 33, 37, 41, 45, 49, 53, 57, 61}
 
 --Configure harpoon.
 harpoon.setup({
@@ -80,10 +80,10 @@ vim.api.nvim_create_user_command("HarpoonQuickMenu", function() require("harpoon
 
 	--Alt-u, Alt-i, Alt-o, Alt-p access four consecutive buffers as populated in Harpoon's quick menu.
 
-vim.api.nvim_create_user_command("HarpoonNav1", function() require("harpoon.ui").nav_file(_HarpoonSceneTable[_HarpoonIndex]+0) end, {nargs = 0})
-vim.api.nvim_create_user_command("HarpoonNav2", function() require("harpoon.ui").nav_file(_HarpoonSceneTable[_HarpoonIndex]+1) end, {nargs = 0})
-vim.api.nvim_create_user_command("HarpoonNav3", function() require("harpoon.ui").nav_file(_HarpoonSceneTable[_HarpoonIndex]+2) end, {nargs = 0})
-vim.api.nvim_create_user_command("HarpoonNav4", function() require("harpoon.ui").nav_file(_HarpoonSceneTable[_HarpoonIndex]+3) end, {nargs = 0})
+vim.api.nvim_create_user_command("HarpoonNav1", function() require("harpoon.ui").nav_file(vim.g.harpoon_scene_table[vim.g.harpoon_index]+0) end, {nargs = 0})
+vim.api.nvim_create_user_command("HarpoonNav2", function() require("harpoon.ui").nav_file(vim.g.harpoon_scene_table[vim.g.harpoon_index]+1) end, {nargs = 0})
+vim.api.nvim_create_user_command("HarpoonNav3", function() require("harpoon.ui").nav_file(vim.g.harpoon_scene_table[vim.g.harpoon_index]+2) end, {nargs = 0})
+vim.api.nvim_create_user_command("HarpoonNav4", function() require("harpoon.ui").nav_file(vim.g.harpoon_scene_table[vim.g.harpoon_index]+3) end, {nargs = 0})
 
 
 --Clamping is needed for the next two commands and lua doesn't implement it for some reason...
@@ -98,20 +98,20 @@ local function clamp(x, min, max) if x < min then return min elseif x > max then
 --Get a multiple from current number of buffers, and move down by four. Clamp so value rounds down to zero if less than 1.
 vim.api.nvim_create_user_command("HarpoonGroupLeft",  function()
 	local current_max = math.floor((require("harpoon.mark").get_length()-1)/4)+1
-	if current_max == 0 then _HarpoonIndex = 1 return
+	if current_max == 0 then vim.g.harpoon_index = 1 return
 	else
-		_HarpoonIndex = clamp(_HarpoonIndex - 1, 1, current_max)
-		vim.api.nvim_command("echo \"" .. "Buffer " .. _HarpoonSceneTable[_HarpoonIndex] .. " through " .. _HarpoonSceneTable[_HarpoonIndex] + 4 .. " selected." .. "\"")
+		vim.g.harpoon_index = clamp(vim.g.harpoon_index - 1, 1, current_max)
+		vim.api.nvim_command("echo \"" .. "Buffer " .. vim.g.harpoon_scene_table[vim.g.harpoon_index] .. " through " .. vim.g.harpoon_scene_table[vim.g.harpoon_index] + 4 .. " selected." .. "\"")
 	end
 end, {nargs = 0})
 
 --Get a multiple from current number of buffers, and move up by four. Clamp so value rounds down to a maximum defined by current number of buffers.
 vim.api.nvim_create_user_command("HarpoonGroupRight", function()
 	local current_max = math.floor((require("harpoon.mark").get_length()-1)/4)+1
-	if current_max == 0 then _HarpoonIndex = 1 return
+	if current_max == 0 then vim.g.harpoon_index = 1 return
 	else
-		_HarpoonIndex = clamp(_HarpoonIndex + 1, 1, current_max)
-		vim.api.nvim_command("echo \"" .. "Buffer " .. _HarpoonSceneTable[_HarpoonIndex] .. " through " .. _HarpoonSceneTable[_HarpoonIndex] + 4 .. " selected." .. "\"")
+		vim.g.harpoon_index = clamp(vim.g.harpoon_index + 1, 1, current_max)
+		vim.api.nvim_command("echo \"" .. "Buffer " .. vim.g.harpoon_scene_table[vim.g.harpoon_index] .. " through " .. vim.g.harpoon_scene_table[vim.g.harpoon_index] + 4 .. " selected." .. "\"")
 	end
 end, {nargs = 0})
 
@@ -129,7 +129,7 @@ require'marks'.setup {
 
 --Translate numbers and characters back and forth: 1=a, z=26
 local function char_from_mark(num) return string.char(string.byte("a")+num-1) end
-local function mark_from_char(char) return string.byte(char)-string.byte("a")+1 end
+-- local function mark_from_char(char) return string.byte(char)-string.byte("a")+1 end
 
 --Registering global variables to determine which set of marks hotkeys will focus to.
 vim.g.marker_index = 1

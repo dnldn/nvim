@@ -8,5 +8,5 @@ register("lualine", {})
 register("nvim-web-devicons", {})
 
 --Implementing status bar for when LSP resources are loading.
--- register("fidget", {})
 require"fidget".setup{}
+-- register("fidget", {})

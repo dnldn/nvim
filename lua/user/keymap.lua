@@ -14,8 +14,6 @@ vim.keymap.set("n", "<leader>so", "<cmd>:so<CR>")
 --Tab through windows with alt + direction.
 vim.keymap.set("n", "<A-h>", "<cmd>wincmd h<CR>")
 vim.keymap.set("n", "<A-l>", "<cmd>wincmd l<CR>")
-vim.keymap.set("n", "<A-j>", "<cmd>wincmd j<CR>") --Note: This bind will change depending on whether LSP diagnostics are toggled or not.
-vim.keymap.set("n", "<A-k>", "<cmd>wincmd k<CR>") --Note: This bind will change depending on whether LSP diagnostics are toggled or not.
 
 --Split window.
 vim.keymap.set("n", "<leader>wh", "<C-w>s") --Split window horizontally.
@@ -61,16 +59,83 @@ vim.keymap.set("n", "<F7><F7>", [[:%s/\<<C-r><C-w>\>//gI<Left><Left><Left>]])
 --Open command line with clipboard or register to lua execute command.
 vim.keymap.set("n", "<leader>pc", ":<C-R>+")
 vim.keymap.set("n", "<leader>pr", ':lua <C-r>"')
+vim.keymap.set("n", "<leader>hi", "<cmd>hi<CR>")
 
------------------------------------------------------------------------------------------------------------------------------------------------------
+--Clear line and escape.
+vim.keymap.set("n", "<leader>dd", 'cc<Esc>')
 
---Plugins:
+--TODO: Add guardrailing at top or bottom of session.
+--TODO: Add support for languages where vim's comment syntax defaults to wrapper-style comments (C++, java, HTML).
+function _InsertEmptyLinesAroundCurrentLine()
 
---Shortcut to resync packer after sourcing and installing new plugins.
+	--Gap is magic numbered to two for now - I really don't see a need to add more options based on my use case.
+	local gap = 2
+	local center_idx = gap+1
+
+	--Get syntax for comments from LSP on current buffer (they will count as empty on lines where they are the only thing). This may cause conflicts where the language uses * for comments but meh.
+	local comment = vim.o.commentstring:gsub(" ", ""):gsub("%%s", "")
+	local delimiter = comment .. "*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***"
+
+	--Get line, column, and buffer from cursor position.
+	local current = {}
+	current.row, current.col = unpack(vim.api.nvim_win_get_cursor(0))
+
+	--Iterate only through lines in range of current buffer.
+	local emptyLines = true
+	local lines = vim.api.nvim_buf_get_lines(0, current.row-1-gap, current.row+gap, true)
+
+	for n, line in ipairs(lines) do
+		if n ~= center_idx then
+			if line ~= "" and line ~= delimiter then
+				emptyLines = false
+				break
+			end
+		end
+	end
+
+	--Get current line.
+	local current_line = {tostring(vim.api.nvim_get_current_line())}
+
+	if emptyLines then
+
+		--Delete space.
+		vim.api.nvim_buf_set_text(0, current.row-1-gap, 0, current.row-1+gap, 0, current_line)
+
+		--Move cursor back to position and clean up delimiter.
+		vim.api.nvim_win_set_cursor(0, {current.row-gap, current.col})
+		vim.api.nvim_set_current_line(current_line[1])
+
+	else
+
+		--Create replacement lines.
+		local replace_lines = {delimiter, "", tostring(vim.api.nvim_get_current_line()), "", delimiter}
+
+		--Create spaces above and below text.
+		local a1 = "normal " .. gap .. "O"
+		local a2 = "normal j"
+		local a3 = "normal " .. gap .. "o"
+		local a4 = "normal 2k"
+
+		--Do replacement on temporary text.
+		vim.cmd(a1) vim.cmd(a2) vim.cmd(a3) vim.cmd(a4)
+		vim.api.nvim_buf_set_lines(0, current.row-1, current.row+(gap*2), true, replace_lines)
+
+		--Move cursor back to position.
+		vim.api.nvim_win_set_cursor(0, {current.row+gap, current.col})
+	end
+end
+
+vim.keymap.set("n", "<leader>oi", ":lua _InsertEmptyLinesAroundCurrentLine()<CR>")
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+--Plugins: (Note - all CoC keybinds are in coc.lua.
+
 vim.keymap.set("n", "<leader>ps", "<cmd>:PackerSync<CR>")
 
 --Opens nvim-tree. Internal bindings for that are kept in navigation.lua.
 vim.keymap.set("n", "<A-f>", "<cmd>NvimTreeToggle<CR>")
+
+--CoC Keybinds.
 
 --Opens Telescope.
 vim.keymap.set("n", "<A-t>", "<cmd>Telescope find_files find_command=rg,--ignore,--hidden,--files prompt_prefix=🔍<CR>")
@@ -108,6 +173,8 @@ vim.keymap.set("n", "<leader>gs", "<cmd>Gvdiffsplit<CR>")
 vim.keymap.set("n", "<leader>ch", "<cmd>CheatWithoutComments<CR>")
 vim.keymap.set("n", "<leader>cc", "<cmd>Cheat<CR>")
 
+
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
 --User commands:
@@ -121,8 +188,12 @@ vim.keymap.set("n", "<leader>ac", "<cmd>CmpToggle<CR>")
 --Toggle dark mode.
 vim.keymap.set("n", "<leader>dm", "<cmd>DarkMode<CR>")
 
---Toggles LSP diagnostics on or off. Alters keymaps of Alt-j/k depending on state.
-vim.keymap.set("n", "<A-d>", "<cmd>DisplayDiagnostics<CR>")
+--Toggles LSP or COC diagnostics on or off. Alters keymaps of Alt-j/k depending on state in LSP implementation. Disables both autocomplete and diagnostics in COC implementation.
+vim.keymap.set("n", "<leader>dg", "<cmd>DisplayDiagnostics<CR>")
+
+-- Defaults for LSP scheme:
+-- vim.keymap.set("n", "<A-j>", "<cmd>wincmd j<CR>") --Note: This bind will change depending on whether LSP diagnostics are toggled or not.
+-- vim.keymap.set("n", "<A-k>", "<cmd>wincmd k<CR>") --Note: This bind will change depending on whether LSP diagnostics are toggled or not.
 
 --Delete marks from file and make change persistent - otherwise, they will come back when session is reopened.
 vim.keymap.set("n", "<leader>dl", "<cmd>DeleteMarkFromBuffer<CR>")
