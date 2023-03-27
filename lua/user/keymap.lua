@@ -23,6 +23,8 @@ vim.keymap.set("n", "<leader>wq", "<cmd>close<CR>") --Close current split window
 --Movement. 
 vim.keymap.set("n", "<C-j>", "<C-d>zz") --Center screen after page down.
 vim.keymap.set("n", "<C-k>", "<C-u>zz") --Center screen after page up.
+vim.keymap.set("v", "<C-j>", "20j") --Move selection down by 20 in visual mode.
+vim.keymap.set("v", "<C-k>", "20k") --Move selection up by 20 in visual mode.
 vim.keymap.set("n", "n", "nzz") --Center screen after finding next match.
 vim.keymap.set("n", "N", "Nzz") --Center screen after finding previous match.
 
@@ -43,6 +45,14 @@ vim.keymap.set("n", "q", "@")
 vim.keymap.set("n", "<leader>pe", "A <Esc>p")
 vim.keymap.set("n", "<leader>pw", "_Pa <Esc>")
 
+--Toggle word wrap.
+vim.keymap.set("n", "<leader>sw", ":set wrap<CR>")
+
+
+--Copying/pasting in visual mode.
+vim.keymap.set('v', '<C-c>', '"+y')
+vim.keymap.set('v', '<C-v>', '"+p')
+
 --Look up vim command under string in help menu.
 vim.keymap.set("n", "<leader>vh", "WBvt(y:help <C-r>" .. "\"" .. "<CR>")
 
@@ -61,8 +71,13 @@ vim.keymap.set("n", "<leader>pc", ":<C-R>+")
 vim.keymap.set("n", "<leader>pr", ':lua <C-r>"')
 vim.keymap.set("n", "<leader>hi", "<cmd>hi<CR>")
 
---Clear line and escape.
-vim.keymap.set("n", "<leader>dd", 'cc<Esc>')
+--Clear line to black hole register and escape.
+vim.keymap.set("n", "<leader>dd", '"_cc<Esc>')
+vim.keymap.set("v", "<leader>dd", '"_dd<Esc>')
+
+
+vim.keymap.set("n", "<CR>", "o<Esc>k")
+vim.keymap.set("n", "<A-Enter>", "O<Esc>j")
 
 --TODO: Add guardrailing at top or bottom of session.
 --TODO: Add support for languages where vim's comment syntax defaults to wrapper-style comments (C++, java, HTML).
@@ -70,10 +85,6 @@ function _InsertEmptyLinesAroundCurrentLine()
 
 	--Gap is magic numbered to two for now - I really don't see a need to add more options based on my use case.
 	local gap = 2
-	local center_idx = gap+1
-
-	--Get syntax for comments from LSP on current buffer (they will count as empty on lines where they are the only thing). This may cause conflicts where the language uses * for comments but meh.
-	local comment = vim.o.commentstring:gsub(" ", ""):gsub("%%s", "")
 	local delimiter = comment .. "*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***"
 
 	--Get line, column, and buffer from cursor position.
@@ -190,10 +201,6 @@ vim.keymap.set("n", "<leader>dm", "<cmd>DarkMode<CR>")
 
 --Toggles LSP or COC diagnostics on or off. Alters keymaps of Alt-j/k depending on state in LSP implementation. Disables both autocomplete and diagnostics in COC implementation.
 vim.keymap.set("n", "<leader>dg", "<cmd>DisplayDiagnostics<CR>")
-
--- Defaults for LSP scheme:
--- vim.keymap.set("n", "<A-j>", "<cmd>wincmd j<CR>") --Note: This bind will change depending on whether LSP diagnostics are toggled or not.
--- vim.keymap.set("n", "<A-k>", "<cmd>wincmd k<CR>") --Note: This bind will change depending on whether LSP diagnostics are toggled or not.
 
 --Delete marks from file and make change persistent - otherwise, they will come back when session is reopened.
 vim.keymap.set("n", "<leader>dl", "<cmd>DeleteMarkFromBuffer<CR>")

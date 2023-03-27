@@ -69,10 +69,6 @@ end
 vim.api.nvim_set_keymap("n", "<A-k>", ":lua NavigateWindowsOrDiagnosticsUp()<CR>", { silent = true })
 vim.api.nvim_set_keymap("n", "<A-j>", ":lua NavigateWindowsOrDiagnosticsDown()<CR>", { silent = true })
 
---Toggle diagnostics. Note: this command can become misaligned due to CocAction not returning a boolean and lack of non-toggle way to affect diagnostic staus, so I have redundant implementations below.
-vim.api.nvim_set_keymap("n", "<leader>ad", ":lua DisplayDiagnostics()<CR>", opts)
-vim.api.nvim_set_keymap("n", "<A-D>", ":call CocAction('diagnosticToggle')<CR>", opts)
-
 --Toggles inlay hints. This is fun to type, so I don't mind doing it separate from diagnostics.
 vim.api.nvim_set_keymap("n", "<leader>ih", ":CocCommand document.toggleInlayHint<CR>", opts)
 

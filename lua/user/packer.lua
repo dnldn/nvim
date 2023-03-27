@@ -35,6 +35,7 @@ return require('packer').startup(function(use)
 	use 'tpope/vim-fugitive'
 	use 'RishabhRD/popfix'
 	use 'RishabhRD/nvim-cheat.sh'
+	-- use 'ojroques/nvim-osc52'
 
 	--TODO: compress and remove redundant dependency after unit testing.
 	use({

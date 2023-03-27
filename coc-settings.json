@@ -1,8 +1,8 @@
 {
-	/*"Lua.diagnostics.enable": false,*/
-	/*"Lua.hint.enable": false,*/
 	"Lua.telemetry.enable": false,
-	/*"Lua.runtime.meta": false, */
-	/*"Lua.runtime.meta": false, */
-	"Lua.runtime.version": "LuaJit"
+	"Lua.runtime.version": "LuaJit", 
+	"vscode-reascript-extension": {
+		"filetypes": ["lua"],
+		"module": "/home/kubuntu-main/github/vscode-reascript-extension/out/extension.js"
+	}
 }
